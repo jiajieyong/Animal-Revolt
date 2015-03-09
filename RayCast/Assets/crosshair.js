@@ -7,6 +7,6 @@ function Start () {
 }
  
 function OnGUI () { 
-        GUI.DrawTexture(Rect(Screen.width/2,Screen.height/2,64,64), crosshair);
+        GUI.DrawTexture(Rect(Screen.width * 0.5 - 32,Screen.height * 0.5 - 32,64,64), crosshair);
 }
 

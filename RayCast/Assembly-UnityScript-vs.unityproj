@@ -47,8 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Enemy.js" />
+     <Compile Include="Assets\ProjectileFire.js" />
+     <Compile Include="Assets\bulletProp.js" />
      <Compile Include="Assets\crosshair.js" />
+     <Compile Include="Assets\prefabBullet.js" />
      <Compile Include="Assets\raycastShooting.js" />
+     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Projector Additive Shader.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/jiajie/Documents/RayCast/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
