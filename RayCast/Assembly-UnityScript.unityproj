@@ -46,15 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Enemy.js" />
-     <Compile Include="Assets\ProjectileFire.js" />
-     <Compile Include="Assets\bulletProp.js" />
-     <Compile Include="Assets\crosshair.js" />
-     <Compile Include="Assets\prefabBullet.js" />
-     <Compile Include="Assets\raycastShooting.js" />
+     <Compile Include="Assets\AI\Enemy.js" />
+     <Compile Include="Assets\Ammunition\Scripts\ProjectileFire.js" />
+     <Compile Include="Assets\Ammunition\Scripts\bulletProp.js" />
+     <Compile Include="Assets\Ammunition\Scripts\changeAmmo.js" />
+     <Compile Include="Assets\Ammunition\Scripts\prefabCow.js" />
+     <Compile Include="Assets\Ammunition\Scripts\prefabStone.js" />
+     <Compile Include="Assets\Ammunition\raycastShooting.js" />
+     <Compile Include="Assets\Camera\changeCamera.js" />
+     <Compile Include="Assets\Camera\crosshair.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
-     <None Include="Assets\Projector Additive Shader.shader" />
+     <None Include="Assets\Camera\Projector Additive Shader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
