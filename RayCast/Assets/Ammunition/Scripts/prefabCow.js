@@ -1,18 +1,19 @@
 ﻿#pragma strict
 
 var theBullet : Rigidbody;
- var Speed = 20;
+var Speed = 20f;
  
- var radius = 0;
+ 	 var radius = 0;
      var power = 10;
      
      var ammo : int;
      var maxAmmo : int;
      var Reloading : boolean;
      private var timer = 0.0;
-     var shootSpeed = 0.1;
+     var cooldown = 0.5;
      var enoughAmmo : boolean;
      var gun : Transform;
+     
      
      function Start () {
      ammo = 12;
@@ -22,17 +23,17 @@ var theBullet : Rigidbody;
          var colliders : Collider[] = Physics.OverlapSphere (explosionPos, radius);
          
          for (var hit : Collider in colliders) {
-             if (hit && hit.rigidbody)
+             if (hit.rigidbody)
                  hit.rigidbody.AddExplosionForce(power, explosionPos, radius, 3.0);
          }
      }
  
  function Update () {
-     if (Input.GetMouseButtonDown(0) && enoughAmmo == true)
+     if (Input.GetMouseButtonDown(0) && enoughAmmo == true && timer <= Time.time)
      {
-         
          var clone = Instantiate(theBullet, transform.position, transform.rotation);
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
+         timer = Time.time + cooldown;
          ammo -= 1;
          if(ammo <= 0)
          {
@@ -41,22 +42,6 @@ var theBullet : Rigidbody;
          Destroy (clone.gameObject, 2);
          
      
-     }
-     if(Input.GetMouseButtonDown(1) && ammo != 12)
-         {
- 
-         gun.animation.Play("reload");
-         
-             ammo = 12;
-         Reloading = true;
-         }
-         if(Input.GetMouseButtonUp(1))
-         {
-         Reloading = false;
-         }
-      
-     if(ammo <= 0 && maxAmmo <= 0){
-     enoughAmmo = false;
      }
  }
  function OnGUI()
@@ -70,3 +55,4 @@ var theBullet : Rigidbody;
  if(maxAmmo - (12 - ammo) >= 0){ ammo=12; maxAmmo-=ammo; }
  else{ ammo = maxAmmo; maxAmmo = 0; }
  }
+ 

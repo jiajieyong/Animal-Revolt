@@ -3,6 +3,8 @@
 var health = 100;
 
 function Update () {
+	if (health <= 0)
+		DestroyObject(gameObject);
 }
 
 

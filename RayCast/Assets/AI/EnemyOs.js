@@ -4,13 +4,10 @@ var health = 100;
 var agent : NavMeshAgent;
 var speed = 0.4;
 var targetPos : Vector3;
-var myRigid : Rigidbody;
 var isGrounded = false;
 var timeSinceShot :float;
 
 function Start() {
-	
-	
 	agent = GetComponent(NavMeshAgent);
 	agent.speed = this.speed;
 	
@@ -32,6 +29,7 @@ function Update () {
  			}
 		}
 	}
+	//movement script
 	if (gameObject.transform.position.x <= -4) {
 		targetPos = Vector3(4, gameObject.transform.position.y, gameObject.transform.position.z);
 		agent.SetDestination(targetPos);

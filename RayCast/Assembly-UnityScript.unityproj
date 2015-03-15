@@ -47,16 +47,24 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AI\Enemy.js" />
-     <Compile Include="Assets\Ammunition\Scripts\ProjectileFire.js" />
+     <Compile Include="Assets\AI\EnemyOs.js" />
+     <Compile Include="Assets\Ammunition\Scripts\Explosion.js" />
+     <Compile Include="Assets\Ammunition\Scripts\KnockBack.js" />
      <Compile Include="Assets\Ammunition\Scripts\bulletProp.js" />
      <Compile Include="Assets\Ammunition\Scripts\changeAmmo.js" />
+     <Compile Include="Assets\Ammunition\Scripts\dogBullet.js" />
      <Compile Include="Assets\Ammunition\Scripts\prefabCow.js" />
+     <Compile Include="Assets\Ammunition\Scripts\prefabDog.js" />
      <Compile Include="Assets\Ammunition\Scripts\prefabStone.js" />
      <Compile Include="Assets\Ammunition\raycastShooting.js" />
+     <Compile Include="Assets\Ammunition\raycastShootingOs.js" />
+     <Compile Include="Assets\Camera\MouseLookJS.js" />
      <Compile Include="Assets\Camera\changeCamera.js" />
      <Compile Include="Assets\Camera\crosshair.js" />
+     <Compile Include="Assets\Camera\switchCam.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Camera\Projector Additive Shader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
  <Reference Include="UnityEngine.UI">

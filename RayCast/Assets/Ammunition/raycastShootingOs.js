@@ -6,12 +6,17 @@ var hasCreated = false;
 var hasFound = false;
 var speed = 0.002;
 
+var tpsCamera: Camera;
+var fpsCamera: Camera;
+
+
 function Update () {
 
 	var hit : RaycastHit;
 	var hitTarget: RaycastHit;
 	var clone : GameObject;
-	var ray : Ray = Camera.main.ScreenPointToRay(Vector3(Screen.width * 0.5, Screen.height * 0.5, 0));
+	var ray : Ray = tpsCamera.ScreenPointToRay(Vector3(Screen.width * 0.5, Screen.height * 0.5, 0));
+	var fpsRay : Ray = fpsCamera.ScreenPointToRay(Vector3(Screen.width * 0.5, Screen.height * 0.5, 0));
 	Debug.DrawRay (ray.origin, ray.direction * 10, Color.cyan);
 	
 	if (!changeAmmo.cowMode){
@@ -23,7 +28,7 @@ function Update () {
 		}
 		
 		if (Input.GetMouseButtonDown(0)){
-	 	if (Physics.Raycast (ray, hit)){
+	 	if (Physics.Raycast (ray, hit) || Physics.Raycast (fpsRay, hit)){
 	 		var hitposition = hit.point;
 	 		
 	 		if (hit.collider != null) {

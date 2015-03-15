@@ -4,6 +4,7 @@
 var target : Transform;
 var agent : NavMeshAgent;
 var speed = 0.5;
+var maxSpeed = 3;
 
 function Start () {
 	agent = GetComponent(NavMeshAgent);
@@ -14,7 +15,7 @@ function Start () {
 }
 
 function Update () {
-	if (agent.speed < 5) {
+	if (agent.speed < 3) {
 		speed = Mathf.Pow(speed, 1.3);
 		agent.speed += speed;
 	}
