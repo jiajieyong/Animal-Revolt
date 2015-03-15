@@ -42,22 +42,6 @@ var theBullet : Rigidbody;
          
      
      }
-     if(Input.GetMouseButtonDown(1) && ammo != 12)
-         {
- 
-         gun.animation.Play("reload");
-         
-             ammo = 12;
-         Reloading = true;
-         }
-         if(Input.GetMouseButtonUp(1))
-         {
-         Reloading = false;
-         }
-      
-     if(ammo <= 0 && maxAmmo <= 0){
-     enoughAmmo = false;
-     }
  }
  function OnGUI()
  {

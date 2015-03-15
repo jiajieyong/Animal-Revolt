@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 5df8303a51a900843b68992d1bb534a2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: body
+    100002: //RootNode
+    100004: joint2
+    100006: joint4
+    100008: l_ear
+    100010: l_eye
+    100012: leg1
+    100014: leg2
+    100016: leg3
+    100018: leg4
+    100020: leg_1
+    100022: leg_2
+    100024: leg_3
+    100026: leg_4
+    100028: mane
+    100030: mouth
+    100032: pasted__joint2
+    100034: pasted__joint2 1
+    100036: pasted__pasted__joint2
+    100038: r_ear
+    100040: r_eye
+    100042: tail
+    100044: tail1
+    100046: teeth
+    400000: body
+    400002: //RootNode
+    400004: joint2
+    400006: joint4
+    400008: l_ear
+    400010: l_eye
+    400012: leg1
+    400014: leg2
+    400016: leg3
+    400018: leg4
+    400020: leg_1
+    400022: leg_2
+    400024: leg_3
+    400026: leg_4
+    400028: mane
+    400030: mouth
+    400032: pasted__joint2
+    400034: pasted__joint2 1
+    400036: pasted__pasted__joint2
+    400038: r_ear
+    400040: r_eye
+    400042: tail
+    400044: tail1
+    400046: teeth
+    2300000: body
+    2300002: l_ear
+    2300004: l_eye
+    2300006: mane
+    2300008: mouth
+    2300010: r_ear
+    2300012: r_eye
+    2300014: teeth
+    3300000: body
+    3300002: l_ear
+    3300004: l_eye
+    3300006: mane
+    3300008: mouth
+    3300010: r_ear
+    3300012: r_eye
+    3300014: teeth
+    4300000: body
+    4300002: mouth
+    4300004: teeth
+    4300006: l_eye
+    4300008: l_ear
+    4300010: r_ear
+    4300012: r_eye
+    4300014: mane
+    4300016: leg1
+    4300018: leg2
+    4300020: leg3
+    4300022: leg4
+    4300024: tail1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: leg1
+    13700002: leg2
+    13700004: leg3
+    13700006: leg4
+    13700008: tail1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
