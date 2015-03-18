@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 28502c38c95e71641b64a84b9e8134bd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bazooka
+    100002: Bazooka 1
+    100004: Body
+    100006: Chest
+    100008: Head
+    100010: Head 1
+    100012: Lankle
+    100014: Lear
+    100016: left
+    100018: Lelbow
+    100020: Lfeet
+    100022: Lhand
+    100024: Lhand 1
+    100026: Lhip
+    100028: Lknee
+    100030: Lleg
+    100032: Lshoulder
+    100034: Ltoe
+    100036: Neck
+    100038: pasted__group
+    100040: pasted__group1
+    100042: pasted__pasted__pCube2
+    100044: pasted__pasted__pCube2 1
+    100046: pasted__pCube2
+    100048: pasted__pCube3
+    100050: pasted__pCube4
+    100052: Pelvis
+    100054: //RootNode
+    100056: Rankle
+    100058: Rear
+    100060: Relbow
+    100062: Rfeet
+    100064: Rhand
+    100066: Rhand 1
+    100068: Rhip
+    100070: Rknee
+    100072: Rleg
+    100074: Rshoulder
+    100076: Rtoe
+    100078: Snout
+    400000: Bazooka
+    400002: Bazooka 1
+    400004: Body
+    400006: Chest
+    400008: Head
+    400010: Head 1
+    400012: Lankle
+    400014: Lear
+    400016: left
+    400018: Lelbow
+    400020: Lfeet
+    400022: Lhand
+    400024: Lhand 1
+    400026: Lhip
+    400028: Lknee
+    400030: Lleg
+    400032: Lshoulder
+    400034: Ltoe
+    400036: Neck
+    400038: pasted__group
+    400040: pasted__group1
+    400042: pasted__pasted__pCube2
+    400044: pasted__pasted__pCube2 1
+    400046: pasted__pCube2
+    400048: pasted__pCube3
+    400050: pasted__pCube4
+    400052: Pelvis
+    400054: //RootNode
+    400056: Rankle
+    400058: Rear
+    400060: Relbow
+    400062: Rfeet
+    400064: Rhand
+    400066: Rhand 1
+    400068: Rhip
+    400070: Rknee
+    400072: Rleg
+    400074: Rshoulder
+    400076: Rtoe
+    400078: Snout
+    4300000: Head
+    4300002: Snout
+    4300004: Lear
+    4300006: Rear
+    4300008: Body
+    4300010: Lhand
+    4300012: Rhand
+    4300014: Lleg
+    4300016: Lfeet
+    4300018: Rleg
+    4300020: Rfeet
+    4300022: pasted__pCube2
+    4300024: pasted__pasted__pCube2
+    4300026: pasted__pCube3
+    4300028: pasted__pCube4
+    4300030: pasted__pasted__pCube2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body
+    13700002: Head
+    13700004: Lear
+    13700006: Lfeet
+    13700008: Lhand
+    13700010: Lleg
+    13700012: pasted__pasted__pCube2
+    13700014: pasted__pasted__pCube2 1
+    13700016: pasted__pCube2
+    13700018: pasted__pCube3
+    13700020: pasted__pCube4
+    13700022: Rear
+    13700024: Rfeet
+    13700026: Rhand
+    13700028: Rleg
+    13700030: Snout
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

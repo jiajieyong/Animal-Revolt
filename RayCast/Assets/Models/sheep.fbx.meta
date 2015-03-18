@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: 155abd9f2c99e52439d05ceb45c69b9d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: afro
+    100002: body
+    100004: face
+    100006: joint2
+    100008: l_ear
+    100010: l_eye
+    100012: leg1
+    100014: leg11
+    100016: leg2
+    100018: leg22
+    100020: leg3
+    100022: leg33
+    100024: leg4
+    100026: leg44
+    100028: leg_1
+    100030: leg_2
+    100032: leg_3
+    100034: leg_4
+    100036: pasted__joint2
+    100038: pasted__joint2 1
+    100040: pasted__pasted__joint2
+    100042: pCube9
+    100044: r_ear
+    100046: r_eye
+    100048: //RootNode
+    100050: tongue
+    400000: afro
+    400002: body
+    400004: face
+    400006: joint2
+    400008: l_ear
+    400010: l_eye
+    400012: leg1
+    400014: leg11
+    400016: leg2
+    400018: leg22
+    400020: leg3
+    400022: leg33
+    400024: leg4
+    400026: leg44
+    400028: leg_1
+    400030: leg_2
+    400032: leg_3
+    400034: leg_4
+    400036: pasted__joint2
+    400038: pasted__joint2 1
+    400040: pasted__pasted__joint2
+    400042: pCube9
+    400044: r_ear
+    400046: r_eye
+    400048: //RootNode
+    400050: tongue
+    2300000: afro
+    2300002: body
+    2300004: face
+    2300006: l_ear
+    2300008: l_eye
+    2300010: pCube9
+    2300012: r_ear
+    2300014: r_eye
+    2300016: tongue
+    3300000: afro
+    3300002: body
+    3300004: face
+    3300006: l_ear
+    3300008: l_eye
+    3300010: pCube9
+    3300012: r_ear
+    3300014: r_eye
+    3300016: tongue
+    4300000: face
+    4300002: l_eye
+    4300004: l_ear
+    4300006: r_eye
+    4300008: tongue
+    4300010: r_ear
+    4300012: afro
+    4300014: body
+    4300016: leg1
+    4300018: leg11
+    4300020: pCube9
+    4300022: leg44
+    4300024: leg4
+    4300026: leg33
+    4300028: leg3
+    4300030: leg22
+    4300032: leg2
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: leg1
+    13700002: leg11
+    13700004: leg2
+    13700006: leg22
+    13700008: leg3
+    13700010: leg33
+    13700012: leg4
+    13700014: leg44
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

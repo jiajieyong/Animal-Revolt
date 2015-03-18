@@ -5,7 +5,6 @@ var Speed = 20f;
  
  	 var radius = 0;
      var power = 10;
-     
      var ammo : int;
      var maxAmmo : int;
      var Reloading : boolean;
@@ -33,6 +32,7 @@ var Speed = 20f;
      {
          var clone = Instantiate(theBullet, transform.position, transform.rotation);
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
+		 audio.Play();	
          timer = Time.time + cooldown;
          ammo -= 1;
          if(ammo <= 0)

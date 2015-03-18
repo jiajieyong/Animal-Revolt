@@ -44,7 +44,7 @@ function ApplyDamage(damage: int){
 	agent.Stop(true);
  	rigidbody.isKinematic = false;
  	rigidbody.useGravity = true;
-	rigidbody.AddForce(new Vector3(0,5,0),ForceMode.Impulse);
+	//rigidbody.AddForce(new Vector3(0,5,0),ForceMode.Impulse);
     health -= damage;
     timeSinceShot = Time.deltaTime;
 }

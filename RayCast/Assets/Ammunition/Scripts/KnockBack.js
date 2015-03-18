@@ -1,6 +1,7 @@
 ﻿#pragma strict
 var speed = 10;
 var removeHorse = 2;
+var TheDamage = 10;
 
  function OnCollisionEnter (info : Collision)
  {	
@@ -14,6 +15,7 @@ var removeHorse = 2;
  		//var direction = Quaternion.identity;
  		//direction.eulerAngles = Vector3(0,yRotation, zRotation);
  		var direction = new Vector3 ( xDistance, 0, zDistance);
+ 		info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
 		info.rigidbody.AddForce(transform.forward * speed);
 		yield WaitForSeconds(removeHorse);
 		Destroy(gameObject);

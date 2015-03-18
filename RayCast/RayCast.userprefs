@@ -1,14 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Ammunition\Scripts\prefabCow.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\searchLocation.cs">
     <Files>
-      <File FileName="Assets\Camera\switchCam.js" Line="14" Column="2" />
-      <File FileName="Assets\AI\EnemyOs.js" Line="56" Column="1" />
-      <File FileName="Assets\Ammunition\Scripts\bulletProp.js" Line="1" Column="1" />
-      <File FileName="Assets\Ammunition\raycastShooting.js" Line="46" Column="30" />
-      <File FileName="Assets\Ammunition\Scripts\prefabCow.js" Line="45" Column="7" />
-      <File FileName="Assets\Ammunition\Scripts\prefabStone.js" Line="44" Column="7" />
-      <File FileName="Assets\Camera\MouseLookJS.js" Line="1" Column="1" />
+      <File FileName="Assets\AI\Actions\searchLocation.cs" Line="39" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
