@@ -22,8 +22,8 @@ function OnCollisionEnter (info: Collision){
          for (var hit : Collider in colliders) {
              if (hit.rigidbody) {
              	
+             	 hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
                  hit.rigidbody.AddExplosionForce(power, explosionPos, radius, lift);
-                 hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
                  Destroy(gameObject);
          	}	
          }
