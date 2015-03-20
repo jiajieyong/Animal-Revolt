@@ -46,9 +46,13 @@ function ApplyDamage(damage: int){
  	rigidbody.useGravity = true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	//rigidbody.AddForce(new Vector3(0,5,0),ForceMode.Impulse);
 >>>>>>> origin/master
+=======
+	rigidbody.AddForce(new Vector3(0,5,0),ForceMode.Impulse);
+>>>>>>> parent of 9d72593... Some updates done for the demo
 =======
 	rigidbody.AddForce(new Vector3(0,5,0),ForceMode.Impulse);
 >>>>>>> parent of 9d72593... Some updates done for the demo

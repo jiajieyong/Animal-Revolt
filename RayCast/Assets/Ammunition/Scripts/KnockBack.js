@@ -15,11 +15,15 @@ var removeHorse = 2;
  		//direction.eulerAngles = Vector3(0,yRotation, zRotation);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  		//var direction = new Vector3 ( xDistance, 0, zDistance);
 =======
  		var direction = new Vector3 ( xDistance, 0, zDistance);
 >>>>>>> origin/master
  		info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+=======
+ 		var direction = new Vector3 ( xDistance, 0, zDistance);
+>>>>>>> parent of 9d72593... Some updates done for the demo
 =======
  		var direction = new Vector3 ( xDistance, 0, zDistance);
 >>>>>>> parent of 9d72593... Some updates done for the demo

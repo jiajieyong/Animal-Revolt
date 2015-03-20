@@ -23,6 +23,7 @@ function OnCollisionEnter (info: Collision){
              if (hit.rigidbody) {
 <<<<<<< HEAD
              	
+<<<<<<< HEAD
                  hit.rigidbody.AddExplosionForce(power, explosionPos, radius, lift);
 <<<<<<< HEAD
 =======
@@ -31,6 +32,10 @@ function OnCollisionEnter (info: Collision){
                  
 >>>>>>> origin/master
 =======
+                 hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+>>>>>>> parent of 9d72593... Some updates done for the demo
+=======
+                 hit.rigidbody.AddExplosionForce(power, explosionPos, radius, lift);
                  hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
 >>>>>>> parent of 9d72593... Some updates done for the demo
                  Destroy(gameObject);
