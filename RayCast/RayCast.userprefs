@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\searchLocation.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Ammunition\Scripts\KnockBack.js">
     <Files>
-      <File FileName="Assets\AI\Actions\searchLocation.cs" Line="39" Column="61" />
+      <File FileName="Assets\AI\Actions\searchLocation.cs" Line="1" Column="1" />
+      <File FileName="Assets\AI\EnemyOs.js" Line="1" Column="2" />
+      <File FileName="Assets\Ammunition\Scripts\Explosion.js" Line="1" Column="2" />
+      <File FileName="Assets\Ammunition\Scripts\KnockBack.js" Line="23" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
