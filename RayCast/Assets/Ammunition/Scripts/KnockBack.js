@@ -14,7 +14,11 @@ var TheDamage = 10;
  		
  		//var direction = Quaternion.identity;
  		//direction.eulerAngles = Vector3(0,yRotation, zRotation);
+<<<<<<< HEAD
  		//var direction = new Vector3 ( xDistance, 0, zDistance);
+=======
+ 		var direction = new Vector3 ( xDistance, 0, zDistance);
+>>>>>>> origin/master
  		info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
 		info.rigidbody.AddForce(transform.forward * speed);
 		yield WaitForSeconds(removeHorse);

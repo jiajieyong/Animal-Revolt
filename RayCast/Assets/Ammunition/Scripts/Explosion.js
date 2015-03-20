@@ -21,9 +21,15 @@ function OnCollisionEnter (info: Collision){
 		 Instantiate(explosionPrefab, transform.position, transform.rotation);
          for (var hit : Collider in colliders) {
              if (hit.rigidbody) {
+<<<<<<< HEAD
              	
              	 hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
                  hit.rigidbody.AddExplosionForce(power, explosionPos, radius, lift);
+=======
+             	 hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+                 hit.rigidbody.AddExplosionForce(power, explosionPos, radius, lift);
+                 
+>>>>>>> origin/master
                  Destroy(gameObject);
          	}	
          }
