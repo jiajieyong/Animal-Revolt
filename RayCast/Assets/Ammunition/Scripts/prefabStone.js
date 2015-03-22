@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var theBullet : Rigidbody;
+ var theBullet : Rigidbody;
  var Speed = 20;
  
  var radius = 0;

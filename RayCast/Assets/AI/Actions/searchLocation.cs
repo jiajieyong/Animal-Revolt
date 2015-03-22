@@ -28,15 +28,15 @@ public class searchLocation : RAINAction
 		List<RAINNavigationGraph> found = new List<RAINNavigationGraph> ();
 
 		do {
-						loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-5f, 5f),
+						loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-2f, 2f),
 			                  ai.Kinematic.Position.y,
-			                  ai.Kinematic.Position.z + Random.Range (-5f, 5f));
+			                  ai.Kinematic.Position.z + Random.Range (-2f, 2f));
 						found = NavigationManager.Instance.GraphsForPoints (ai.Kinematic.Position,
 			                                                  loc, 
 			                                                  ai.Motor.StepUpHeight, 
 			                                                  NavigationManager.GraphType.Navmesh, 
 			                                                  ((BasicNavigator)ai.Navigator).GraphTags);
-				} while ((Vector3.Distance(ai.Kinematic.Position,loc) <2f) || (found.Count == 0));
+				} while ((Vector3.Distance(ai.Kinematic.Position,loc) <0.5f) || (found.Count == 0));
 
 		ai.WorkingMemory.SetItem<Vector3> ("varMoveTo", loc);
 

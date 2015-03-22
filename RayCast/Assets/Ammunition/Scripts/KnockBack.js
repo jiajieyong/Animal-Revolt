@@ -1,4 +1,4 @@
-#pragma strict
+﻿#pragma strict
 var speed = 10;
 var removeHorse = 2;
 var TheDamage = 10;

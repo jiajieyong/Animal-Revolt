@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 72b4a81adc771574693daf47e0dddb16
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - theBullet: {fileID: 5418818, guid: 382ec47cf36e60e4988a2556c0f5f76c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
