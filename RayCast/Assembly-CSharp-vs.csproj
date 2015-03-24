@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AI\Actions\dodge.cs" />
      <Compile Include="Assets\AI\Actions\searchLocation.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />

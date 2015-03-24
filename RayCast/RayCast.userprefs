@@ -1,11 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\Actions\AiFiring.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AI\enemyFire.js">
     <Files>
-      <File FileName="Assets\AI\Actions\AiFiring.js" Line="11" Column="8" />
-      <File FileName="Assets\AI\Actions\searchLocation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Ammunition\Scripts\prefabStone.js" Line="1" Column="1" />
-      <File FileName="Assets\AI\enemyFire.js" Line="1" Column="1" />
+      <File FileName="Assets\AI\enemyFire.js" Line="18" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

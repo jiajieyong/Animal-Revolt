@@ -132,7 +132,113 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bazooka
+        weight: 1
+      - path: Bazooka/pasted__group
+        weight: 1
+      - path: Bazooka/pasted__group/pasted__pasted__pCube2
+        weight: 1
+      - path: Bazooka/pasted__group1
+        weight: 1
+      - path: Bazooka/pasted__group1/pasted__pasted__pCube2 1
+        weight: 1
+      - path: Bazooka/pasted__pCube2
+        weight: 1
+      - path: Bazooka/pasted__pCube3
+        weight: 1
+      - path: Bazooka/pasted__pCube4
+        weight: 1
+      - path: Body
+        weight: 1
+      - path: Head
+        weight: 1
+      - path: Head/Lear
+        weight: 1
+      - path: Head/Rear
+        weight: 1
+      - path: Head/Snout
+        weight: 1
+      - path: left
+        weight: 1
+      - path: Lhand
+        weight: 1
+      - path: Lleg
+        weight: 1
+      - path: Lleg/Lfeet
+        weight: 1
+      - path: Pelvis
+        weight: 1
+      - path: Pelvis/Chest
+        weight: 1
+      - path: Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: Pelvis/Chest/Neck
+        weight: 1
+      - path: Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: Pelvis/Chest/Rshoulder
+        weight: 1
+      - path: Pelvis/Chest/Rshoulder/Relbow
+        weight: 1
+      - path: Pelvis/Chest/Rshoulder/Relbow/Rhand 1
+        weight: 1
+      - path: Pelvis/Chest/Rshoulder/Relbow/Rhand 1/Bazooka 1
+        weight: 1
+      - path: Pelvis/Lhip
+        weight: 1
+      - path: Pelvis/Lhip/Lknee
+        weight: 1
+      - path: Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: Pelvis/Rhip
+        weight: 1
+      - path: Pelvis/Rhip/Rknee
+        weight: 1
+      - path: Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: Rhand
+        weight: 1
+      - path: Rleg
+        weight: 1
+      - path: Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

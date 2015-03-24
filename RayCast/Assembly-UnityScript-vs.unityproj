@@ -64,6 +64,7 @@
      <Compile Include="Assets\Camera\changeCamera.js" />
      <Compile Include="Assets\Camera\crosshair.js" />
      <Compile Include="Assets\Camera\switchCam.js" />
+     <Compile Include="Assets\Environment\Ladder\Step.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />

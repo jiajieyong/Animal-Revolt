@@ -44,7 +44,6 @@ public class searchLocation : RAINAction
 			ai.WorkingMemory.SetItem("isSearching", false);
 			_time = 0;
 		}
-
 		return ActionResult.SUCCESS;
     }
 
