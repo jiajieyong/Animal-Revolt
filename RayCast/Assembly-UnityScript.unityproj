@@ -65,6 +65,7 @@
      <Compile Include="Assets\Camera\crosshair.js" />
      <Compile Include="Assets\Camera\switchCam.js" />
      <Compile Include="Assets\Environment\Ladder\Step.js" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -73,20 +74,23 @@
      <None Include="Assets\Camera\Projector Additive Shader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshContourShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\WaypointShader.shader" />
+     <None Include="Assets\Water Flow Free\Shaders\Water Simple.shader" />
      <None Include="Assets\RAIN\Editor\ScriptTemplates\BehaviorTreeTemplate.xml" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Fantasy Skybox FREE\Readme\Readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
      <None Include="Assets\RAIN\ReleaseNotes.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
+     <None Include="Assets\Water Flow Free\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/jiajie/Documents/RayCast/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/jiajie/Documents/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
