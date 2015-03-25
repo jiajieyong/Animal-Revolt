@@ -1,0 +1,7 @@
+Idle			1 - 48 (24 mid pt) loop
+Walking			49 - 96 (72 mid pt) loop, speed up for run
+Jumping up		97 - 120 play once
+Air time		120 - 120.1 loop
+Jumping down	120 - 144 play once
+
+Pig Arm location relative to Pig Body: Body Scale * (0.1, 0.28, 0)
