@@ -1,0 +1,988 @@
+fileFormatVersion: 2
+guid: f7146c879a505e04ebaa3326da5888cb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Body
+    100002: Chest
+    100004: Head
+    100006: Head 1
+    100008: Lankle
+    100010: Lear
+    100012: left
+    100014: Lelbow
+    100016: Lfeet
+    100018: Lhand
+    100020: Lhand 1
+    100022: Lhip
+    100024: Lknee
+    100026: Lleg
+    100028: Lshoulder
+    100030: Ltoe
+    100032: Neck
+    100034: Pelvis
+    100036: //RootNode
+    100038: pig_joint
+    100040: pig_model
+    100042: Rankle
+    100044: Rear
+    100046: Rfeet
+    100048: Rhip
+    100050: Rknee
+    100052: Rleg
+    100054: Rtoe
+    100056: Snout
+    400000: Body
+    400002: Chest
+    400004: Head
+    400006: Head 1
+    400008: Lankle
+    400010: Lear
+    400012: left
+    400014: Lelbow
+    400016: Lfeet
+    400018: Lhand
+    400020: Lhand 1
+    400022: Lhip
+    400024: Lknee
+    400026: Lleg
+    400028: Lshoulder
+    400030: Ltoe
+    400032: Neck
+    400034: Pelvis
+    400036: //RootNode
+    400038: pig_joint
+    400040: pig_model
+    400042: Rankle
+    400044: Rear
+    400046: Rfeet
+    400048: Rhip
+    400050: Rknee
+    400052: Rleg
+    400054: Rtoe
+    400056: Snout
+    4300000: Head
+    4300002: Snout
+    4300004: Lear
+    4300006: Rear
+    4300008: Body
+    4300010: Lhand
+    4300012: Lleg
+    4300014: Lfeet
+    4300016: Rleg
+    4300018: Rfeet
+    7400000: Walk
+    7400002: Run
+    7400004: Strafe Left
+    7400006: Strafe Right
+    7400008: Idle
+    7400010: Die
+    7400012: Jump up
+    7400014: Air Time
+    7400016: Jump Down
+    7400018: Jumping
+    9500000: //RootNode
+    13700000: Body
+    13700002: Head
+    13700004: Lear
+    13700006: Lfeet
+    13700008: Lhand
+    13700010: Lleg
+    13700012: Rear
+    13700014: Rfeet
+    13700016: Rleg
+    13700018: Snout
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Run
+      takeName: Take 001
+      firstFrame: 101
+      lastFrame: 148
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Strafe Left
+      takeName: Take 001
+      firstFrame: 201
+      lastFrame: 248
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Strafe Right
+      takeName: Take 001
+      firstFrame: 301
+      lastFrame: 348
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 401
+      lastFrame: 448
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Die
+      takeName: Take 001
+      firstFrame: 501
+      lastFrame: 548
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump up
+      takeName: Take 001
+      firstFrame: 601
+      lastFrame: 624
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Air Time
+      takeName: Take 001
+      firstFrame: 624
+      lastFrame: 624.099976
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Down
+      takeName: Take 001
+      firstFrame: 624
+      lastFrame: 648
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jumping
+      takeName: Take 001
+      firstFrame: 601
+      lastFrame: 648
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pig_joint
+        weight: 1
+      - path: pig_joint/Pelvis
+        weight: 1
+      - path: pig_joint/Pelvis/Chest
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Lshoulder/Lelbow/Lhand 1
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck
+        weight: 1
+      - path: pig_joint/Pelvis/Chest/Neck/Head 1
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle
+        weight: 1
+      - path: pig_joint/Pelvis/Lhip/Lknee/Lankle/Ltoe
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle
+        weight: 1
+      - path: pig_joint/Pelvis/Rhip/Rknee/Rankle/Rtoe
+        weight: 1
+      - path: pig_model
+        weight: 1
+      - path: pig_model/Body
+        weight: 1
+      - path: pig_model/Head
+        weight: 1
+      - path: pig_model/Head/Lear
+        weight: 1
+      - path: pig_model/Head/Rear
+        weight: 1
+      - path: pig_model/Head/Snout
+        weight: 1
+      - path: pig_model/Lhand
+        weight: 1
+      - path: pig_model/Lleg
+        weight: 1
+      - path: pig_model/Lleg/Lfeet
+        weight: 1
+      - path: pig_model/Rleg
+        weight: 1
+      - path: pig_model/Rleg/Rfeet
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

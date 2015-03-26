@@ -66,10 +66,10 @@
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
      <None Include="Assets\Water Flow Free\!Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
@@ -78,25 +78,25 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
  <Reference Include="AetherUnity">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/AetherUnity.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/AetherUnity.dll</HintPath>
  </Reference>
  <Reference Include="LegionRestModel">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/LegionRestModel.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/LegionRestModel.dll</HintPath>
  </Reference>
  <Reference Include="RAINEditor">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaformEditor">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
  </Reference>
  <Reference Include="RAINUpdater">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINUpdater.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/Editor/RAINUpdater.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

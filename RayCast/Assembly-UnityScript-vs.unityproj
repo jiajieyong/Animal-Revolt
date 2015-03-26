@@ -66,6 +66,7 @@
      <Compile Include="Assets\Camera\switchCam.js" />
      <Compile Include="Assets\Environment\Ladder\Step.js" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.js" />
+     <Compile Include="Assets\rotateArm.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
@@ -84,16 +85,16 @@
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
      <None Include="Assets\Water Flow Free\!Readme.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/jiajie/Documents/Documents/Documents/NUS Sem 2 Jan-May 2015/CS3247/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>D:/Users/Kiang Kuang/Dropbox/School/Year 3 Semester 2/CS3247 Game Development/Gently-Plays-Animal-Farm/RayCast/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

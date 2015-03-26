@@ -35,8 +35,8 @@
 			rotationY = 0;
 		} 
 		else {
-			minimumY = -20;
-			maximumY = 20;
+			minimumY = -45;
+			maximumY = 90;
 		}
 
 		if (axes == RotationAxes.MouseXAndY)

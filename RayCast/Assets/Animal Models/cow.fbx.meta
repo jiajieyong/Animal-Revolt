@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: aa7b26f744461ae4f8b32fa43513fabd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ass
+    100002: body
+    100004: //RootNode
+    100006: head
+    100008: head1
+    100010: horn
+    100012: joint2
+    100014: joint4
+    100016: joints
+    100018: l_ear
+    100020: l_eye
+    100022: leg1
+    100024: leg2
+    100026: leg3
+    100028: leg4
+    100030: leg_1
+    100032: leg_2
+    100034: leg_3
+    100036: leg_4
+    100038: mid
+    100040: model
+    100042: mouth
+    100044: pasted__joint2
+    100046: pasted__joint2 1
+    100048: pasted__pasted__joint2
+    100050: r_ear
+    100052: r_eye
+    100054: tail
+    100056: tail1
+    100058: udder
+    400000: ass
+    400002: body
+    400004: //RootNode
+    400006: head
+    400008: head1
+    400010: horn
+    400012: joint2
+    400014: joint4
+    400016: joints
+    400018: l_ear
+    400020: l_eye
+    400022: leg1
+    400024: leg2
+    400026: leg3
+    400028: leg4
+    400030: leg_1
+    400032: leg_2
+    400034: leg_3
+    400036: leg_4
+    400038: mid
+    400040: model
+    400042: mouth
+    400044: pasted__joint2
+    400046: pasted__joint2 1
+    400048: pasted__pasted__joint2
+    400050: r_ear
+    400052: r_eye
+    400054: tail
+    400056: tail1
+    400058: udder
+    4300000: leg_1
+    4300002: leg_2
+    4300004: leg_3
+    4300006: leg_4
+    4300008: tail
+    4300010: head
+    4300012: l_eye
+    4300014: r_eye
+    4300016: mouth
+    4300018: horn
+    4300020: l_ear
+    4300022: r_ear
+    4300024: body
+    4300026: udder
+    7400000: Idle
+    7400002: Walk
+    7400004: Jump Up
+    7400006: Air Time
+    7400008: Jump Down
+    9500000: //RootNode
+    13700000: body
+    13700002: head
+    13700004: horn
+    13700006: l_ear
+    13700008: l_eye
+    13700010: leg_1
+    13700012: leg_2
+    13700014: leg_3
+    13700016: leg_4
+    13700018: mouth
+    13700020: r_ear
+    13700022: r_eye
+    13700024: tail
+    13700026: udder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints
+        weight: 1
+      - path: joints/ass
+        weight: 1
+      - path: joints/ass/mid
+        weight: 1
+      - path: joints/ass/mid/head1
+        weight: 1
+      - path: joints/leg1
+        weight: 1
+      - path: joints/leg1/joint2
+        weight: 1
+      - path: joints/leg2
+        weight: 1
+      - path: joints/leg2/pasted__joint2
+        weight: 1
+      - path: joints/leg3
+        weight: 1
+      - path: joints/leg3/pasted__joint2 1
+        weight: 1
+      - path: joints/leg4
+        weight: 1
+      - path: joints/leg4/pasted__pasted__joint2
+        weight: 1
+      - path: joints/tail1
+        weight: 1
+      - path: joints/tail1/joint4
+        weight: 1
+      - path: leg_1
+        weight: 1
+      - path: leg_2
+        weight: 1
+      - path: leg_3
+        weight: 1
+      - path: leg_4
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/body/udder
+        weight: 1
+      - path: model/head
+        weight: 1
+      - path: model/head/horn
+        weight: 1
+      - path: model/head/l_ear
+        weight: 1
+      - path: model/head/l_eye
+        weight: 1
+      - path: model/head/mouth
+        weight: 1
+      - path: model/head/r_ear
+        weight: 1
+      - path: model/head/r_eye
+        weight: 1
+      - path: model/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 96
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints
+        weight: 1
+      - path: joints/ass
+        weight: 1
+      - path: joints/ass/mid
+        weight: 1
+      - path: joints/ass/mid/head1
+        weight: 1
+      - path: joints/leg1
+        weight: 1
+      - path: joints/leg1/joint2
+        weight: 1
+      - path: joints/leg2
+        weight: 1
+      - path: joints/leg2/pasted__joint2
+        weight: 1
+      - path: joints/leg3
+        weight: 1
+      - path: joints/leg3/pasted__joint2 1
+        weight: 1
+      - path: joints/leg4
+        weight: 1
+      - path: joints/leg4/pasted__pasted__joint2
+        weight: 1
+      - path: joints/tail1
+        weight: 1
+      - path: joints/tail1/joint4
+        weight: 1
+      - path: leg_1
+        weight: 1
+      - path: leg_2
+        weight: 1
+      - path: leg_3
+        weight: 1
+      - path: leg_4
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/body/udder
+        weight: 1
+      - path: model/head
+        weight: 1
+      - path: model/head/horn
+        weight: 1
+      - path: model/head/l_ear
+        weight: 1
+      - path: model/head/l_eye
+        weight: 1
+      - path: model/head/mouth
+        weight: 1
+      - path: model/head/r_ear
+        weight: 1
+      - path: model/head/r_eye
+        weight: 1
+      - path: model/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Up
+      takeName: Take 001
+      firstFrame: 97
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints
+        weight: 1
+      - path: joints/ass
+        weight: 1
+      - path: joints/ass/mid
+        weight: 1
+      - path: joints/ass/mid/head1
+        weight: 1
+      - path: joints/leg1
+        weight: 1
+      - path: joints/leg1/joint2
+        weight: 1
+      - path: joints/leg2
+        weight: 1
+      - path: joints/leg2/pasted__joint2
+        weight: 1
+      - path: joints/leg3
+        weight: 1
+      - path: joints/leg3/pasted__joint2 1
+        weight: 1
+      - path: joints/leg4
+        weight: 1
+      - path: joints/leg4/pasted__pasted__joint2
+        weight: 1
+      - path: joints/tail1
+        weight: 1
+      - path: joints/tail1/joint4
+        weight: 1
+      - path: leg_1
+        weight: 1
+      - path: leg_2
+        weight: 1
+      - path: leg_3
+        weight: 1
+      - path: leg_4
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/body/udder
+        weight: 1
+      - path: model/head
+        weight: 1
+      - path: model/head/horn
+        weight: 1
+      - path: model/head/l_ear
+        weight: 1
+      - path: model/head/l_eye
+        weight: 1
+      - path: model/head/mouth
+        weight: 1
+      - path: model/head/r_ear
+        weight: 1
+      - path: model/head/r_eye
+        weight: 1
+      - path: model/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Air Time
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 120.099998
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints
+        weight: 1
+      - path: joints/ass
+        weight: 1
+      - path: joints/ass/mid
+        weight: 1
+      - path: joints/ass/mid/head1
+        weight: 1
+      - path: joints/leg1
+        weight: 1
+      - path: joints/leg1/joint2
+        weight: 1
+      - path: joints/leg2
+        weight: 1
+      - path: joints/leg2/pasted__joint2
+        weight: 1
+      - path: joints/leg3
+        weight: 1
+      - path: joints/leg3/pasted__joint2 1
+        weight: 1
+      - path: joints/leg4
+        weight: 1
+      - path: joints/leg4/pasted__pasted__joint2
+        weight: 1
+      - path: joints/tail1
+        weight: 1
+      - path: joints/tail1/joint4
+        weight: 1
+      - path: leg_1
+        weight: 1
+      - path: leg_2
+        weight: 1
+      - path: leg_3
+        weight: 1
+      - path: leg_4
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/body/udder
+        weight: 1
+      - path: model/head
+        weight: 1
+      - path: model/head/horn
+        weight: 1
+      - path: model/head/l_ear
+        weight: 1
+      - path: model/head/l_eye
+        weight: 1
+      - path: model/head/mouth
+        weight: 1
+      - path: model/head/r_ear
+        weight: 1
+      - path: model/head/r_eye
+        weight: 1
+      - path: model/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Jump Down
+      takeName: Take 001
+      firstFrame: 120
+      lastFrame: 144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joints
+        weight: 1
+      - path: joints/ass
+        weight: 1
+      - path: joints/ass/mid
+        weight: 1
+      - path: joints/ass/mid/head1
+        weight: 1
+      - path: joints/leg1
+        weight: 1
+      - path: joints/leg1/joint2
+        weight: 1
+      - path: joints/leg2
+        weight: 1
+      - path: joints/leg2/pasted__joint2
+        weight: 1
+      - path: joints/leg3
+        weight: 1
+      - path: joints/leg3/pasted__joint2 1
+        weight: 1
+      - path: joints/leg4
+        weight: 1
+      - path: joints/leg4/pasted__pasted__joint2
+        weight: 1
+      - path: joints/tail1
+        weight: 1
+      - path: joints/tail1/joint4
+        weight: 1
+      - path: leg_1
+        weight: 1
+      - path: leg_2
+        weight: 1
+      - path: leg_3
+        weight: 1
+      - path: leg_4
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/body
+        weight: 1
+      - path: model/body/udder
+        weight: 1
+      - path: model/head
+        weight: 1
+      - path: model/head/horn
+        weight: 1
+      - path: model/head/l_ear
+        weight: 1
+      - path: model/head/l_eye
+        weight: 1
+      - path: model/head/mouth
+        weight: 1
+      - path: model/head/r_ear
+        weight: 1
+      - path: model/head/r_eye
+        weight: 1
+      - path: model/tail
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
