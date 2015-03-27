@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7146c879a505e04ebaa3326da5888cb
+guid: 2ab13000c3f8b0648aaec32228608c78
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -77,8 +77,8 @@ ModelImporter:
     7400006: Strafe Right
     7400008: Idle
     7400010: Die
-    7400012: Jump up
-    7400014: Air Time
+    7400012: Jump Up
+    7400014: Jump Air
     7400016: Jump Down
     7400018: Jumping
     9500000: //RootNode
@@ -613,7 +613,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Jump up
+      name: Jump Up
       takeName: Take 001
       firstFrame: 601
       lastFrame: 624
@@ -697,7 +697,7 @@ ModelImporter:
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Air Time
+      name: Jump Air
       takeName: Take 001
       firstFrame: 624
       lastFrame: 624.099976
