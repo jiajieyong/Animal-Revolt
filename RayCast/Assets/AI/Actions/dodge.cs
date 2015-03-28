@@ -25,15 +25,15 @@ public class dodge : RAINAction
 		List<RAINNavigationGraph> found = new List<RAINNavigationGraph> ();
 		
 		do {
-			loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-2f, 2f),
+			loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-20f, 20f),
 			                   ai.Kinematic.Position.y,
-			                   ai.Kinematic.Position.z + Random.Range (-2f, 2f));
+			                   ai.Kinematic.Position.z + Random.Range (-20f, 20f));
 			found = NavigationManager.Instance.GraphsForPoints (ai.Kinematic.Position,
 			                                                    loc, 
 			                                                    ai.Motor.StepUpHeight, 
 			                                                    NavigationManager.GraphType.Navmesh, 
 			                                                    ((BasicNavigator)ai.Navigator).GraphTags);
-		} while ((Vector3.Distance(ai.Kinematic.Position,loc) <0.5f) || (found.Count == 0));
+		} while ((Vector3.Distance(ai.Kinematic.Position,loc) <5f) || (found.Count == 0));
 		
 		ai.WorkingMemory.SetItem<Vector3> ("dodgeTo", loc);
 
