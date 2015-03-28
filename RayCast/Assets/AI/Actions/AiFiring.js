@@ -8,14 +8,14 @@ class AiFiring extends RAIN.Action.RAINAction
     function Start(ai:RAIN.Core.AI):void
 	{
         super.Start(ai);
-      	 aiShot = ai.Body.GetComponent("enemyFire");
+      	 //aiShot = ai.Body.GetComponent("enemyFire");
 	}
 
     function Execute(ai:RAIN.Core.AI):ActionResult
 	{	
 		//Debug.Log("Close Enough Man");
-        aiShot = ai.Body.GetComponent("enemyFire");
-        aiShot.Shoot();
+        //aiShot = ai.Body.GetComponent("enemyFire");
+        ai.Body.BroadcastMessage ("AIShoot");
         return ActionResult.SUCCESS;
 	}
 
