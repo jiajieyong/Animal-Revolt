@@ -10,8 +10,7 @@ function Update () {
 
 }
 
-function Shoot() {
-		Debug.Log("Close Enough Man");
+function AIShoot() {
 		var newBlast = Instantiate(theBullet, transform.position, transform.rotation);
 		newBlast.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
 		
