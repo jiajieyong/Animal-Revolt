@@ -40,10 +40,11 @@ public class searchLocation : RAINAction
 
 		ai.WorkingMemory.SetItem<Vector3> ("varMoveTo", loc);
 
-		if (_time > 500f) {
-			ai.WorkingMemory.SetItem("isSearching", false);
-			_time = 0;
-		}
+		//if (_time > 500f) {
+		//	ai.WorkingMemory.SetItem("isSearching", false);
+		//	Debug.Log ("timer stop once");
+		//	_time = 0;
+		//}
 		return ActionResult.SUCCESS;
     }
 
