@@ -40,6 +40,11 @@ function Update () {
 		dogMode = true;
 		SelectAmmo(5);
 	}
+	if (Input.GetKeyDown("7")){
+		cowMode = false;
+		dogMode = true;
+		SelectAmmo(6);
+	}
 }
 
 function SelectAmmo (index : int) { 
