@@ -9,7 +9,6 @@ var explosionPrefab : GameObject;
 function OnCollisionEnter (info: Collision){
  		 if ((info.transform.tag == "Enemy")){
 		  	 explode();
-  			 Debug.Log("Got hit leh");
   		}
   		yield WaitForSeconds(delay);
   		explode();
