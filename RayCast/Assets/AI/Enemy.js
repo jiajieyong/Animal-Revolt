@@ -2,10 +2,14 @@
 
 var health = 100;
 var speed = 5;
+var prefab : Transform;
 
 function Update () {
-	if (health <= 0)
-		DestroyObject(gameObject);
+	if (health <= 0) {
+		var animator = GetComponentInChildren(Animator);
+		animator.SetTrigger("Die");
+		DestroyObject(gameObject, 3);
+		}
 }
 
 

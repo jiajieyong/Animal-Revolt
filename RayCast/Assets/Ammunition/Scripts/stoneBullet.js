@@ -5,6 +5,12 @@ var direction : Vector3;
  
  function OnCollisionEnter (info : Collision)
  {	
- 	direction = transform.position - info.transform.position;
-    info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+ 	if (info.gameObject.tag == "Player" && this.gameObject.tag == "EnemyBullet") {
+    	info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+    	Destroy(this.gameObject);
+    }
+   else if (info.gameObject.tag == "Enemy" && this.gameObject.tag == "PlayerBullet") {
+    	info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+    	Destroy(this.gameObject);
+    }
  }
