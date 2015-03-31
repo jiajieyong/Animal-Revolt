@@ -87,7 +87,18 @@ function Update () {
 	if (Input.GetKeyDown ("e")) {
 		var count = vicinity.Count;
 		if (count != 0) {
-			var ob = vicinity[0];
+			
+			var chosen = -1;
+			var distance = 100000000;
+			for (var j = 0; j < count; j++) {
+				var obj = vicinity[j];
+				var theD = Vector3.Distance(transform.position, obj.transform.position);
+				if (theD < distance) {
+					chosen = j;
+				}
+			}
+			
+			var ob = vicinity[chosen];
 			var name = ob.name;
 			var nullIndex = -1;
 			var isNotAdded = true;
