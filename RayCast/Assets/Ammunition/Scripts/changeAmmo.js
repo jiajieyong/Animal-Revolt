@@ -1,55 +1,86 @@
 ﻿#pragma strict
 var ammo: GameObject[];
+var ammoMap: String[];
 static var cowMode = false;
 static var dogMode = false;
 
+private var prevIndex = 0;
+
 function Start () {
-	SelectAmmo(0);
+
 }
 
 function Update () {
-	//default ammunition - stones
-	if (Input.GetKeyDown("1")){
-		cowMode = false;
-		dogMode = false;
-		SelectAmmo(0);
-	}
-	//cow is the current ammunition
-	if (Input.GetKeyDown("2")){
-		cowMode = true;
-		dogMode = false;
-		SelectAmmo(1);
-	}
-	if (Input.GetKeyDown("3")){
-		cowMode = false;
-		dogMode = false;
-		SelectAmmo(2);
-	}
-	if (Input.GetKeyDown("4")){
-		cowMode = false;
-		dogMode = false;
-		SelectAmmo(3);
-	}
-	if (Input.GetKeyDown("5")){
-		cowMode = false;
-		dogMode = true;
-		SelectAmmo(4);
-	}
-	if (Input.GetKeyDown("6")){
-		cowMode = false;
-		dogMode = true;
-		SelectAmmo(5);
-	}
-	if (Input.GetKeyDown("7")){
-		cowMode = false;
-		dogMode = true;
-		SelectAmmo(6);
-	}
+
 }
 
-function SelectAmmo (index : int) { 
-	for (var obj: GameObject in ammo)
-		obj.SetActive(false);
-		
-	ammo[index].SetActive(true);
+function ActivateAmmo (index : int) { 
+	if (index != prevIndex) {
+		ammo[prevIndex].SetActive(false);
+		ammo[index].SetActive(true);
+		prevIndex = index;
+	}	
+}
+
+function animalToIndex(name : String) {
+	var animalIndex = 0;
+	for (var i = 0; i < ammoMap.length; i++) {
+		if (ammoMap[i] == name) {
+			animalIndex = i;
+			break;
+		}
+	}
+	
+	return animalIndex;
+}
+
+function SelectAmmo (name : String) {
+	var animalIndex = animalToIndex(name);
+	
+	switch ((animalIndex)) {
+		case 1:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(1);
+			break;
+		case 2:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(2);
+			break;
+		case 3:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(3);
+			break;
+		case 4:
+			cowMode = false;
+			dogMode = true;
+			ActivateAmmo(4);
+			break;
+		case 5:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(5);
+			break;
+		case 6:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(6);
+			break;
+		case 7:
+			cowMode = true;
+			dogMode = false;
+			ActivateAmmo(7);
+			break;
+		case 8:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(8);
+			break;
+		default:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(0);
+	}
 }

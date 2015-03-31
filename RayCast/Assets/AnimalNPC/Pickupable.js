@@ -22,4 +22,5 @@ function OnTriggerExit(other: Collider) {
 			ob.enabled = false;
 		} 
 		
+		
 }
