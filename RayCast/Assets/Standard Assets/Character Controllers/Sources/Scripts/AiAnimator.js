@@ -31,7 +31,7 @@ function Update () {
 	if (localVel.x != 0 || localVel.z != 0){
 		animator.SetFloat ("Forward", 1);
 		}
-	Debug.Log(localVel);
+	//Debug.Log(localVel);
 	
 	animator.SetBool ("Grounded", AIgrounded);
 	

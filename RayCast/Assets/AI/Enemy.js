@@ -9,7 +9,7 @@ function Update () {
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
 		DestroyObject(gameObject, 3);
-		}
+	}
 }
 
 
