@@ -2,6 +2,7 @@
 
 var theBullet : Rigidbody;
 var Speed = 20f;
+var sound : AudioClip;
  
  	 var radius = 0;
      var power = 10;
@@ -28,7 +29,7 @@ var Speed = 20f;
      {
          var clone = Instantiate(theBullet, transform.position, transform.rotation);
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
-		 audio.Play();	
+		 AudioSource.PlayClipAtPoint(sound, transform.position, 0.2);
          timer = Time.time + cooldown;
 
          Destroy (clone.gameObject, 2);
