@@ -4,13 +4,17 @@ var playerHealth : playerHealth;       // Reference to the player's heatlh.
 var enemy : GameObject;                // The enemy prefab to be spawned.
 var spawnTime : float = 5f;            // How long between each spawn.
 var spawnPoints : Transform[];         // An array of the spawn points this enemy can spawn from.
+var style : GUIStyle; 
+
 
 var spawnMode : SpawnType;
 var totalWaves : float = 3f;
 private var numWaves : float = 1f;
-var enemyDeathCount : float = 0f;
+private var enemyDeathCount : float = 0f;
 var spawn = true;
-var totalEnemies : float = 0f;
+private var totalEnemies : float = 0f;
+private var showLabel = false;
+private var startOfWave = true;
 
 
 function Start ()
@@ -40,10 +44,19 @@ function StartSpawn() {
 			case SpawnType.Wave:
 				if (numWaves <= totalWaves) {
 				
+					if(startOfWave) {
+						yield WaitForSeconds(1);
+						ToggleLable();
+						yield WaitForSeconds(3);
+						ToggleLable();
+						
+						startOfWave = false;
+					}
+					
 				
 					Debug.Log(enemyDeathCount);
 					
-					if (totalEnemies <= numWaves*5f && enemyDeathCount <= numWaves*5f) {
+					if (totalEnemies < numWaves*5f && enemyDeathCount <= numWaves*5f) {
 						yield WaitForSeconds(spawnTime);
 						Spawn();
 					}
@@ -53,7 +66,8 @@ function StartSpawn() {
 						enemyDeathCount = 0f;
 						totalEnemies = 0f;
 						numWaves++;
-						yield WaitForSeconds(7);
+						yield WaitForSeconds(5);
+						startOfWave = true;
 						break;
 					}
 					
@@ -105,5 +119,17 @@ function EnemyDeath() {
 	
 	if (spawnMode==SpawnType.Wave)
 		enemyDeathCount++;
+
+}
+
+function ToggleLable() {
+	showLabel = !showLabel;
+}
+
+function OnGUI () { 
+
+	if (showLabel) {
+		GUI.Label(Rect(Screen.width/2 - 50,Screen.height/2 - 25 ,100, 50), "WAVE " + numWaves, style); 
+	}
 
 }
