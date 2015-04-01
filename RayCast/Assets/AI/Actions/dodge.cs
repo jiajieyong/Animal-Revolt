@@ -28,11 +28,12 @@ public class dodge : RAINAction
 			loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-20f, 20f),
 			                   ai.Kinematic.Position.y,
 			                   ai.Kinematic.Position.z + Random.Range (-20f, 20f));
-			found = NavigationManager.Instance.GraphsForPoints (ai.Kinematic.Position,
+			found = NavigationManager.Instance.GraphForPoint (
 			                                                    loc, 
 			                                                    ai.Motor.StepUpHeight, 
 			                                                    NavigationManager.GraphType.Navmesh, 
 			                                                    ((BasicNavigator)ai.Navigator).GraphTags);
+
 		} while ((Vector3.Distance(ai.Kinematic.Position,loc) <5f) || (found.Count == 0));
 		
 		ai.WorkingMemory.SetItem<Vector3> ("dodgeTo", loc);
