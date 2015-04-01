@@ -197,85 +197,59 @@ function OnGUI () {
 }
 
 function ammoMap (ammotype : String) {
-	switch (ammotype) {
-		case "stone" : 
+		if (ammotype == "stone") {
 			return stone; 
-			break;
-		case "bull" : 
+		} else if (ammotype == "bull") {
 			return bull; 
-			break;
-		case "cat" : 
+		} else if (ammotype == "cat") {
 			return cat; 
-			break;
-		case "chicken" : 
+		} else if (ammotype == "chicken") {
 			return chicken; 
-			break;
-		case "cow" : 
+		} else if (ammotype == "cow") {
 			return cow; 
-			break;
-		case "dog" : 
+		} else if (ammotype == "dog") {
 			return dog; 
-			break;
-		case "frog" : 
+		} else if (ammotype == "frog") {
 			return frog; 
-			break;
-		case "goat" : 
+		} else if (ammotype == "goat") {
 			return goat; 
-			break;
-		case "horse" : 
+		} else if (ammotype == "horse") {
 			return horse; 
-			break;
-		case "rat" : 
+		} else if (ammotype == "rat") {
 			return rat; 
-			break;
-		case "sheep" : 
+		} else if (ammotype == "sheep") {
 			return sheep; 
-			break;
-		default : 
-			return blank; 
-			break;
-	}
+		} else {
+			return blank;
+		}
 }
 
 function amountOfAmmoToGet (ammotype : String) {
-	switch (ammotype) {
-		case "stone" : 
+	if (ammotype == "stone") {
 			return 100; 
-			break;
-		case "bull" : 
-			return 2;
-			break;
-		case "cat" : 
+		} else if (ammotype == "bull") {
+			return 2; 
+		} else if (ammotype == "cat") {
+			return 3; 
+		} else if (ammotype == "chicken") {
 			return 4; 
-			break;
-		case "chicken" : 
+		} else if (ammotype == "cow") {
+			return 10000; 
+		} else if (ammotype == "dog") {
+			return 3; 
+		} else if (ammotype == "frog") {
 			return 5; 
-			break;
-		case "cow" : 
+		} else if (ammotype == "goat") {
+			return 3; 
+		} else if (ammotype == "horse") {
+			return 3; 
+		} else if (ammotype == "rat") {
 			return 2; 
-			break;
-		case "dog" : 
-			return 3; 
-			break;
-		case "frog" : 
-			return 5; 
-			break;
-		case "goat" : 
-			return 3; 
-			break;
-		case "horse" : 
-			return 3; 
-			break;
-		case "rat" : 
-			return 1; 
-			break;
-		case "sheep" : 
+		} else if (ammotype == "sheep") {
 			return 2; 
-			break;
-		default : 
-			return 0; 
-			break;
-	}
+		} else {
+			return 0;
+		}
 }
 
 function chooseCamera() { 
