@@ -1,14 +1,17 @@
 ﻿#pragma strict
 
+var EnemyManager : EnemyManager;
 var health = 100;
 var speed = 5;
 var prefab : Transform;
+
 
 function Update () {
 	if (health <= 0) {
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
-		DestroyObject(gameObject, 3);
+		EnemyManager.enemyDeathCount++;
+		DestroyObject(gameObject, 2);
 	}
 }
 

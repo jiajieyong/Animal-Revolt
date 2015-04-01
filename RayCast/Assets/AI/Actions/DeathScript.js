@@ -20,7 +20,7 @@ class DeathScript extends RAIN.Action.RAINDecision
 				  
         var death = ai.Body.GetComponent("Enemy");
 		if (death.health <= 0){
-		ai.WorkingMemory.SetItem<bool> ("Dead", true);
+		//ai.WorkingMemory.SetItem<bool> ("Dead", true);
 		Debug.Log("this is dying now");
 		}
 		
