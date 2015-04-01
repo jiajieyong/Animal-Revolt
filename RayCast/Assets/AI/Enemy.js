@@ -1,11 +1,15 @@
 ﻿#pragma strict
 
+var EnemyManager : EnemyManager;
 var health = 100;
 var speed = 5;
 
+
 function Update () {
-	if (health <= 0)
+	if (health <= 0) {
+		EnemyManager.enemyDeathCount++;
 		DestroyObject(gameObject);
+	}
 }
 
 
