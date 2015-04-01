@@ -30,6 +30,7 @@ RayCast/*.booproj
 Icon?
 ehthumbs.db
 [Tt]humbs.db
+*.meta
 RayCast/Assets/osVer.unity
 RayCast/Assets/memoryLeak.cs
 RayCast/game_Data/Mono/etc/mono/1.0/DefaultWsdlHelpGenerator.aspx
