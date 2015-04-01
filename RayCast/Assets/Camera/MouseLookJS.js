@@ -29,6 +29,15 @@
 
 	function Update ()
 	{
+		if (changeAmmo.cowMode) {
+			minimumY = 0;
+			maximumY = 0;
+			rotationY = 0;
+		} 
+		else {
+			minimumY = -45;
+			maximumY = 90;
+		}
 
 		if (axes == RotationAxes.MouseXAndY)
 		{

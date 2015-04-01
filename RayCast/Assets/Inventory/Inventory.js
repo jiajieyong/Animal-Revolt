@@ -234,7 +234,7 @@ function amountOfAmmoToGet (ammotype : String) {
 		} else if (ammotype == "chicken") {
 			return 4; 
 		} else if (ammotype == "cow") {
-			return 10000; 
+			return 2; 
 		} else if (ammotype == "dog") {
 			return 3; 
 		} else if (ammotype == "frog") {

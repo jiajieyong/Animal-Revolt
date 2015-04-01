@@ -1,33 +1,20 @@
 ﻿#pragma strict
 
-var enemyManager : GameObject;
+var EnemyManager : EnemyManager;
 var health = 100;
 var speed = 5;
 var prefab : Transform;
-var isDead = false;
+
 
 function Update () {
-	if (isDead)
-		return;
-
 	if (health <= 0) {
-	
-		dead();
-		
-		enemyManager.SendMessage("EnemyDeath");
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
+		EnemyManager.enemyDeathCount++;
 		DestroyObject(gameObject, 2);
 	}
 }
 
-function dead() {
-	isDead = true;
-}
-
-function updateEM(a:GameObject) {
-	enemyManager = a;
-}
 
 function ApplyDamage(damage: int){
 	//var step = speed * Time.deltaTime;
@@ -35,5 +22,5 @@ function ApplyDamage(damage: int){
 	//var newDir = Vector3.RotateTowards(transform.forward, direction, step, 0.0);
     //transform.rotation = Quaternion.LookRotation(newDir);
     health -= damage;
-
+    Debug.Log(health);
 }
