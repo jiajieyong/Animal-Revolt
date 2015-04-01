@@ -11,7 +11,7 @@ function Update () {
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
 		EnemyManager.enemyDeathCount++;
-		DestroyObject(gameObject, 3);
+		DestroyObject(gameObject, 2);
 	}
 }
 
