@@ -41,7 +41,7 @@ function OnGUI() {
 	for (var i = 0; i < count; i++) {
 		var msg = msgList[0];
 		
-		if (msg._time > 2) {
+		if (msg._time > 1.5) {
 			msgList.RemoveAt(0);
 		}
 		
@@ -52,13 +52,19 @@ function OnGUI() {
 		if (msg._transform != null) {
 			var pos = msg._transform.position;
 
-		
-		var currentCam = chooseCamera();
-		var heading = pos - currentCam.transform.position;
-		if (Vector3.Dot(currentCam.transform.forward, heading) > 0) {
-    		var screenPos : Vector3 = currentCam.WorldToScreenPoint(pos);
-			GUI.Label(Rect(screenPos.x, Screen.height - screenPos.y - 50,60, 60), "" + msg._dmg, style);;
-		}
+			var currentCam = chooseCamera();
+			var heading = pos - currentCam.transform.position;
+			if (Vector3.Dot(currentCam.transform.forward, heading) > 0) {
+				var dist = Vector3.Distance(transform.position, pos);
+				var size = msg._transform.collider.bounds.size;
+				var offset = Vector3(0, size.y, 0);
+				var fontSize = 30 + (50/Mathf.Sqrt(dist));
+				style.fontSize = fontSize;
+				style.normal.textColor.a = (1.5/msg._time);
+				var floatingOffset = 50*(msg._time/1.5);
+    			var screenPos : Vector3 = currentCam.WorldToScreenPoint(pos + offset);
+				GUI.Label(Rect(screenPos.x, Screen.height - screenPos.y - floatingOffset,60, 60), "" + msg._dmg, style);;
+			}
 		}
 		msg._time += time;
 	}
