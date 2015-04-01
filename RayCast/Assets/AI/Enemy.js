@@ -3,12 +3,15 @@
 var EnemyManager : EnemyManager;
 var health = 100;
 var speed = 5;
+var prefab : Transform;
 
 
 function Update () {
 	if (health <= 0) {
+		var animator = GetComponentInChildren(Animator);
+		animator.SetTrigger("Die");
 		EnemyManager.enemyDeathCount++;
-		DestroyObject(gameObject);
+		DestroyObject(gameObject, 3);
 	}
 }
 

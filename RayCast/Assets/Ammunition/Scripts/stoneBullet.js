@@ -2,6 +2,10 @@
  
 var TheDamage = 100;
 var direction : Vector3;
+
+function Start () {
+	rigidbody.AddTorque(Vector3(10.0, 0, 10.0));
+}
  
  function OnCollisionEnter (info : Collision)
  {	
