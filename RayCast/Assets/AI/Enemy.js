@@ -17,7 +17,7 @@ function Update () {
 		enemyManager.SendMessage("EnemyDeath");
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
-		DestroyObject(gameObject, 2);
+		DestroyObject(gameObject, 4);
 	}
 }
 
