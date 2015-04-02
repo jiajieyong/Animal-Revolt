@@ -14,7 +14,7 @@ private var enemyDeathCount : float = 0f;
 var spawn = true;
 private var totalEnemies : float = 0f;
 private var showLabel = false;
-var startOfWave = false;
+var startOfWave = true;
 
 
 function Start ()
@@ -30,7 +30,6 @@ function StartSpawn() {
 
 		
 	while (spawn) {
-		Debug.Log("spawn continues");
 		switch(spawnMode) {
 			case SpawnType.Normal: 
 				yield WaitForSeconds(spawnTime);
@@ -43,7 +42,6 @@ function StartSpawn() {
 			
 			case SpawnType.Wave:
 			
-				startOfWave = true;
 				
 				if (numWaves <= totalWaves) {
 				
@@ -56,7 +54,6 @@ function StartSpawn() {
 					}
 					
 				
-					Debug.Log(enemyDeathCount);
 					
 					if (totalEnemies < numWaves*5f && enemyDeathCount <= numWaves*5f) {
 						yield WaitForSeconds(spawnTime);
@@ -64,7 +61,6 @@ function StartSpawn() {
 					}
 					
 					if (enemyDeathCount >= numWaves*5f) {
-						Debug.Log("here");
 						enemyDeathCount = 0f;
 						totalEnemies = 0f;
 						numWaves++;
@@ -100,16 +96,12 @@ function StartSpawn() {
 
 function Spawn ()
 {
-    // If the player has no health left...
     if(playerHealth.playerHealth <= 0f)
     {
-        // ... exit the function.
         return;
     }
 
-    // Find a random index between zero and one less than the number of spawn points.
     var spawnPointIndex : int = Random.Range (0, spawnPoints.Length);
-    // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
     var clone = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     
     clone.GetComponent(Enemy).updateEM(gameObject);
