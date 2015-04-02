@@ -3,6 +3,7 @@ var playerHealth = 100;
 var heart : Texture2D;
 
 var style : GUIStyle; 
+var style1 : GUIStyle; 
 
 function Start () {
 
