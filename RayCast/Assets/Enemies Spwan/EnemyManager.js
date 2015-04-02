@@ -45,7 +45,6 @@ function StartSpawn() {
 				if (numWaves <= totalWaves) {
 				
 					if(startOfWave) {
-						yield WaitForSeconds(1);
 						ToggleLable();
 						yield WaitForSeconds(3);
 						ToggleLable();

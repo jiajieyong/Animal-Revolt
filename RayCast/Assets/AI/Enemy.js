@@ -23,6 +23,9 @@ function Update () {
 
 function dead() {
 	isDead = true;
+	gameObject.rigidbody.useGravity = false;
+	gameObject.rigidbody.isKinematic = true;
+	gameObject.collider.isTrigger = true;
 }
 
 function updateEM(a:GameObject) {
