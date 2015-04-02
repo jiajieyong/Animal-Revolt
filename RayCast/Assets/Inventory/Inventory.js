@@ -16,6 +16,7 @@ var horse : Texture2D;
 var rat : Texture2D;
 var sheep : Texture2D;
 var blank : Texture2D;
+var inactive : Texture2D;
 
 var ebutton : Texture2D;
 var select : Texture2D;
@@ -33,6 +34,7 @@ private var vicinity : List.<GameObject> = new List.<GameObject>();
 private var inventory : String[];
 private var ammoAmount : int[];
 private var selected : int;
+private var reloadTime : float;
 
 function Start () {
 	inventory = new String[inventorySize];
@@ -44,8 +46,10 @@ function Start () {
 	}
 	
 	inventory[3] = "stone";
+	ammoAmount[3] = 18;
 	
 	selected = 4;
+	reloadTime = 0;
 }
 
 function Update () {
@@ -130,12 +134,32 @@ function Update () {
 	}
 	
 	if (Input.GetMouseButtonDown(0)){
-		if (selected < 4) {
-			ammoAmount[selected - 1]--;
+		ammoAmount[selected - 1]--;
 			
-			if (ammoAmount[selected - 1] == -1) {
-				inventory[selected - 1] = "null";
+		if (ammoAmount[selected - 1] == -1) {
+			inventory[selected - 1] = "null";
+		}
+	}
+	
+	if (Input.GetKeyDown ("r")) {
+		ammoAmount[3] = 0;
+		inventory[selected - 1] = "null";
+	}
+	
+	if (ammoAmount[3] < 1) {
+		var ob1 = gameObject.GetComponent(Reloading);
+
+		if (reloadTime < 2) {
+			if (!ob1.isLoading()) {
+				ob1.reload();
 			}
+			reloadTime = reloadTime + Time.deltaTime;
+		} else {
+			Debug.Log("hi");
+			ob1.reload();
+			reloadTime = 0;
+			ammoAmount[3] = 18;
+			inventory[3] = "stone";
 		}
 	}
 	
@@ -161,14 +185,19 @@ function OnGUI () {
 		for (var i = 0; i < inventorySize; i++) {
 			GUI.DrawTexture(Rect(Screen.width * 0.5 + slotPosX,Screen.height - 93 ,60, 60), slot);
 			
-			if (i == 3) {
-				GUI.DrawTexture(Rect(Screen.width * 0.5 + slotPosX,Screen.height - 93 ,60, 60), ammoMap(inventory[i]));
-			}
-			
 			if (ammoAmount[i] > 0) {
 				GUI.DrawTexture(Rect(Screen.width * 0.5 + slotPosX,Screen.height - 93 ,60, 60), ammoMap(inventory[i]));
 				GUI.DrawTexture(Rect(Screen.width * 0.5 + slotPosX,Screen.height - 93 ,60, 60), amount);
-				GUI.Label(Rect(Screen.width * 0.5 + slotPosX + 46,Screen.height - 93 + 43 ,60, 60), "" + (ammoAmount[i]), amountStyle);
+				
+				var shift = 0;
+				
+				if (ammoAmount[i] >= 10) {
+					shift = 2;
+				}
+				
+				GUI.Label(Rect(Screen.width * 0.5 - shift + slotPosX + 46,Screen.height - 93 + 43 ,60, 60), "" + (ammoAmount[i]), amountStyle);
+			} else {
+				GUI.DrawTexture(Rect(Screen.width * 0.5 + slotPosX,Screen.height - 93 ,60, 60), inactive);
 			}
 			
 			if ((selected - 1) == i) {
