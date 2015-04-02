@@ -43,7 +43,7 @@ function Death () {
 
 
     // After 2 seconds destory the enemy.
-    Destroy (gameObject, 0f);
+    Destroy (gameObject, 3f);
 
 }
 
