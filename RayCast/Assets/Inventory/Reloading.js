@@ -22,6 +22,7 @@ function Update () {
 
 function OnGUI() {
 	if (isReloading) {
+		GUI.depth = 0;
 		var matrixBackup : Matrix4x4 = GUI.matrix;
     	GUIUtility.RotateAroundPivot(angle, pivot);
     	GUI.DrawTexture(rect, tex);

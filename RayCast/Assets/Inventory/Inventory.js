@@ -155,7 +155,6 @@ function Update () {
 			}
 			reloadTime = reloadTime + Time.deltaTime;
 		} else {
-			Debug.Log("hi");
 			ob1.reload();
 			reloadTime = 0;
 			ammoAmount[3] = 18;
