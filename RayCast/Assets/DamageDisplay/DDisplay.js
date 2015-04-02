@@ -78,11 +78,14 @@ function OnGUI() {
 					var floatingOffset = 50*(msg._time/1.5);
     			
     				//Draw
-					GUI.Label(Rect(screenPos.x, Screen.height - screenPos.y - floatingOffset,60, 60), "" + msg._dmg, style);;
+					GUI.Label(Rect(screenPos.x, Screen.height - screenPos.y - floatingOffset,60, 60), "" + -msg._dmg, style);;
 				}
 			}
 		
 			msg._time += time;
+		} else if (msg._target == "player") {
+			var pos1 = msg._transform.position;
+			
 		}
 	}
 }
