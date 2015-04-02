@@ -1,4 +1,4 @@
-	#pragma strict
+#pragma strict
 
 var playerHealth : playerHealth;       // Reference to the player's heatlh.
 var enemy : GameObject;                // The enemy prefab to be spawned.
@@ -22,7 +22,6 @@ function Start ()
 	var enemyNum : float;
 	StartCoroutine("StartSpawn");
 	
-	
 }
 
 function StartSpawn() {
@@ -32,11 +31,13 @@ function StartSpawn() {
 	while (spawn) {
 		switch(spawnMode) {
 			case SpawnType.Normal: 
+			/**
 				yield WaitForSeconds(spawnTime);
 				Spawn();
 				
 				if (playerHealth.playerHealth <= 0f) 
 					spawn = false;
+			**/
 					
 				break;
 			
