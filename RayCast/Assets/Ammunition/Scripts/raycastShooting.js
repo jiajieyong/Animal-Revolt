@@ -31,15 +31,15 @@ function Update () {
 		tpsON = !tpsON;
 	}
 	
-	if (!changeAmmo.cowMode){
+	//if (!changeAmmo.cowMode){
 		//Destroy (clone.gameObject);
-		if (hasCreated) {
+	/*	if (hasCreated) {
 			clone = GameObject.Find("LandingZone(Clone)");
 			Destroy(clone);
 			hasCreated = false;
 			zMovement = 4.5;
 		}
-		
+	*/	
 		if (Input.GetMouseButtonDown(0)){
 			if (Physics.Raycast (FPSray, hit) && !tpsON) {
 				var hitpoint = hit.point;
@@ -54,7 +54,7 @@ function Update () {
 			
 			Debug.DrawRay (transform.position, transform.forward * 10, Color.red);
 		}
-	}
+	} /*
 	else if (changeAmmo.cowMode){
 			if (!hasCreated) {
 		   	clone = Instantiate(projectileCrossHair, transform.position + transform.forward * 3.5 + transform.up*2, transform.rotation);
@@ -98,7 +98,7 @@ function Update () {
 				
 			}		
 	}
-}
+}*/
 
 function fireDog(target : RaycastHit){
 	if (target.collider != null && changeAmmo.dogMode) {

@@ -14,7 +14,7 @@ private var enemyDeathCount : float = 0f;
 var spawn = true;
 private var totalEnemies : float = 0f;
 private var showLabel = false;
-var startOfWave = true;
+var startOfWave = false;
 
 
 function Start ()
@@ -42,10 +42,12 @@ function StartSpawn() {
 				break;
 			
 			case SpawnType.Wave:
+			
+				startOfWave = true;
+				
 				if (numWaves <= totalWaves) {
 				
 					if(startOfWave) {
-						yield WaitForSeconds(1);
 						ToggleLable();
 						yield WaitForSeconds(3);
 						ToggleLable();

@@ -26,6 +26,6 @@ function ApplyDamage(damage: int){
 }
 
 function OnGUI () { 
-		GUI.Label(Rect(Screen.width * 0.5 + 200,Screen.height - 100 ,100, 100), "" + payLoadHealth, style); 
+		GUI.Label(Rect(Screen.width * 0.5 + 400,Screen.height - 100 ,100, 100), "" + payLoadHealth, style); 
         GUI.DrawTexture(Rect(Screen.width * 0.5 + 310,Screen.height - 110 ,80,80), truck);
 }
