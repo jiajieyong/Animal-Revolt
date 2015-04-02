@@ -36,7 +36,6 @@ public class searchLocation : RAINAction
 			                                                  ai.Motor.StepUpHeight, 
 			                                                  NavigationManager.GraphType.Navmesh, 
 			                                                  ((BasicNavigator)ai.Navigator).GraphTags);
-
 				} while ((Vector3.Distance(ai.Kinematic.Position,loc) <5f) || (found.Count == 0));
 
 		ai.WorkingMemory.SetItem<Vector3> ("varMoveTo", loc);
