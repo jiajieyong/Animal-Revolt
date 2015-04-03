@@ -1,7 +1,6 @@
 ﻿#pragma strict
 
 var frogSpawnPoints : Transform[];
-var ammoInfo : AmmoInfo;
 var frog : GameObject;
 
 var startOfGame = true;
@@ -19,20 +18,23 @@ function StartingSpawn(ammoTransform : Transform, ammoName : String) {
 	var clone = Instantiate (frog, ammoTransform.position, ammoTransform.rotation);
   	clone.name = ammoName;
   	
-  	clone.GetComponent(AnimalSPScript).UpdateAM(gameObject, ammoInfo);
-  	
 }
 
-function Spawn (info : AmmoInfo)
+function Spawn (go : GameObject)
 {
-	var t = info.ammoTransform.position;
-	var r = info.ammoTransform.rotation;
-	var n = info.ammoName;
+	var t = go.transform.position;
+	var r = go.transform.rotation;
+	var n = go.name;
 	
 	yield WaitForSeconds(5);
 	
     var clone = Instantiate (frog, t, r);
   	clone.name = n;
 
-  	clone.GetComponent(AnimalSPScript).UpdateAM(gameObject, info);
+}
+
+function PickedUp(go : GameObject) {
+
+	Spawn(go);
+
 }
