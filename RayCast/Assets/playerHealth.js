@@ -36,7 +36,8 @@ function ApplyDamage(damage: int){
 		tpsCamera.GetComponent(MouseLookJS).enabled = false;
 		tpsCamera.GetComponent(crosshair).enabled = false;
 		GameObject.Find("Inventory").active = false;
-		GameObject.Find("Payload").GetComponent(payloadHealth).enabled = false;
+		if (GameObject.Find("Payload") != null)
+			GameObject.Find("Payload").GetComponent(payloadHealth).enabled = false;
 		
    		
    		// swap to full body model to animate
