@@ -120,7 +120,7 @@ function OnGUI () {
 
 }
 
-// for wave
+// for wave enemy counter
 function EnemyDeath() {
 	
 	if (spawnMode==SpawnType.Wave)
@@ -128,7 +128,7 @@ function EnemyDeath() {
 
 }
 
-// for normal
+// for normal enemy counter
 function EnemyCounter(increase : float) {
 
 	if(spawnMode == SpawnType.Normal) {

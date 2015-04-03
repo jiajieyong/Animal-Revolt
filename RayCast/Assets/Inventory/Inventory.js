@@ -110,12 +110,18 @@ function Update () {
 			
 			for (var i = inventorySize - 2; i >= 0; i--) {
 				if (inventory[i] == name) {
+					
+					ob.GetComponent(AnimalSPScript).PickedUp(ob);
+				
 					var ammoToGet = amountOfAmmoToGet(name);
 					inventory[i] = name;
 					ammoAmount[i] += ammoToGet;
 					Destroy(ob);
 					vicinity.Remove(ob);
 					isNotAdded = false;
+					
+					
+					
 					break;
 				}
 				
@@ -125,6 +131,9 @@ function Update () {
 			}
 			
 			if (nullIndex >= 0 && isNotAdded) {
+						
+					ob.GetComponent(AnimalSPScript).PickedUp(ob);
+					
 					ammoToGet = amountOfAmmoToGet(name);
 					inventory[nullIndex] = name;
 					ammoAmount[nullIndex] = ammoToGet;
