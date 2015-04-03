@@ -8,11 +8,6 @@ var player : GameObject;
 
 function OnTriggerEnter (col : Collider) {
 	
-//	if(triggered)
-//		return;
-		
-//	triggered = true;
-	
 	if ((col.tag == "Player") && (enemyManager.spawnMode == SpawnType.Normal)) {
 		StartCoroutine("Spawn");
 	}
@@ -21,11 +16,6 @@ function OnTriggerEnter (col : Collider) {
 }
 
 function OnTriggerExit (col : Collider) {
-
-//	if(!triggered)
-//		return;
-		
-//	triggered = false;
 	
 	if ((col.tag == "Player") && (enemyManager.spawnMode == SpawnType.Normal)) {
 		StopCoroutine("Spawn");
@@ -35,10 +25,14 @@ function OnTriggerExit (col : Collider) {
 function Spawn ()
 {
 	while(true) {
-		var clone = Instantiate (enemy, transform.position, transform.rotation); 
-    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject);
-    	yield WaitForSeconds(enemyManager.spawnTime);
-    	yield new WaitForEndOfFrame ();
+		if(enemyManager.currentEnemyCount < enemyManager.maxEnemyCount) {
+			var clone = Instantiate (enemy, transform.position, transform.rotation); 
+	    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject);
+	    	enemyManager.SendMessage("EnemyCounter", 1);
+	    	yield WaitForSeconds(enemyManager.spawnTime);
+	    }
+	    
+	    yield new WaitForEndOfFrame ();
 	}
     
     

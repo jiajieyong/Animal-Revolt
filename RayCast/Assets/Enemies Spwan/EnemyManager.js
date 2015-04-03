@@ -6,14 +6,12 @@ var spawnTime : float = 5f;            // How long between each spawn.
 var spawnPoints : Transform[];         // An array of the spawn points this enemy can spawn from.
 var style : GUIStyle; 
 var player: GameObject;
-
-
 var spawnMode : SpawnType;
 var totalWaves : float = 3f;
-
 var spawn = true;
-
 var startOfWave = true;
+var currentEnemyCount = 0f;
+var maxEnemyCount = 20f;
 
 private var totalEnemies : float = 0f;
 private var showLabel = false;
@@ -76,9 +74,6 @@ function StartSpawn() {
 					break;
 					
 					
-					
-					
-					
 				} else {
 					spawn = false;
 				}
@@ -113,13 +108,6 @@ function Spawn ()
     totalEnemies++;
 }
 
-function EnemyDeath() {
-	
-	if (spawnMode==SpawnType.Wave)
-		enemyDeathCount++;
-
-}
-
 function ToggleLable() {
 	showLabel = !showLabel;
 }
@@ -129,5 +117,28 @@ function OnGUI () {
 	if (showLabel) {
 		GUI.Label(Rect(Screen.width/2 - 50,Screen.height/2 - 25 ,100, 50), "WAVE " + numWaves, style); 
 	}
+
+}
+
+// for wave
+function EnemyDeath() {
+	
+	if (spawnMode==SpawnType.Wave)
+		enemyDeathCount++;
+
+}
+
+// for normal
+function EnemyCounter(increase : float) {
+
+	if(spawnMode == SpawnType.Normal) {
+		if (increase) {
+			currentEnemyCount++;
+		} else {
+			currentEnemyCount--;
+		}
+	}
+	
+
 
 }

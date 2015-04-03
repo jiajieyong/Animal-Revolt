@@ -28,6 +28,7 @@ var amountStyle : GUIStyle;
 var tpsCamera: Camera;
 var fpsCamera: Camera;
 var ammoChanger : GameObject;
+var detonator: GameObject;
 
 private var tpsON = false; 
 private var vicinity : List.<GameObject> = new List.<GameObject>();
@@ -168,6 +169,10 @@ function Update () {
 function OnTriggerEnter (other : Collider) {
 		if (other.CompareTag("ammo")) {
 			vicinity.Add(other.gameObject);
+		}
+		else if (other.CompareTag("Detonator")){
+			detonator.SetActive(true);
+			Destroy(other.gameObject);
 		}
 }
 
