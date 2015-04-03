@@ -23,7 +23,6 @@ function Update () {
 	
 	// Kill off enemy if too far away from Player
 	if (Vector3.Distance(transform.position, player.transform.position) > 70) {
-		Debug.Log("gone");
 		DestroyObject(gameObject);
 	}
 }
