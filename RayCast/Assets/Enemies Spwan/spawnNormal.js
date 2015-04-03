@@ -5,7 +5,7 @@ var enemy : GameObject;
 
 function OnTriggerEnter (col : Collider) {
 	
-	if (col.tag == "Player" && (enemyManager.spawnMode == SpawnType.Normal)) {
+	if ((col.tag == "Player" || col.tag == "Truck") && (enemyManager.spawnMode == SpawnType.Normal)) {
 		StartCoroutine("Spawn");
 	}
 	
@@ -13,7 +13,7 @@ function OnTriggerEnter (col : Collider) {
 }
 
 function OnTriggerExit (col : Collider) {
-	if (col.tag == "Player" && (enemyManager.spawnMode == SpawnType.Normal)) {
+	if ((col.tag == "Player" || col.tag == "Truck") && (enemyManager.spawnMode == SpawnType.Normal)) {
 		StopCoroutine("Spawn");
 	}
 }
