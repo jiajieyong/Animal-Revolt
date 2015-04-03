@@ -5,17 +5,20 @@ var enemy : GameObject;                // The enemy prefab to be spawned.
 var spawnTime : float = 5f;            // How long between each spawn.
 var spawnPoints : Transform[];         // An array of the spawn points this enemy can spawn from.
 var style : GUIStyle; 
+var player: GameObject;
 
 
 var spawnMode : SpawnType;
 var totalWaves : float = 3f;
-private var numWaves : float = 1f;
-private var enemyDeathCount : float = 0f;
+
 var spawn = true;
-private var totalEnemies : float = 0f;
-private var showLabel = false;
+
 var startOfWave = true;
 
+private var totalEnemies : float = 0f;
+private var showLabel = false;
+private var numWaves : float = 1f;
+private var enemyDeathCount : float = 0f;
 
 function Start ()
 {
@@ -105,7 +108,7 @@ function Spawn ()
     var spawnPointIndex : int = Random.Range (0, spawnPoints.Length);
     var clone = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     
-    clone.GetComponent(Enemy).updateEM(gameObject);
+    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
     
     totalEnemies++;
 }

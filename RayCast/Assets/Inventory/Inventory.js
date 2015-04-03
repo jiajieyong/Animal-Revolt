@@ -144,7 +144,7 @@ function Update () {
 	
 	if (Input.GetKeyDown ("r")) {
 		ammoAmount[3] = 0;
-		inventory[selected - 1] = "null";
+		inventory[3] = "null";
 	}
 	
 	if (ammoAmount[3] < 1) {
