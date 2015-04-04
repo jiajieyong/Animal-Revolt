@@ -6,6 +6,7 @@ var diePrefab : GameObject;
 var tpsCamera: Camera;
 var fpsCamera: Camera;
 var isDead = false;
+var immortal = true;
 
 private var msgList = new List.<Container>();
 
@@ -18,17 +19,16 @@ function Update () {
 }
 
 function ApplyDamage(damage: int){
-	if (playerHealth - damage > 0 && isDead == false) {
+	if (playerHealth - damage > 0 && isDead == false && immortal == false) {
 	    playerHealth -= damage;
 	    var c : Container = new Container(damage, null, null, "");
 	    msgList.Add(c);
-	} else if (playerHealth - damage <= 0 && isDead == false) {
+	} else if (playerHealth - damage <= 0 && isDead == false && immortal == false) {
     	isDead = true;
     	
     	// watch yourself die
     	fpsCamera.camera.enabled = false;
 		tpsCamera.camera.enabled = true;
-		Screen.showCursor = true;
 		
 		GetComponent(CharacterController).enabled = false;
 		GetComponent(FPSInputController).enabled = false;
