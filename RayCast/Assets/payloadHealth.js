@@ -13,16 +13,20 @@ function Start () {
 function Update () {
 	if (payLoadHealth <= 0)
 		explosion();
+		
 }
 
 function explosion(){
-	 Instantiate(explosionPrefab, transform.position, transform.rotation);
-	 AudioSource.PlayClipAtPoint(sound, transform.position);
-	 Destroy(gameObject);
+	Instantiate(explosionPrefab, transform.position, transform.rotation);
+	AudioSource.PlayClipAtPoint(sound, transform.position);
+	Destroy(gameObject);
+	
+	// show restart menu
+	Application.LoadLevelAdditive (4);
 }
 
 function ApplyDamage(damage: int){
-    payLoadHealth -= damage;
+	payLoadHealth -= damage;
 }
 
 function OnGUI () { 

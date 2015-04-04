@@ -6,7 +6,7 @@ var diePrefab : GameObject;
 var tpsCamera: Camera;
 var fpsCamera: Camera;
 var isDead = false;
-var immortal = true;
+var immortal = false;
 
 private var msgList = new List.<Container>();
 
