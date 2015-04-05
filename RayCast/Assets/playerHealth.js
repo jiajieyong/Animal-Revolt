@@ -5,6 +5,7 @@ var style : GUIStyle;
 var diePrefab : GameObject;
 var tpsCamera: Camera;
 var fpsCamera: Camera;
+var deathCamera: Camera;
 var isDead = false;
 var immortal = false;
 
@@ -28,11 +29,13 @@ function ApplyDamage(damage: int){
     	
     	// watch yourself die
     	fpsCamera.camera.enabled = false;
-		tpsCamera.camera.enabled = true;
+		tpsCamera.camera.enabled = false;
+		deathCamera.camera.enabled = true;
 		
 		GetComponent(CharacterController).enabled = false;
 		GetComponent(FPSInputController).enabled = false;
 		GetComponent(MouseLook).enabled = false;
+		GetComponent(switchCam).enabled = false;
 		tpsCamera.GetComponent(MouseLookJS).enabled = false;
 		tpsCamera.GetComponent(crosshair).enabled = false;
 		GameObject.Find("Inventory").active = false;
@@ -49,7 +52,7 @@ function ApplyDamage(damage: int){
     	var obj = Instantiate(diePrefab, pos ,rot);
     	obj.GetComponentInChildren(Animator).SetTrigger("Die");
     	
-    	yield WaitForSeconds (2);
+    	yield WaitForSeconds (2.5f);
     	// show restart menu
 		Application.LoadLevelAdditive (4); 
 		
