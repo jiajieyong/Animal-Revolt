@@ -5,6 +5,7 @@ var health = 100;
 var speed = 5;
 var prefab : Transform;
 var isDead = false;
+var player : GameObject;
 
 function Update () {
 	if (isDead)
@@ -17,7 +18,14 @@ function Update () {
 		enemyManager.SendMessage("EnemyDeath");
 		var animator = GetComponentInChildren(Animator);
 		animator.SetTrigger("Die");
+		enemyManager.SendMessage("EnemyCounter", 0);
 		DestroyObject(gameObject, 4);
+	}
+	
+	// Kill off enemy if too far away from Player
+	if (Vector3.Distance(transform.position, player.transform.position) > 60) {
+		enemyManager.SendMessage("EnemyCounter", 0);
+		DestroyObject(gameObject);
 	}
 }
 
@@ -30,8 +38,9 @@ function dead() {
 	ai.enabled = false;
 }
 
-function updateEM(a:GameObject) {
-	enemyManager = a;
+function updateEnemy(em:GameObject, p:GameObject) {
+	enemyManager = em;
+	player = p;
 }
 
 function ApplyDamage(damage: int){
