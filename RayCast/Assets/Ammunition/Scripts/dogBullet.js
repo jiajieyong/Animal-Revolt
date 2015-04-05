@@ -1,35 +1,34 @@
 ﻿
 #pragma strict
-
-var target : Transform;
-var agent : NavMeshAgent;
-var speed = 0.5;
-var maxSpeed = 3;
-
+var target : GameObject;
+var speed : float = 0.5;
+var maxSpeed : float = 3;
+var damageDisplay : GameObject;
+var origin : Vector3;
+var TheDamage : int;
+private var isNotYetUpdated = false;
+private var updated = false;
 function Start () {
-	agent = GetComponent(NavMeshAgent);
-	agent.speed = this.speed;
-	
-	var targetPos = target.transform.position;
-	agent.SetDestination(targetPos);
+	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
 }
 
 function Update () {
-	if (agent.speed < 3) {
-		speed = Mathf.Pow(speed, 1.3);
-		agent.speed += speed;
+	if (isNotYetUpdated) {
+		GetComponentInChildren(AIRig).AI.WorkingMemory.SetItem("target", target, GameObject);
+		isNotYetUpdated = false;
 	}
-	var targetPos = target.transform.position;
-	Debug.Log(target.name);
-	agent.SetDestination(targetPos);
 }
 
-function OnCollisionEnter (info : Collision)
- {	
-     info.transform.SendMessage("ApplyDamage", 10, SendMessageOptions.DontRequireReceiver);
-     Destroy(gameObject);
+function OnCollisionEnter (info : Collision) {
+	if (info.collider.CompareTag("Enemy")) {	
+ 		var containerE = new Container(TheDamage, info.collider.transform, "enemy", "instant");
+		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
+		info.transform.SendMessage("ApplyDamage", 10, SendMessageOptions.DontRequireReceiver);
+		Destroy(gameObject);
+	}
  }
 
- function updateTarget(target : Transform) {
+ function updateTarget(target : GameObject) {
  	this.target = target;
+ 	isNotYetUpdated = true;
  }

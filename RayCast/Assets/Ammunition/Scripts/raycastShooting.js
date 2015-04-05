@@ -42,11 +42,13 @@ function Update () {
 	*/	
 		if (Input.GetMouseButtonDown(0)){
 			if (Physics.Raycast (FPSray, hit) && !tpsON) {
+				Debug.Log(hit.collider.name);
 				var hitpoint = hit.point;
 				transform.LookAt(hitpoint);
 				fireDog(hit);
 			}
 	 		if (Physics.Raycast (ray, hit) && tpsON){
+	 			Debug.Log(hit.collider.name);
 	 			var hitposition = hit.point;	 		
 	 			transform.LookAt(hitposition);		
 	 			fireDog(hit);	

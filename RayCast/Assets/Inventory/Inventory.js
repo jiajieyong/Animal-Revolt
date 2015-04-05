@@ -134,10 +134,12 @@ function Update () {
 	}
 	
 	if (Input.GetMouseButtonDown(0)){
+		if (!(inventory[selected - 1] == "dog")) {
 		ammoAmount[selected - 1]--;
 			
 		if (ammoAmount[selected - 1] == -1) {
 			inventory[selected - 1] = "null";
+		}
 		}
 	}
 	
