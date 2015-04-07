@@ -27,4 +27,11 @@ function Update () {
  	
 	animator.SetFloat ("Forward", originalMag);
 	originalPos = pos;
+	
+	if (Physics.Raycast(transform.position, -Vector3.up, 0.3)) {
+		animator.SetBool ("Grounded", true);
+	} else {
+		animator.SetBool ("Grounded", false);
+	}
+	
 }
