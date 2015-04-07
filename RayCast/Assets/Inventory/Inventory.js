@@ -30,6 +30,8 @@ var fpsCamera: Camera;
 var ammoChanger : GameObject;
 var detonator: GameObject;
 
+var animalManager : AnimalManager;
+
 private var tpsON = false; 
 private var vicinity : List.<GameObject> = new List.<GameObject>();
 private var inventory : String[];
@@ -110,12 +112,18 @@ function Update () {
 			
 			for (var i = inventorySize - 2; i >= 0; i--) {
 				if (inventory[i] == name) {
+					
+					animalManager.PickedUp(ob);
+				
 					var ammoToGet = amountOfAmmoToGet(name);
 					inventory[i] = name;
 					ammoAmount[i] += ammoToGet;
 					Destroy(ob);
 					vicinity.Remove(ob);
 					isNotAdded = false;
+					
+					
+					
 					break;
 				}
 				
@@ -125,6 +133,9 @@ function Update () {
 			}
 			
 			if (nullIndex >= 0 && isNotAdded) {
+						
+					animalManager.PickedUp(ob);
+					
 					ammoToGet = amountOfAmmoToGet(name);
 					inventory[nullIndex] = name;
 					ammoAmount[nullIndex] = ammoToGet;
