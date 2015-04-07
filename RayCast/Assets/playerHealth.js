@@ -32,15 +32,19 @@ function ApplyDamage(damage: int){
 		tpsCamera.camera.enabled = false;
 		deathCamera.camera.enabled = true;
 		
+		//GameObject.Find("Main Camera/Point light").active = false;
 		GetComponent(CharacterController).enabled = false;
+		GetComponent(CharacterMotor).enabled = false;
 		GetComponent(FPSInputController).enabled = false;
 		GetComponent(MouseLook).enabled = false;
 		GetComponent(switchCam).enabled = false;
 		tpsCamera.GetComponent(MouseLookJS).enabled = false;
 		tpsCamera.GetComponent(crosshair).enabled = false;
-		GameObject.Find("Inventory").active = false;
-		if (GameObject.Find("Payload") != null)
-			GameObject.Find("Payload").GetComponent(payloadHealth).enabled = false;
+		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
+		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
+		GameObject.Find("/First Person Controller/Inventory").active = false;
+		if (GameObject.Find("/Payload") != null)
+			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
 		
    		
    		// swap to full body model to animate
