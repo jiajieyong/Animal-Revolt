@@ -8,6 +8,7 @@ var origin : Vector3;
 var TheDamage : int;
 private var isNotYetUpdated = false;
 private var updated = false;
+
 function Start () {
 	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
 }
@@ -16,6 +17,11 @@ function Update () {
 	if (isNotYetUpdated) {
 		GetComponentInChildren(AIRig).AI.WorkingMemory.SetItem("target", target, GameObject);
 		isNotYetUpdated = false;
+		updated = true;
+	}
+	
+	if (updated && target == null) {
+		Destroy(gameObject);
 	}
 }
 

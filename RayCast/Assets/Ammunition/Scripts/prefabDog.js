@@ -14,6 +14,8 @@ var isValidTarget = false;
 var showInvalid = false;
 var time : float;
 
+private var target : GameObject;
+
 function Start () {
 
 }
@@ -23,6 +25,7 @@ function Update () {
 	if (Input.GetMouseButtonDown(0)) {
 		if (isValidTarget) {
 			var clone = Instantiate(theBullet, transform.position, transform.rotation);
+			clone.GetComponent(dogBullet).updateTarget(target.gameObject);
 			clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
 			isValidTarget = false;
 			bullet--;
@@ -48,10 +51,10 @@ function OnGUI() {
 	GUI.Label(Rect(600,200,1000,1000), "<size=20><color=red>" + bullet +"</color></size>");
 }
 
-function updateTarget(target : Transform) {
-	if (target.gameObject.tag == "Enemy") {
+function updateTarget(target1 : Transform) {
+	if (target1.gameObject.tag == "Enemy") {
 		isValidTarget = true;
-		this.theBullet.GetComponent(dogBullet).updateTarget(target.gameObject);
+		target = target1.gameObject; 
 	} else {
 		showInvalid = true;
 	}

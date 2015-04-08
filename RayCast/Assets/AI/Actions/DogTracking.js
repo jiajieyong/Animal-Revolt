@@ -14,6 +14,8 @@ class DogTracking extends RAIN.Action.RAINAction
 		var ob : GameObject = ai.WorkingMemory.GetItem("target");
 		
 		var loc : Vector3 = ob.transform.position;
+		Debug.Log(loc);
+		
 		
 		ai.Motor.AllowOffGraphMovement = true;
 		
