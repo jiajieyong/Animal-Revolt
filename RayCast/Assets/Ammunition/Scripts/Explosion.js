@@ -6,6 +6,7 @@ var lift = 5;
 var delay = 2f;
 var explosionPrefab : GameObject;
 var damageDisplay : GameObject; 
+var origin : Vector3;
 
 function Start () {
 	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
@@ -33,4 +34,8 @@ function OnCollisionEnter (info: Collision){
                  Destroy(gameObject);
          	}	
          }
+ }
+
+ function updateOrigin(o : Vector3) {
+ 	origin = o;
  }

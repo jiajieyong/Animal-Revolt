@@ -8,7 +8,9 @@ function Start () {
 }
 
 function Update () {
-	animator.SetBool ("Grounded", characterMotor.grounded);
-	animator.SetFloat ("Forward", Input.GetAxis ("Vertical"));
-	animator.SetFloat ("Side", Input.GetAxis ("Horizontal"));
+	if (animator != null) {
+		animator.SetBool ("Grounded", characterMotor.grounded);
+		animator.SetFloat ("Forward", Input.GetAxis ("Vertical"));
+		animator.SetFloat ("Side", Input.GetAxis ("Horizontal"));
+	}
 }
