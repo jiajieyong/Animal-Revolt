@@ -33,7 +33,7 @@ function dead() {
 	isDead = true;
 	gameObject.rigidbody.useGravity = false;
 	gameObject.rigidbody.isKinematic = true;
-	gameObject.collider.isTrigger = true;
+	gameObject.collider.enabled = false;
 	var ai : Behaviour = gameObject.GetComponentInChildren(AIRig);
 	ai.enabled = false;
 }

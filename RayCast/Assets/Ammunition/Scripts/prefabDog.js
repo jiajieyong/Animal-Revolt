@@ -13,6 +13,7 @@ var gun : Transform;
 var isValidTarget = false;
 var showInvalid = false;
 var time : float;
+var inventory : GameObject;
 
 private var target : GameObject;
 
@@ -28,7 +29,7 @@ function Update () {
 			clone.GetComponent(dogBullet).updateTarget(target.gameObject);
 			clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
 			isValidTarget = false;
-			bullet--;
+			inventory.GetComponent(Inventory).decrementBullet();
 		}
 	}
 }
@@ -53,8 +54,10 @@ function OnGUI() {
 
 function updateTarget(target1 : Transform) {
 	if (target1.gameObject.tag == "Enemy") {
-		isValidTarget = true;
-		target = target1.gameObject; 
+		if (target1.GetComponent(Enemy).health > 0) {
+			isValidTarget = true;
+			target = target1.gameObject;
+		}
 	} else {
 		showInvalid = true;
 	}

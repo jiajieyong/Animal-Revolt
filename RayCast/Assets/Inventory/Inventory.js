@@ -147,12 +147,16 @@ function Update () {
 	
 	if (Input.GetMouseButtonDown(0)){
 		if (!(inventory[selected - 1] == "dog")) {
-		ammoAmount[selected - 1]--;
-			
-		if (ammoAmount[selected - 1] == -1) {
-			inventory[selected - 1] = "null";
+			decrementBullet();
 		}
-		}
+	}
+	
+	if (ammoAmount[selected - 1] == 0 && inventory[selected - 1] == "dog") {
+		inventory[selected - 1] = "null";
+	}
+	
+	if (ammoAmount[selected - 1] == -1) {
+		inventory[selected - 1] = "null";
 	}
 	
 	if (Input.GetKeyDown ("r")) {
@@ -177,6 +181,10 @@ function Update () {
 	}
 	
 	ammoChanger.GetComponent(changeAmmo).SelectAmmo(inventory[selected - 1]);
+}
+
+function decrementBullet() {
+	ammoAmount[selected - 1]--;
 }
 
 function OnTriggerEnter (other : Collider) {
