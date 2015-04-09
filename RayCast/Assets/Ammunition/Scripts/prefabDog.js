@@ -6,13 +6,14 @@ var Speed = 20;
 var radius = 0;
 var power = 10;
 var bullet : int = 10;
+var style : GUIStyle;
 
 private var timer = 0.0;
 var shootSpeed = 0.1;
 var gun : Transform;
-var isValidTarget = false;
-var showInvalid = false;
-var time : float;
+private var isValidTarget = false;
+private var showInvalid = false;
+private var time : float;
 var inventory : GameObject;
 
 private var target : GameObject;
@@ -39,17 +40,12 @@ function OnGUI() {
 		time += Time.deltaTime;
 
 		if (time < 5) {
-			var style = new GUIStyle();
-			style.richText = true;
-
-			GUI.Label(Rect(200,200,1000,1000), "<size=20><color=red>Invalid Target</color></size>");
+			GUI.Label(Rect(Screen.width * 0.5 - 90, Screen.height * 0.5 - 50, 100, 100), "Invalid Target", style);
 		} else {
 			time = 0;
 			showInvalid = false;
 		}
 	}
-	
-	GUI.Label(Rect(600,200,1000,1000), "<size=20><color=red>" + bullet +"</color></size>");
 }
 
 function updateTarget(target1 : Transform) {
