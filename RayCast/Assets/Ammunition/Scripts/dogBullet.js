@@ -26,40 +26,43 @@ function Update () {
 	if (updated && target != null) {
 		
 		targetPath.RemoveAll(function (x : Vector3) {return x == transform.position;});
-		if (target.GetComponent(Enemy).health <= 0) {
+		if (target.GetComponent(Enemy).health <= 0 || targetPath.Count == 0) {
 			Destroy(gameObject);
 		} else {
-		var oldPos : Vector3 = targetPath[0];
-		
-		var newPos = target.transform.position;
-		var dir = Vector3.Normalize(newPos - transform.position);
-		var time = Time.deltaTime;
-		
-		var hit : RaycastHit;
-		if (Physics.Raycast(transform.position, dir, hit)) {
-			var dist = Vector3.Distance(newPos, transform.position);
-			
-			transform.forward = dir;
-			if (speed * time >= dist) {
-				transform.position = newPos;
-			} else {
-				transform.position = transform.position + (time * speed * dir);
-			}
-			
-			targetPath = new List.<Vector3>();
+			var oldPos : Vector3 = targetPath[0];
+			Debug.Log(targetPath.Count);
+			var newPos = target.transform.position;
+			var dir = Vector3.Normalize(newPos - transform.position);
+			var time = Time.deltaTime;
 			targetPath.Add(newPos);
-		} else {
-			var dist1 = Vector3.Distance(oldPos, transform.position);
-			dir = Vector3.Normalize(oldPos - transform.position);
+		
+			var hit : RaycastHit;
+			if (Physics.Raycast(transform.position, dir, hit)) {
+				if (hit.collider.gameObject == target) {
+					var dist = Vector3.Distance(newPos, transform.position);
 			
-			transform.forward = dir;
-			if (speed * time >= dist1) {
-				transform.position = oldPos;
-			} else {
-				transform.position = transform.position + (Time.deltaTime * speed * dir);
-			}
+					transform.forward = dir;
+					if (speed * time >= dist) {
+						transform.position = newPos;
+					} else {
+						transform.position = transform.position + (time * speed * dir);
+					}
+			
+					targetPath = new List.<Vector3>();
+					targetPath.Add(newPos);
+				} else {
+					var dist1 = Vector3.Distance(oldPos, transform.position);
+					dir = Vector3.Normalize(oldPos - transform.position);
+			
+					transform.forward = dir;
+					if (speed * time >= dist1) {
+						transform.position = oldPos;
+					} else {
+						transform.position = transform.position + (Time.deltaTime * speed * dir);
+					}
+				}
+			} 
 		}
-	}
 	}
 }
 
@@ -67,7 +70,7 @@ function OnCollisionEnter (info : Collision) {
 	if (info.collider.CompareTag("Enemy")) {	
  		var containerE = new Container(TheDamage, info.collider.transform, "enemy", "instant");
 		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
-		info.transform.SendMessage("ApplyDamage", 10, SendMessageOptions.DontRequireReceiver);
+		info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 	}
  }
