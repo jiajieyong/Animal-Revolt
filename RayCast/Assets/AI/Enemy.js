@@ -6,6 +6,12 @@ var speed = 5;
 var prefab : Transform;
 var isDead = false;
 var player : GameObject;
+var damageDisplay : GameObject;
+private var _isBullet = false;
+
+function Start () {
+	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
+}
 
 function Update () {
 	if (isDead)
@@ -44,10 +50,30 @@ function updateEnemy(em:GameObject, p:GameObject) {
 }
 
 function ApplyDamage(damage: int){
-	//var step = speed * Time.deltaTime;
-	  
-	//var newDir = Vector3.RotateTowards(transform.forward, direction, step, 0.0);
-    //transform.rotation = Quaternion.LookRotation(newDir);
     health -= damage;
+}
 
+function setBulletState(isBullet: boolean){
+    _isBullet = isBullet;
+}
+
+function getBulletState(){
+    return _isBullet;
+}
+
+function OnCollisionEnter(collision : Collision) {
+	if (collision.gameObject.CompareTag("Enemy")) {
+		if (collision.relativeVelocity.magnitude > 5) {
+			if (collision.gameObject.GetComponent(Enemy).getBulletState()) {
+				ApplyDamage(5);
+				_isBullet = false;
+				collision.gameObject.GetComponent(Enemy).setBulletState(true);
+				var containerE = new Container(5, transform, "enemy", "instant");
+   				damageDisplay.transform.SendMessage("DisplayDamage", containerE);
+   			}
+   		} else {
+   			_isBullet = false;
+   			collision.gameObject.GetComponent(Enemy).setBulletState(false);
+   		}
+	}
 }
