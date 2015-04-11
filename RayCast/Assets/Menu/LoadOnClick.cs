@@ -29,4 +29,9 @@ public class LoadOnClick : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevel + 1);
 		}
 	}
+
+	public void QuitGame()
+	{
+		Application.Quit ();
+	}
 }

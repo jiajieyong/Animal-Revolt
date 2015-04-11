@@ -24,7 +24,7 @@ function Start () {
 
 function Update () {
 
-	if (Input.GetMouseButtonDown(0)) {
+	if (Input.GetMouseButtonDown(0) && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false) {
 		if (isValidTarget) {
 			var clone = Instantiate(theBullet, transform.position, transform.rotation);
 			clone.GetComponent(dogBullet).updateTarget(target.gameObject);

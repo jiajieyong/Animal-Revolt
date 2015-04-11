@@ -34,7 +34,7 @@
      }
 
  function Update () {
-     if (Input.GetMouseButtonDown(0) && enoughAmmo == true)
+     if (Input.GetMouseButtonDown(0) && enoughAmmo == true && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false)
      {
          
          var clone: Rigidbody;
