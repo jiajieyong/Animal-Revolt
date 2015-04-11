@@ -12,9 +12,12 @@ function Start () {
  
  function OnCollisionEnter (info : Collision)
  {	
- 	if (info.gameObject.tag == "Player" && this.gameObject.tag == "EnemyBullet") {
+ 	if ((info.gameObject.tag == "Player" || info.gameObject.tag == "Payload") && this.gameObject.tag == "EnemyBullet") {
  		var containerP = new ImpactContainer(origin);
- 		damageDisplay.transform.SendMessage("DisplayImpact", containerP);
+ 		
+ 		if(info.gameObject.tag == "Player")
+ 			damageDisplay.transform.SendMessage("DisplayImpact", containerP);
+ 			
     	info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
     	Destroy(this.gameObject);
     }

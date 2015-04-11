@@ -145,7 +145,7 @@ function Update () {
 		}
 	}
 	
-	if (Input.GetMouseButtonDown(0)){
+	if (Input.GetMouseButtonDown(0) && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false){
 		if (!(inventory[selected - 1] == "dog")) {
 			decrementBullet();
 		}

@@ -40,15 +40,13 @@ function Update () {
 			zMovement = 4.5;
 		}
 	*/	
-		if (Input.GetMouseButtonDown(0)){
+		if (Input.GetMouseButtonDown(0) && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false ) {
 			if (Physics.Raycast (FPSray, hit) && !tpsON) {
-				Debug.Log(hit.collider.name);
 				var hitpoint = hit.point;
 				transform.LookAt(hitpoint);
 				fireDog(hit);
 			}
 	 		if (Physics.Raycast (ray, hit) && tpsON){
-	 			Debug.Log(hit.collider.name);
 	 			var hitposition = hit.point;	 		
 	 			transform.LookAt(hitposition);		
 	 			fireDog(hit);	

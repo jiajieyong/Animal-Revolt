@@ -30,7 +30,6 @@ function Update () {
 			Destroy(gameObject);
 		} else {
 			var oldPos : Vector3 = targetPath[0];
-			Debug.Log(targetPath.Count);
 			var newPos = target.transform.position;
 			var dir = Vector3.Normalize(newPos - transform.position);
 			var time = Time.deltaTime;

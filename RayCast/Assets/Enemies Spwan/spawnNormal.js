@@ -3,27 +3,37 @@
 var enemyManager : EnemyManager;
 var enemy : GameObject;  
 var player : GameObject;
-//private var triggered = false; 
+private var calledOnce = false; 
+private var spawning = false; 
  
 
-function OnTriggerEnter (col : Collider) {
+function Update () {
+
+	if(enemyManager.spawnMode != SpawnType.Normal) 
+		return;
 	
-	if ((col.tag == "Player") && (enemyManager.spawnMode == SpawnType.Normal)) {
+	var dis = Vector3.Distance(gameObject.transform.position, player.transform.position);
+	
+	if (dis < 60 && dis > 40) {
 		StartCoroutine("Spawn");
-	}
-	
-
-}
-
-function OnTriggerExit (col : Collider) {
-	
-	if ((col.tag == "Player") && (enemyManager.spawnMode == SpawnType.Normal)) {
+		calledOnce = true;
+		spawning = true;
+	} else if (spawning){
 		StopCoroutine("Spawn");
+		calledOnce = false;
+		spawning = false;
+	} else {
+		return;
 	}
+	
+
 }
 
 function Spawn ()
 {
+	if(calledOnce)
+		return;
+		
 	while(true) {
 		if(enemyManager.currentEnemyCount < enemyManager.maxEnemyCount) {
 			var clone = Instantiate (enemy, transform.position, transform.rotation); 
