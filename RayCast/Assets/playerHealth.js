@@ -42,7 +42,7 @@ function ApplyDamage(damage: int){
 		tpsCamera.GetComponent(crosshair).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Inventory").active = false;
+		GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
 		

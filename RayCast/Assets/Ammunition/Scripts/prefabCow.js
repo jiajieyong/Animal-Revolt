@@ -24,7 +24,7 @@ var Speed = 20f;
      }
  
  function Update () {
-     if (Input.GetMouseButtonDown(0) && timer <= Time.time)
+     if (Input.GetMouseButtonDown(0) && timer <= Time.time && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false)
      {
          var clone = Instantiate(theBullet, transform.position, transform.rotation);
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
