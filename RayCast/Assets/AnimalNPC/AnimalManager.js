@@ -1,40 +1,67 @@
 ﻿#pragma strict
 
-var frogSpawnPoints : Transform[];
+var frogSP : Transform[];
+var cowSP : Transform[];
+var spawnTime : int = 10;
 var frog : GameObject;
+var cow : GameObject;
 
 var startOfGame = true;
 
 function Start () {
 
-	for (var i = 0; i < frogSpawnPoints.Length; i++) {
-		StartingSpawn(frogSpawnPoints[i], "frog");
+	for (var i = 0; i < frogSP.Length; i++) {
+		StartingSpawn(frogSP[i], "frog", frog);
+	}
+	
+	for (i = 0; i < cowSP.Length; i++) {
+		StartingSpawn(cowSP[i], "cow", cow);
 	}
 
 	startOfGame = false;
 }
 
-function StartingSpawn(ammoTransform : Transform, ammoName : String) {
-	var clone = Instantiate (frog, ammoTransform.position, ammoTransform.rotation);
+function StartingSpawn(ammoTransform : Transform, ammoName : String, npc : GameObject) {
+	var clone = Instantiate (npc, ammoTransform.position, ammoTransform.rotation);
   	clone.name = ammoName;
   	
 }
 
-function Spawn (go : GameObject)
+function Spawn (t : Vector3, r : Quaternion, n : String)
 {
-	var t = go.transform.position;
-	var r = go.transform.rotation;
-	var n = go.name;
+	yield WaitForSeconds(spawnTime);
+	var clone : GameObject;
+	switch(n) {
 	
-	yield WaitForSeconds(5);
+		case "frog" :
+			clone = Instantiate (frog, t, r);
+  			clone.name = n;
 	
-    var clone = Instantiate (frog, t, r);
-  	clone.name = n;
+			break;
+			
+		case "cow" :
+			clone = Instantiate (cow, t, r);
+  			clone.name = n;
+			
+			break;
+			
+		default : break;
+	
+	}
+	
+	
+	
+	
+    
 
 }
 
 function PickedUp(go : GameObject) {
 
-	Spawn(go);
+	var t = go.transform.position;
+	var r = go.transform.rotation;
+	var n = go.name;
+
+	Spawn(t, r, n);
 
 }
