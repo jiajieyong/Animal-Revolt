@@ -6,6 +6,7 @@ var spawnTime : float = 5f;            // How long between each spawn.
 var spawnPoints : Transform[];         // An array of the spawn points this enemy can spawn from.
 var style : GUIStyle; 
 var player: GameObject;
+var payload : GameObject;
 var spawnMode : SpawnType;
 var totalWaves : float = 3f;
 var spawn = true;
@@ -104,6 +105,10 @@ function Spawn ()
     var clone = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     
     clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
+	rig.AI.WorkingMemory.SetItem("payload", payload);
+	rig.AI.WorkingMemory.SetItem("player", player);
+	rig.AI.WorkingMemory.SetItem("myself", clone);
     
     totalEnemies++;
 }

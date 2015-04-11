@@ -63,9 +63,9 @@ class DecideTarget extends RAIN.Action.RAINAction
 		
 		var target : GameObject;
 		if (payloadDesirability > playerDesirability) {
-			target = payload;
+			ai.WorkingMemory.SetItem("shootingTarget", payload);
 		} else {
-			target = player;
+			ai.WorkingMemory.SetItem("shootingTarget", player);
 		}
 		
         return ActionResult.SUCCESS;
