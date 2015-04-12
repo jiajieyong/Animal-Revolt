@@ -1,4 +1,4 @@
-﻿#pragma strict
+﻿#pragma implicit
 
 function Start () {
 
