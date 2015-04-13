@@ -27,9 +27,12 @@ function cottonGuard () {
 		playerHealth += 1; 
 		yield WaitForSeconds (0.5f);
 	}
-	immortal = false;
+	
+	if (GameObject.Find("/Canvas/Menu 1/Continue") == null)
+		immortal = false;
+	
 	cotton.SetActive(false); 
-	 if (playerHealth > 100)
+	if (playerHealth > 100)
 	 	playerHealth = 100; 
 }
 

@@ -5,7 +5,7 @@ var sound : AudioClip;
 
 function OnCollisionEnter(collision : Collision) {
 		if (collision.gameObject.name == "co_Farmhouse") {
-			GameObject.Find("First Person Controller").GetComponent(playerHealth).immortal = true;
+			GameObject.Find("/First Person Controller").GetComponent(playerHealth).immortal = true;
 			yield WaitForSeconds (1);
 			// payload explode
 			Instantiate(explosionPrefab, transform.position, transform.rotation);
@@ -17,7 +17,8 @@ function OnCollisionEnter(collision : Collision) {
 		 	AudioSource.PlayClipAtPoint(sound, collision.gameObject.transform.position);
 			Destroy(collision.gameObject);
 			
+			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
     		// show win menu
-			Application.LoadLevelAdditive (5); 
+			Application.LoadLevelAdditive (5);
 		}
 	}
