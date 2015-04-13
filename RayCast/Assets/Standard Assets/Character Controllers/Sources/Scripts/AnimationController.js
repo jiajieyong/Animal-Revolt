@@ -1,6 +1,6 @@
 ﻿#pragma strict
-var animator : Animator;
-var characterMotor : CharacterMotor;
+private var animator : Animator;
+private var characterMotor : CharacterMotor;
 
 function Start () {
 	animator = GetComponentInChildren(Animator);
