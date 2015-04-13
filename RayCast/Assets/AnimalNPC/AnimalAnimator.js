@@ -4,7 +4,11 @@ private var originalPos : Vector2;
 private var originalMag : float;
 
 function Start () {
-	animator = GetComponentInChildren(Animator);
+	if (GetComponent(Animator) == null) {
+		animator = GetComponentInChildren(Animator);
+	} else {
+		animator = GetComponent(Animator);
+	}
 	originalPos = Vector2(rigidbody.transform.position.x, rigidbody.transform.position.z) ;
 	originalMag = 0;
 }
