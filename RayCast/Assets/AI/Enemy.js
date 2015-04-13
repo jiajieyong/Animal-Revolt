@@ -62,7 +62,7 @@ function stun(duration: float){
 }
 
 function dotDamage (damage: int){
-	var containerE = new Container(5, transform, "enemy", "dots");		
+	var containerE = new Container(damage, transform, "enemy", "dots");		
 	for (var count = 0 ; count <5; count++){	
 		yield WaitForSeconds(1);
 		health -= damage; 
