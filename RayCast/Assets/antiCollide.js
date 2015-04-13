@@ -7,5 +7,6 @@ function Start() {
 }
 
 function OnTriggerEnter (other : Collider) {
-	motor.movement.velocity = Vector3(0,0,0);
+	if (other.gameObject.tag != "PlayerBullet")
+		motor.movement.velocity = Vector3(0,0,0);
 }
