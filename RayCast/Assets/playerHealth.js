@@ -17,7 +17,8 @@ function Start () {
 }
 
 function Update () {
-	
+	if (cotton.active == false && playerHealth >100)
+		playerHealth--;
 }
 
 function cottonGuard () {
@@ -32,8 +33,6 @@ function cottonGuard () {
 		immortal = false;
 	
 	cotton.SetActive(false); 
-	if (playerHealth > 100)
-	 	playerHealth = 100; 
 }
 
 function ApplyDamage(damage: int){
