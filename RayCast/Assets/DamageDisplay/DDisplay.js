@@ -53,6 +53,10 @@ function OnGUI() {
 				style.normal.textColor = Color.yellow;
 			}
 			
+			else if (msg._type == "dots") { 
+				style.normal.textColor = Color.red;
+			}
+			
 			if (msg._transform != null) {
 				var pos = msg._transform.position;
 
