@@ -1,7 +1,5 @@
 ﻿#pragma strict
 var animator : Animator;
-var characterMotor : CharacterMotor;
-var originaly = 0;
 var originalPos : Vector2;
 var originalMag : float;
 

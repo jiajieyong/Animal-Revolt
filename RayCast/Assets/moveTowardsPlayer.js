@@ -1,13 +1,15 @@
 ﻿#pragma strict
 var speed : float = 20;
-var playerObject : GameObject; 
+var target : Vector3; 
 
 function Start () {
-	playerObject = GameObject.Find("Display");
 	
 }
 
 function Update () {
-	var playerTransform = playerObject.transform;
-	transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, speed*Time.deltaTime);
+	if (transform.position == target) {
+		Destroy(gameObject);
+	} else {
+		transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime);
+	}
 }
