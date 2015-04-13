@@ -29,6 +29,7 @@ function explosion(){
 	AudioSource.PlayClipAtPoint(sound, transform.position);
 	Destroy(gameObject);
 	
+	GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
 	// show restart menu
 	Application.LoadLevelAdditive (4);
 }

@@ -1,6 +1,6 @@
 ﻿Shader "Custom/glass" {
 	Properties {
-		_Color ("Main Color", Color) = (1,1,1,0.5)
+		_Color ("Main Color", Color) = (0,0,0,0.5)
 		_SpecColor ("Specular Color", Color) = (0.5, 0.5, 0.5, 1)
 		_Shininess ("Shininess", Range (0.01, 1)) = 0.078125
 		_BumpAmt  ("Distortion", range (0,128)) = 10

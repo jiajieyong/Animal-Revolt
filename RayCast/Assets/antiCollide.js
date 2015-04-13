@@ -6,6 +6,7 @@ function Start() {
 	motor = GameObject.Find("/First Person Controller").GetComponent(CharacterMotor);
 }
 
-function OnCollisionEnter(collision : Collision) {
-	motor.movement.velocity = Vector3(0,0,0);
+function OnTriggerEnter (other : Collider) {
+	if (other.gameObject.tag != "PlayerBullet")
+		motor.movement.velocity = Vector3(0,0,0);
 }

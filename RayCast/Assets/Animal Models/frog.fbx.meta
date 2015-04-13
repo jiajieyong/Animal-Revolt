@@ -17,6 +17,9 @@ ModelImporter:
     100022: pCube2
     100024: pCube3
     100026: pCube4
+    100028: joint1
+    100030: model
+    100032: pasted__pCube4
     400000: //RootNode
     400002: group
     400004: group1
@@ -31,6 +34,9 @@ ModelImporter:
     400022: pCube2
     400024: pCube3
     400026: pCube4
+    400028: joint1
+    400030: model
+    400032: pasted__pCube4
     2300000: pasted__pasted__pCube3
     2300002: pasted__pCube2
     2300004: pasted__pCube3
@@ -55,7 +61,18 @@ ModelImporter:
     4300010: pasted__pCube3
     4300012: pasted__pasted__pCube3
     4300014: pCube4
+    4300016: pasted__pCube4
+    7400000: Idle
+    7400002: Walk
     9500000: //RootNode
+    13700000: pasted__pasted__pCube3
+    13700002: pasted__pCube2
+    13700004: pasted__pCube3
+    13700006: pasted__pCube4
+    13700008: pCube1
+    13700010: pCube2
+    13700012: pCube3
+    13700014: pCube4
   materials:
     importMaterials: 1
     materialName: 0
@@ -71,7 +88,103 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/pasted__pasted__pCube3
+        weight: 1
+      - path: model/pasted__pCube2
+        weight: 1
+      - path: model/pasted__pCube3
+        weight: 1
+      - path: model/pasted__pCube4
+        weight: 1
+      - path: model/pCube1
+        weight: 1
+      - path: model/pCube2
+        weight: 1
+      - path: model/pCube3
+        weight: 1
+      - path: model/pCube4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 101
+      lastFrame: 148
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: joint1
+        weight: 1
+      - path: model
+        weight: 1
+      - path: model/pasted__pasted__pCube3
+        weight: 1
+      - path: model/pasted__pCube2
+        weight: 1
+      - path: model/pasted__pCube3
+        weight: 1
+      - path: model/pasted__pCube4
+        weight: 1
+      - path: model/pCube1
+        weight: 1
+      - path: model/pCube2
+        weight: 1
+      - path: model/pCube3
+        weight: 1
+      - path: model/pCube4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
