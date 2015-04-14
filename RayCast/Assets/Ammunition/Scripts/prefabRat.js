@@ -2,6 +2,7 @@
 
  var theBullet : Rigidbody;
  var Speed = 10;
+ var inventory : GameObject;
  
  var radius = 0;
      var power = 10;
@@ -43,7 +44,7 @@
          
 	         clone = Instantiate(theBullet, transform.position, Quaternion.AngleAxis(45-(90/(numShots-1))*i, transform.up) * transform.rotation);
 	         clone.rigidbody.AddForce(clone.transform.forward * 1000);
-	         
+	         inventory.GetComponent(Inventory).decrementBullet();
 	         
 	         	     Destroy (clone.gameObject, 2); 
 		      
