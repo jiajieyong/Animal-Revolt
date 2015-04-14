@@ -62,11 +62,11 @@
      
      }
  }
- function OnGUI()
- {
- GUI.Label(Rect(100,100,100,100), "ratAmmo: " + ammo);
- GUI.Label(Rect(100,200,100,100), "Max stoneAmmo: " + maxAmmo);
- }
+ //function OnGUI()
+ //{
+ //GUI.Label(Rect(100,100,100,100), "ratAmmo: " + ammo);
+ //GUI.Label(Rect(100,200,100,100), "Max stoneAmmo: " + maxAmmo);
+ //}
  
  
  function AutoReload(){
