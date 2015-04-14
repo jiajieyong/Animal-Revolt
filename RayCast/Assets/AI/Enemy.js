@@ -27,7 +27,6 @@ function Update () {
 		enemyManager.SendMessage("EnemyCounter", 0);
 		DestroyObject(gameObject, 4);
 	}
-	
 	// Kill off enemy if too far away from Player
 	if (Vector3.Distance(transform.position, player.transform.position) > 60) {
 		enemyManager.SendMessage("EnemyCounter", 0);
@@ -51,6 +50,24 @@ function updateEnemy(em:GameObject, p:GameObject) {
 
 function ApplyDamage(damage: int){
     health -= damage;
+}
+
+function stun(duration: float){
+	rigidbody.AddForce(new Vector3(0,100,0),ForceMode.Impulse);
+	var ai : Behaviour = gameObject.GetComponentInChildren(AIRig);
+	ai.enabled = false;
+	yield WaitForSeconds(duration);
+	if (health > 0)
+	ai.enabled = true; 
+}
+
+function dotDamage (damage: int){
+	var containerE = new Container(damage, transform, "enemy", "dots");		
+	for (var count = 0 ; count <5; count++){	
+		yield WaitForSeconds(1);
+		health -= damage; 
+		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
+	}
 }
 
 function setBulletState(isBullet: boolean){

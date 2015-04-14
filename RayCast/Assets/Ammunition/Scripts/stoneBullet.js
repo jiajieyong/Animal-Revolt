@@ -1,6 +1,8 @@
 ﻿#pragma strict
  
 var TheDamage = 100;
+var CatDot = 3;
+var stunDuration = 1.5;
 var direction : Vector3;
 var damageDisplay : GameObject;
 var origin : Vector3;
@@ -25,6 +27,13 @@ function Start () {
    		var containerE = new Container(TheDamage, info.collider.transform, "enemy", "instant");
    		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
     	info.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+    	
+    	if (this.gameObject.name == "Catbullet(Clone)") {
+    		info.transform.SendMessage("dotDamage",CatDot, SendMessageOptions.DontRequireReceiver);
+    	}
+    	else if (this.gameObject.name == "goatBullet(Clone)") {
+    		info.transform.SendMessage("stun",stunDuration, SendMessageOptions.DontRequireReceiver);
+    	}
     	Destroy(this.gameObject);
     }
  }

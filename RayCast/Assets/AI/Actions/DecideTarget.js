@@ -43,7 +43,7 @@ class DecideTarget extends RAIN.Action.RAINAction
 		var myPos : Vector3 = myself.transform.position;
 		
 		var index : float = wpset.GetNextSequentialWaypointIndex(payload.transform.position, false);
-		var myHealth = myself.GetComponent(SampleEnemy).health;
+		var myHealth = myself.GetComponent(Enemy).health;
 		var player_Health = player.GetComponent(playerHealth).playerHealth;
 		var payload_Health = payload.GetComponent(payloadHealth).payLoadHealth;
 		var playerDistance = Vector3.Distance(player.transform.position, myPos);

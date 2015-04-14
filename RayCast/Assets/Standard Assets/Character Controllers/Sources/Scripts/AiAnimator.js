@@ -1,9 +1,7 @@
 ﻿#pragma strict
-var animator : Animator;
-var characterMotor : CharacterMotor;
-var originaly = 0;
-var originalPos : Vector2;
-var originalMag : float;
+private var animator : Animator;
+private var originalPos : Vector2;
+private var originalMag : float;
 
 function Start () {
 	animator = GetComponentInChildren(Animator);

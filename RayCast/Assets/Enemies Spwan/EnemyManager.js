@@ -103,7 +103,7 @@ function Spawn ()
 
     var spawnPointIndex : int = Random.Range (0, spawnPoints.Length);
     var clone = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-    
+
     clone.GetComponent(Enemy).updateEnemy(gameObject, player);
     var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 	rig.AI.WorkingMemory.SetItem("payload", payload);

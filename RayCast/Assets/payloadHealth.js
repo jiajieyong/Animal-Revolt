@@ -6,8 +6,6 @@ var style : GUIStyle;
 var explosionPrefab : GameObject; 
 var sound : AudioClip;
 var payloadDefense : AudioClip;
-var payloadContested : AudioClip;
-var payloadGet: AudioClip;
 var destination : Transform;
 
 var counter = 0;
@@ -29,6 +27,7 @@ function explosion(){
 	AudioSource.PlayClipAtPoint(sound, transform.position);
 	Destroy(gameObject);
 	
+	GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
 	// show restart menu
 	Application.LoadLevelAdditive (4);
 }
@@ -36,17 +35,7 @@ function explosion(){
 function ApplyDamage(damage: int){
 	payLoadHealth -= damage;
 	if (counter == 0){
-	
-		if (Vector3.Distance(destination.position, transform.position) > 15f) {
-			AudioSource.PlayClipAtPoint(payloadGet, destination.position);
-		}
-		else {
-			var number = Random.value;
-			if (number <0.6)
-				AudioSource.PlayClipAtPoint(payloadDefense, destination.position);
-			else 
-				AudioSource.PlayClipAtPoint(payloadContested, destination.position);	
-		}	
+		AudioSource.PlayClipAtPoint(payloadDefense, destination.position);
 	counter = 150;
 	}
 }

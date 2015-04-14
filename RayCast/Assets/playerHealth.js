@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 var playerHealth = 100;
 var heart : Texture2D;
 var style : GUIStyle; 
@@ -8,6 +8,7 @@ var fpsCamera: Camera;
 var deathCamera: Camera;
 var isDead = false;
 var immortal = false;
+var cotton : GameObject; 
 
 private var msgList = new List.<Container>();
 
@@ -16,7 +17,22 @@ function Start () {
 }
 
 function Update () {
+	if (cotton.active == false && playerHealth >100)
+		playerHealth--;
+}
+
+function cottonGuard () {
+	cotton.SetActive(true); 
+	immortal = true; 
+	for (var hot = 0; hot < 20; hot++){
+		playerHealth += 1; 
+		yield WaitForSeconds (0.5f);
+	}
 	
+	if (GameObject.Find("/Canvas/Menu 1/Continue") == null)
+		immortal = false;
+	
+	cotton.SetActive(false); 
 }
 
 function ApplyDamage(damage: int){
