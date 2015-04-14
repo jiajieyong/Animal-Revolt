@@ -1,4 +1,4 @@
 ﻿#pragma strict
 
-public enum SpawnType{Normal, Wave};
+public enum SpawnType{Normal, Wave, CTF};
 
