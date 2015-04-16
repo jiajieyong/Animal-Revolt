@@ -2,6 +2,7 @@
 var tpsCamera: Camera;
 var fpsCamera: Camera;
 var style : GUIStyle;
+var boss : GameObject;
 
 private var tpsON = false; 
 private var msgList = new List.<Container>();
@@ -64,12 +65,17 @@ function OnGUI() {
 				var heading = pos - currentCam.transform.position;
 			
 				if (Vector3.Dot(currentCam.transform.forward, heading) > 0) {
-				
-					//calculate offset of dmg to top of gameobject
-					var size = msg._transform.collider.bounds.size;
-					var offset = Vector3(0, size.y, 0);
-					var screenPos : Vector3 = currentCam.WorldToScreenPoint(pos + offset);
 					
+					var screenPos : Vector3;
+					
+					//calculate offset of dmg to top of gameobject
+					if (msg._transform.name == "forearm R") {
+						screenPos  = currentCam.WorldToScreenPoint(boss.transform.position + Vector3(0, 9, 0));
+					} else {
+						var size = msg._transform.collider.bounds.size;
+						var offset = Vector3(0, size.y, 0);
+						screenPos = currentCam.WorldToScreenPoint(pos + offset);
+					}
 					//Size of text depending on dist of player to GO
 					var dist = Vector3.Distance(transform.position, pos);
 					var fontSize = 30 + (50/Mathf.Sqrt(dist));
