@@ -21,7 +21,7 @@ function attackDamage () {
 	if (Physics.Raycast (rayOrigin, transform.TransformDirection(Vector3.forward), hit, 3)) {		
 		animator.SetTrigger("Melee");
 		yield WaitForSeconds(0.5f);
-		if (hit != null) {
+		if (hit.collider != null) {
 		hit.transform.SendMessage("ApplyDamage", 5, SendMessageOptions.DontRequireReceiver);
 		}
 	}
