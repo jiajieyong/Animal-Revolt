@@ -28,10 +28,12 @@ function Update () {
 		enemyManager.SendMessage("EnemyCounter", 0);
 		DestroyObject(gameObject, 4);
 	}
-	// Kill off enemy if too far away from Player
+	
+	// Kill off enemy if too far away from Player only for Payload Mode
 	if (Vector3.Distance(transform.position, player.transform.position) > 60) {
-		enemyManager.SendMessage("EnemyCounter", 0);
-		DestroyObject(gameObject);
+		//enemyManager.SendMessage("EnemyCounter", 0);
+		enemyManager.SendMessage("DestroyEnemy", gameObject);
+		//DestroyObject(gameObject);
 	}
 	
 	if (isConfused) {

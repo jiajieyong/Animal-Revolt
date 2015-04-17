@@ -5,6 +5,7 @@
  
  var radius = 0;
  var power = 10;
+ var inventory : GameObject;
  
  var Reloading : boolean;
  var shootSpeed = 0.1;
@@ -28,7 +29,7 @@
          
          var clone = Instantiate(theBullet, transform.position, transform.rotation);
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
-
+		 inventory.GetComponent(Inventory).decrementBullet();
          Destroy (clone.gameObject, 2);
      
      }

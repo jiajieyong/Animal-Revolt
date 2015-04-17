@@ -145,17 +145,7 @@ function Update () {
 		}
 	}
 	
-	if (Input.GetMouseButtonDown(0) && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false){
-		if (!(inventory[selected - 1] == "dog")) {
-			decrementBullet();
-		}
-	}
-	
-	if (ammoAmount[selected - 1] == 0 && inventory[selected - 1] == "dog") {
-		inventory[selected - 1] = "null";
-	}
-	
-	if (ammoAmount[selected - 1] == -1) {
+	if (ammoAmount[selected - 1] <= 0) {
 		inventory[selected - 1] = "null";
 	}
 	

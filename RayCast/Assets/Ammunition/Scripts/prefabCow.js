@@ -2,7 +2,7 @@
 
 var theBullet : Rigidbody;
 var Speed = 20f;
- 
+var inventory : GameObject;
  	 var radius = 0;
      var power = 10;
      var Reloading : boolean;
@@ -30,7 +30,8 @@ var Speed = 20f;
          clone.velocity = transform.TransformDirection(Vector3(0, 0, Speed));
 		 audio.Play();	
          timer = Time.time + cooldown;
-
+         
+		 inventory.GetComponent(Inventory).decrementBullet();
          Destroy (clone.gameObject, 2);
          
      
