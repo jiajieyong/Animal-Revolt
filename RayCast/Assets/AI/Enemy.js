@@ -8,6 +8,7 @@ var isDead = false;
 var player : GameObject;
 var damageDisplay : GameObject;
 private var _isBullet = false;
+var isConfused = false;
 
 function Start () {
 	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
@@ -31,6 +32,10 @@ function Update () {
 	if (Vector3.Distance(transform.position, player.transform.position) > 60) {
 		enemyManager.SendMessage("EnemyCounter", 0);
 		DestroyObject(gameObject);
+	}
+	
+	if (isConfused) {
+		transform.Rotate(Vector3.up, 500 * Time.deltaTime);
 	}
 }
 
@@ -68,6 +73,21 @@ function dotDamage (damage: int){
 		health -= damage; 
 		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
 	}
+}
+
+function confused (arc: int){
+		var ai : Behaviour = gameObject.GetComponentInChildren(AIRig);
+		ai.enabled = false;
+		
+		isConfused = true;
+	for (var count = 0; count <= arc; count++) { 
+		BroadcastMessage("AIShoot", SendMessageOptions.DontRequireReceiver);
+		yield WaitForSeconds(0.3);
+	}
+		isConfused = false;
+		if (health > 0)
+		ai.enabled = true; 
+	
 }
 
 function setBulletState(isBullet: boolean){
