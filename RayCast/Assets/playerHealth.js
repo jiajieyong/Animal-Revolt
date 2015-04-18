@@ -17,7 +17,7 @@ function Start () {
 }
 
 function Update () {
-	if (cotton.active == false && playerHealth >100)
+	if (cotton.activeSelf == false && playerHealth >100)
 		playerHealth--;
 }
 
