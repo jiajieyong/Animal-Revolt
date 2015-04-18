@@ -12,10 +12,14 @@ function Update() {
 
 function LoadScene(level : int)
 	{
-		GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Inventory").SetActive(false);
+		if (GameObject.Find("/First Person Controller") != null)
+			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Inventory") != null)
+			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
 		Time.timeScale = 1;
@@ -26,10 +30,14 @@ function LoadScene(level : int)
 	
 function ReloadScene()
 	{
-		GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Inventory").SetActive(false);
+		if (GameObject.Find("/First Person Controller") != null)
+			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Inventory") != null)
+			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
 		Time.timeScale = 1;
@@ -40,10 +48,14 @@ function ReloadScene()
 
 function NextScene()
 	{
-		GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
-		GameObject.Find("/First Person Controller/Inventory").SetActive(false);
+		if (GameObject.Find("/First Person Controller") != null)
+			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Inventory") != null)
+			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
 		Time.timeScale = 1;
