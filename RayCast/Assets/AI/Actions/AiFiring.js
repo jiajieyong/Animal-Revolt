@@ -12,7 +12,7 @@ class AiFiring extends RAIN.Action.RAINAction
 
     function Execute(ai:RAIN.Core.AI):ActionResult
 	{	
-        ai.Body.BroadcastMessage ("AIShoot");
+        ai.Body.BroadcastMessage ("AIShoot", ai.WorkingMemory.GetItem("varTarget"));
         return ActionResult.SUCCESS;
 	}
 
