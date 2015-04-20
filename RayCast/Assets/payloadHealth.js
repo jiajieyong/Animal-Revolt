@@ -7,6 +7,7 @@ var explosionPrefab : GameObject;
 var sound : AudioClip;
 var payloadDefense : AudioClip;
 var destination : Transform;
+var immortal = false;
 
 var counter = 0;
 
@@ -33,10 +34,11 @@ function explosion(){
 }
 
 function ApplyDamage(damage: int){
-	payLoadHealth -= damage;
+	if (immortal == false)
+		payLoadHealth -= damage;
 	if (counter == 0){
 		AudioSource.PlayClipAtPoint(payloadDefense, destination.position);
-	counter = 150;
+		counter = 300;
 	}
 }
 
