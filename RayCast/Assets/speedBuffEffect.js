@@ -30,9 +30,3 @@ function hax() {
 		buff = false;
 	}
 }
-
-function OnGUI () {
-	if (buff == true) {
-        GUI.DrawTexture(Rect(Screen.width * 0.5 - 380,Screen.height - 90 ,64,64), speed);
-	}
-}

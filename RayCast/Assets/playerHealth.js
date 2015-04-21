@@ -57,6 +57,7 @@ function ApplyDamage(damage: int){
 		GetComponent(switchCam).enabled = false;
 		tpsCamera.GetComponent(MouseLookJS).enabled = false;
 		tpsCamera.GetComponent(crosshair).enabled = false;
+		GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Inventory").SetActive(false);
