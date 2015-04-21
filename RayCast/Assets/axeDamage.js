@@ -18,7 +18,7 @@ function attackDamage () {
 	var rayOrigin = new Vector3(transform.position.x, transform.position.y + 1.1f, transform.position.z);
 	//Debug.DrawRay (rayOrigin, transform.TransformDirection(Vector3.forward), Color.cyan);
 	//Debug.DrawRay (transform.position,  transform.TransformDirection(Vector3.forward), Color.yellow);
-	if (Physics.Raycast (rayOrigin, transform.TransformDirection(Vector3.forward), hit, 3)) {		
+	if (Physics.Raycast(rayOrigin, transform.TransformDirection(Vector3.forward), hit, 3)) {		
 		animator.SetTrigger("Melee");
 		yield WaitForSeconds(0.5f);
 		if (hit.collider != null) {
