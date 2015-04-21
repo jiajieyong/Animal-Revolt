@@ -13,10 +13,10 @@ class checkCloseEnough extends RAIN.Action.RAINAction
 	{
 		//var payload : GameObject = ai.WorkingMemory.GetItem("payload");
 		var hit : RaycastHit;
-		var empty : GameObject = null; 
 		
 		var myself : GameObject = ai.WorkingMemory.GetItem("myself");
 		var payload : GameObject = ai.WorkingMemory.GetItem("payload");
+		var empty : GameObject = ai.WorkingMemory.GetItem("empty");
 		
 		
 		var myPos : Vector3 = myself.transform.position;
@@ -36,6 +36,9 @@ class checkCloseEnough extends RAIN.Action.RAINAction
 			}
 			
 		}
+		else 
+			ai.WorkingMemory.SetItem("varNearPayload", empty);
+			
         return ActionResult.SUCCESS;
 	}
 

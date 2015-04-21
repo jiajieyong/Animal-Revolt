@@ -44,13 +44,13 @@
          
 	         clone = Instantiate(theBullet, transform.position, Quaternion.AngleAxis(45-(90/(numShots-1))*i, transform.up) * transform.rotation);
 	         clone.rigidbody.AddForce(clone.transform.forward * 1000);
-	         inventory.GetComponent(Inventory).decrementBullet();
+	        
 	         
 	         	     Destroy (clone.gameObject, 2); 
 		      
         }
         
-        
+         inventory.GetComponent(Inventory).decrementBullet();
          
          
          ammo -= 1;
