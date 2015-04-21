@@ -1,5 +1,5 @@
 ﻿#pragma strict
-
+var farmFire : GameObject;
 var explosionPrefab : GameObject; 
 var sound : AudioClip;
 
@@ -17,6 +17,7 @@ function OnTriggerEnter(collision : Collider) {
 			Instantiate(explosionPrefab, collision.gameObject.transform.position, collision.gameObject.transform.rotation);
 		 	AudioSource.PlayClipAtPoint(sound, collision.gameObject.transform.position);
 			Destroy(collision.gameObject);
+			farmFire.SetActive(true);
 			
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
     		// show win menu
