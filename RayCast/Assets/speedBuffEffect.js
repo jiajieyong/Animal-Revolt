@@ -13,11 +13,13 @@ function Update () {
 		controller.GetComponent(CharacterMotor).movement.maxSidewaysSpeed = 50;
 		controller.GetComponent(CharacterMotor).movement.maxBackwardsSpeed = 50;
 		controller.GetComponent(CharacterMotor).movement.maxGroundAcceleration = 200;
+		controller.GetComponent(CharacterMotor).movement.maxAirAcceleration = 150;
 	} else {
 		controller.GetComponent(CharacterMotor).movement.maxForwardSpeed = 5;
 		controller.GetComponent(CharacterMotor).movement.maxSidewaysSpeed = 5;
 		controller.GetComponent(CharacterMotor).movement.maxBackwardsSpeed = 5;
 		controller.GetComponent(CharacterMotor).movement.maxGroundAcceleration = 20;
+		controller.GetComponent(CharacterMotor).movement.maxAirAcceleration = 15;
 	}
 }
 
