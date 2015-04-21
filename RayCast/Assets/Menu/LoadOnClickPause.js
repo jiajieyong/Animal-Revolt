@@ -15,6 +15,8 @@ function LoadScene(level : int)
 		if (GameObject.Find("/First Person Controller") != null)
 			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
 			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
 			GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
@@ -33,6 +35,8 @@ function ReloadScene()
 		if (GameObject.Find("/First Person Controller") != null)
 			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
 			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
 			GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
@@ -50,6 +54,8 @@ function NextScene()
 	{
 		if (GameObject.Find("/First Person Controller") != null)
 			GameObject.Find("/First Person Controller").GetComponent(playerHealth).enabled = false;
+		if (GameObject.Find("/First Person Controller/Display") != null)
+			GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
 			GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		if (GameObject.Find("/First Person Controller/Display") != null)
