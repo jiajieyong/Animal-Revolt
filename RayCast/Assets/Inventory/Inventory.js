@@ -196,6 +196,7 @@ function OnTriggerEnter (other : Collider) {
 		if (other.CompareTag("ctfBase") && pickedFlag == true){
 			GameObject.Find("/First Person Controller").GetComponent(playerHealth).immortal = true;
 			pickedFlag = false;
+			signalSet.SetActive(false);
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
     		// show win menu
 			Application.LoadLevelAdditive (5);

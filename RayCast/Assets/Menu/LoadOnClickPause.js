@@ -5,7 +5,7 @@ var pauseUI : GameObject;
 var pauseGame = false;
 
 function Update() {
-	if (Input.GetKeyDown(KeyCode.Escape)){
+	if (Input.GetKeyDown(KeyCode.Escape) && GameObject.Find("/Canvas/Stage Clear") == null && GameObject.Find("/Canvas/Stage Failed") == null){
 		Pause();
 	}
 }
