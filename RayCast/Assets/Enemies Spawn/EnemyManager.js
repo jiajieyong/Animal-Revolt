@@ -25,6 +25,7 @@ private var totalEnemies : float = 0f;
 private var showLabel = false;
 private var numWaves : float = 1f;
 private var enemyDeathCount : float = 0f;
+private var normalSP : List.< GameObject > = new List.< GameObject >();
 
 function Start ()
 {
@@ -37,7 +38,13 @@ function StartSpawn() {
 
 	while (spawn) {
 		switch(spawnMode) {
-			case SpawnType.Normal: 					
+			case SpawnType.Normal: 	
+			
+				if (normalSP.Count != 0) {
+					NormalSpawn();
+				}
+			
+											
 				break;
 			
 			case SpawnType.Wave:
@@ -95,6 +102,60 @@ function StartSpawn() {
 	}
 	
 
+}
+
+function AddNormalSP (spawnPoint : GameObject)
+{
+
+	var existed = false;
+	
+    for (var i=0; i<normalSP.Count; i++){
+        if(normalSP[i] == spawnPoint) {
+        	existed = true;
+        	break;
+        }  
+    }
+
+	if(!existed) {
+		normalSP.Add(spawnPoint);
+	}
+	
+}
+
+function RemoveNormalSP (spawnPoint : GameObject)
+{
+	var index;
+	for (var i=0; i<normalSP.Count; i++){
+        if(normalSP[i] == spawnPoint) {
+        	normalSP.Remove(spawnPoint);
+        	break;
+        }  
+    }
+	
+	
+}
+
+function NormalSpawn () 
+{
+	if(currentEnemyCount < maxEnemyCount) {
+
+		var index : int = Random.Range (0, normalSP.Count);
+		var clone = Instantiate (DecideEnemy(), normalSP[index].transform.position, normalSP[index].transform.rotation);
+		
+		clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
+		rig.AI.WorkingMemory.SetItem("payload", payload);
+		rig.AI.WorkingMemory.SetItem("player", player);
+		rig.AI.WorkingMemory.SetItem("myself", clone);
+		
+		
+		EnemyCounter(1);
+		
+		yield WaitForSeconds(spawnTime);
+	
+	}
+	
+	
 }
 
 function WaveSpawn ()
