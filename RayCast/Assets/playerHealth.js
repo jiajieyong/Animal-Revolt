@@ -17,7 +17,7 @@ function Start () {
 }
 
 function Update () {
-	if (cotton.active == false && playerHealth >100)
+	if (cotton.activeSelf == false && playerHealth >100)
 		playerHealth--;
 }
 
@@ -29,7 +29,8 @@ function cottonGuard () {
 		yield WaitForSeconds (0.5f);
 	}
 	
-	if (GameObject.Find("/Canvas/Menu 1/Continue") == null)
+	// disable immortal only if not in win state
+	if (GameObject.Find("/Canvas/Stage Clear") == null)
 		immortal = false;
 	
 	cotton.SetActive(false); 

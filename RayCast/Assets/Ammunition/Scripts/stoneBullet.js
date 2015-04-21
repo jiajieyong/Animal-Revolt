@@ -34,6 +34,9 @@ function Start () {
     	else if (this.gameObject.name == "goatBullet(Clone)") {
     		info.transform.SendMessage("stun",stunDuration, SendMessageOptions.DontRequireReceiver);
     	}
+    	else if (this.gameObject.name == "ChickenBullet(Clone)") {
+    		info.transform.SendMessage("confused", 6 , SendMessageOptions.DontRequireReceiver);
+    	}
     	Destroy(this.gameObject);
     }
  }

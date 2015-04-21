@@ -22,6 +22,8 @@ var ebutton : Texture2D;
 var select : Texture2D;
 var amount : Texture2D;
 
+var toaster : Texture2D;
+
 var style : GUIStyle;
 var amountStyle : GUIStyle;
 
@@ -30,6 +32,8 @@ var fpsCamera: Camera;
 var ammoChanger : GameObject;
 var detonator: GameObject;
 
+var pickedFlag = false;
+var signalSet: GameObject;
 var animalManager : AnimalManager;
 
 private var tpsON = false; 
@@ -181,10 +185,23 @@ function OnTriggerEnter (other : Collider) {
 		if (other.CompareTag("ammo")) {
 			vicinity.Add(other.gameObject);
 		}
-		else if (other.CompareTag("Detonator")){
+		
+		if (other.CompareTag("Detonator")){
 			detonator.SetActive(true);
 			Destroy(other.gameObject);
+			signalSet.SetActive(true);
+			pickedFlag = true;
 		}
+		
+		if (other.CompareTag("ctfBase") && pickedFlag == true){
+			GameObject.Find("/First Person Controller").GetComponent(playerHealth).immortal = true;
+			pickedFlag = false;
+			signalSet.SetActive(false);
+			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
+    		// show win menu
+			Application.LoadLevelAdditive (5);
+		}
+		
 }
 
 function OnTriggerExit (other : Collider) {
@@ -237,6 +254,10 @@ function OnGUI () {
     			var screenPos : Vector3 = currentCam.WorldToScreenPoint(ob.transform.position);
 				GUI.DrawTexture(Rect(screenPos.x, Screen.height - screenPos.y - 30 ,60, 60), ebutton);
 			}
+		}
+		
+		if (pickedFlag == true) {
+			GUI.DrawTexture(Rect(Screen.width * 0.5 + 310,Screen.height - 110 ,80,80), toaster);
 		}
 }
 

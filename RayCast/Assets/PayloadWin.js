@@ -3,10 +3,11 @@
 var explosionPrefab : GameObject; 
 var sound : AudioClip;
 
-function OnCollisionEnter(collision : Collision) {
+function OnTriggerEnter(collision : Collider) {
 		if (collision.gameObject.name == "co_Farmhouse") {
+			GameObject.Find("/Payload").GetComponent(payloadHealth).immortal = true;
 			GameObject.Find("/First Person Controller").GetComponent(playerHealth).immortal = true;
-			yield WaitForSeconds (1);
+			yield WaitForSeconds (0.5f);
 			// payload explode
 			Instantiate(explosionPrefab, transform.position, transform.rotation);
 			AudioSource.PlayClipAtPoint(sound, transform.position);
