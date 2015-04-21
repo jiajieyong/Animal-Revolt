@@ -16,13 +16,23 @@ function Update () {
 	var dis = Vector3.Distance(gameObject.transform.position, player.transform.position);
 	
 	if (dis < 60 && dis > 40) {
+	
+		enemyManager.SendMessage("AddNormalSP", gameObject);
+	
+		/**
 		StartCoroutine("Spawn");
 		calledOnce = true;
 		spawning = true;
+		**/
 	} else if (spawning){
+	
+		enemyManager.SendMessage("RemoveNormalSP", gameObject);
+		
+		/**
 		StopCoroutine("Spawn");
 		calledOnce = false;
 		spawning = false;
+		**/
 	} else {
 		return;
 	}
@@ -42,15 +52,13 @@ function Spawn ()
 	    	enemyManager.SendMessage("EnemyCounter", 1);
 	    	
 	    	var rig : AIRig = clone.GetComponentInChildren(AIRig);	
-	rig.AI.WorkingMemory.SetItem("payload", payload);
-	rig.AI.WorkingMemory.SetItem("player", player);
-	rig.AI.WorkingMemory.SetItem("myself", clone);
+			rig.AI.WorkingMemory.SetItem("payload", payload);
+			rig.AI.WorkingMemory.SetItem("player", player);
+			rig.AI.WorkingMemory.SetItem("myself", clone);
 	
 	    	yield WaitForSeconds(enemyManager.spawnTime);
 	    }
 	    
 	    yield new WaitForEndOfFrame ();
-	}
-    
-    
+	}  
 }
