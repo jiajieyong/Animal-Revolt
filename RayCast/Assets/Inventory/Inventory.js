@@ -33,7 +33,7 @@ var ammoChanger : GameObject;
 var detonator: GameObject;
 
 var pickedFlag = false;
-
+var signalSet: GameObject;
 var animalManager : AnimalManager;
 
 private var tpsON = false; 
@@ -189,6 +189,7 @@ function OnTriggerEnter (other : Collider) {
 		if (other.CompareTag("Detonator")){
 			detonator.SetActive(true);
 			Destroy(other.gameObject);
+			signalSet.SetActive(true);
 			pickedFlag = true;
 		}
 		
