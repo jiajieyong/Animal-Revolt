@@ -15,6 +15,10 @@ function Start () {
 }
 
 function Update () {
+	if (transform.position.y >-5) {
+		transform.position.y = -5;
+	}
+
 	if (isDead)
 		return;
 

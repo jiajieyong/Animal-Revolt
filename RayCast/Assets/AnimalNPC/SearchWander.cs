@@ -29,9 +29,9 @@ public class SearchWander : RAINAction
 		List<RAINNavigationGraph> found = new List<RAINNavigationGraph> ();
 		
 		do {
-			loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-5f, 5f),
+			loc = new Vector3 (ai.Kinematic.Position.x + Random.Range (-2f, 2f),
 			                   ai.Kinematic.Position.y,
-			                   ai.Kinematic.Position.z + Random.Range (-5f, 5f));
+			                   ai.Kinematic.Position.z + Random.Range (-2f, 2f));
 			found = NavigationManager.Instance.GraphForPoint (
 				loc, 
 				ai.Motor.StepUpHeight, 
