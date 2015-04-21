@@ -26,7 +26,7 @@ function Update () {
 		updated = true;
 	}
 	
-	if (updated && target == null) {
+	if ((updated && target == null)) {
 		Destroy(gameObject);
 	}
 	
@@ -80,6 +80,9 @@ function OnTriggerEnter (other : Collider) {
 		var containerP = new ImpactContainer(origin);
  		damageDisplay.transform.SendMessage("DisplayImpact", containerP);
     	other.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
+		Destroy(gameObject);
+		Instantiate(explosion, transform.position, transform.rotation);
+	} else if (other.CompareTag("ground")){
 		Destroy(gameObject);
 		Instantiate(explosion, transform.position, transform.rotation);
 	}

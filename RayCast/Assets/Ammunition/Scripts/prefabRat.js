@@ -35,7 +35,7 @@
      }
 
  function Update () {
-     if (Input.GetMouseButtonDown(0) && enoughAmmo == true && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false)
+     if (Input.GetMouseButtonDown(0) && GameObject.Find("Canvas").GetComponent(LoadOnClickPause).pauseGame == false)
      {
          
          var clone: Rigidbody;
@@ -44,33 +44,11 @@
          
 	         clone = Instantiate(theBullet, transform.position, Quaternion.AngleAxis(45-(90/(numShots-1))*i, transform.up) * transform.rotation);
 	         clone.rigidbody.AddForce(clone.transform.forward * 1000);
-	         inventory.GetComponent(Inventory).decrementBullet();
 	         
-	         	     Destroy (clone.gameObject, 2); 
-		      
+	         
+	         	     Destroy (clone.gameObject, 2); 		      
         }
-        
-        
-         
-         
-         ammo -= 1;
-         if(ammo <= 0)
-         {
-             AutoReload();
-         }
-         
-         
+        inventory.GetComponent(Inventory).decrementBullet();    
      
      }
- }
- //function OnGUI()
- //{
- //GUI.Label(Rect(100,100,100,100), "ratAmmo: " + ammo);
- //GUI.Label(Rect(100,200,100,100), "Max stoneAmmo: " + maxAmmo);
- //}
- 
- 
- function AutoReload(){
- if(maxAmmo - (12 - ammo) >= 0){ ammo=12; maxAmmo-=ammo; }
- else{ ammo = maxAmmo; maxAmmo = 0; }
  }
