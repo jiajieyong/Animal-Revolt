@@ -20,6 +20,7 @@ var payload : GameObject;
 
 var waveSP : Transform[];         // An array of the spawn points this enemy can spawn from.
 var ctfSP : Transform[]; 
+var ctfENDSP : Transform[];
 
 private var totalEnemies : float = 0f;
 private var showLabel = false;
@@ -202,6 +203,21 @@ function CTFSpawn () {
 	rig.AI.WorkingMemory.SetItem("payload", payload);
 	rig.AI.WorkingMemory.SetItem("player", player);
 	rig.AI.WorkingMemory.SetItem("myself", clone);	
+}
+
+function CTFEndSpawn () {
+
+
+	for (var i = 0; i < ctfENDSP.Length; i++) {
+	    var clone = Instantiate (DecideEnemy(), ctfENDSP[i].position, ctfENDSP[i].rotation);
+		
+	    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
+		rig.AI.WorkingMemory.SetItem("payload", payload);
+		rig.AI.WorkingMemory.SetItem("player", player);
+		rig.AI.WorkingMemory.SetItem("myself", clone);
+	}
+
 }
 
 function ToggleLable() {
