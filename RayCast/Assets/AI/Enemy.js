@@ -8,7 +8,13 @@ var isDead = false;
 var player : GameObject;
 var damageDisplay : GameObject;
 private var _isBullet = false;
-var isConfused = false;
+var stunIcon : Texture2D;
+var dotsIcon : Texture2D;
+var confusedIcon : Texture2D;
+
+private var isDots = false;
+private var isStun = false;
+private var isConfused = false;
 
 function Start () {
 	damageDisplay = GameObject.FindGameObjectsWithTag ("Display")[0];
@@ -64,20 +70,28 @@ function ApplyDamage(damage: int){
 }
 
 function stun(duration: float){
+	isStun = true;
 	rigidbody.AddForce(new Vector3(0,100,0),ForceMode.Impulse);
 	var ai : Behaviour = gameObject.GetComponentInChildren(AIRig);
 	ai.enabled = false;
 	yield WaitForSeconds(duration);
-	if (health > 0)
-	ai.enabled = true; 
+	if (health > 0) {
+		ai.enabled = true;
+		isStun = false; 
+	}
 }
 
 function dotDamage (damage: int){
+	isDots = true;
 	var containerE = new Container(damage, transform, "enemy", "dots");		
 	for (var count = 0 ; count <7; count++){	
 		yield WaitForSeconds(0.5f);
 		health -= damage; 
 		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
+		
+		if (count == 4) {
+			isDots = false;
+		}
 	}
 }
 
@@ -87,7 +101,7 @@ function confused (arc: int){
 		
 		isConfused = true;
 	for (var count = 0; count <= arc; count++) { 
-		BroadcastMessage("AIShoot", SendMessageOptions.DontRequireReceiver);
+		BroadcastMessage("AIShoot", 3, SendMessageOptions.DontRequireReceiver);
 		yield WaitForSeconds(0.3);
 	}
 		isConfused = false;
@@ -118,5 +132,20 @@ function OnCollisionEnter(collision : Collision) {
    			_isBullet = false;
    			collision.gameObject.GetComponent(Enemy).setBulletState(false);
    		}
+	}
+}
+
+function OnGUI() {
+	var size = transform.collider.bounds.size;
+	var offset = Vector3(0, size.y + 0.5, 0);
+	var currentCam = damageDisplay.GetComponent(DDisplay).chooseCamera();
+	var screenPos = currentCam.WorldToScreenPoint(transform.position + offset);
+	
+	if (isDots) {
+		GUI.DrawTexture(Rect(screenPos.x, Screen.height - screenPos.y, 40, 40), dotsIcon);
+	} else if (isStun) {
+		GUI.DrawTexture(Rect(screenPos.x, Screen.height - screenPos.y, 40, 40), stunIcon);
+	} else if (isConfused) {
+		GUI.DrawTexture(Rect(screenPos.x, Screen.height - screenPos.y, 40, 40), confusedIcon);
 	}
 }

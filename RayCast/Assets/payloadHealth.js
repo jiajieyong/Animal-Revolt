@@ -39,6 +39,7 @@ function explosion(){
 	GameObject.Find("/First Person Controller").GetComponent(FPSInputController).enabled = false;
 	GameObject.Find("/First Person Controller").GetComponent(MouseLook).enabled = false;
 	GameObject.Find("/First Person Controller").GetComponent(switchCam).enabled = false;
+	GameObject.Find("/First Person Controller").GetComponent(switchCTF).enabled = false;
 	GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
 	GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 	GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
