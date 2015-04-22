@@ -1,4 +1,4 @@
-#pragma strict
+#pragma implicit
 var maxHealth : float;
 var laser : GameObject;
 var maxAngularSpeed : float;
@@ -8,6 +8,7 @@ var theBullet : GameObject;
 var bossModel : GameObject;
 var damageDisplay : GameObject;
 var deathTemplate : GameObject;
+var stoneBlockOff : GameObject;
 
 var bossHealthTex : Texture2D;
 var bossEmptyHealthTex : Texture2D;
@@ -16,12 +17,13 @@ var smokeTemplate : GameObject;
 private var animator : Animator;
 private var time : float = 0;
 private var moveSpeed : float;
-private var isDecidingAttack = true;
+private var isDecidingAttack = false;
 private var lastAttack : String = "";
 private var isEnraged = false;
 private var isDecidingToMove = false;
 private var isDelay = false;
 private var delaySpot : Vector3;
+private var isDetecting = true;
 
 private var isMoving = false;
 
@@ -79,6 +81,19 @@ function Start () {
 
 function Update () {
 
+	if (isDetecting) {
+		var hit : RaycastHit;
+		var shootDirection = player.transform.position - (transform.position + transform.TransformDirection(Vector3(0, 2, 2)));
+		if (Physics.Raycast (transform.position + transform.TransformDirection(Vector3(0, 2, 2)), shootDirection, hit)) {
+			if (hit.collider.CompareTag("Player")) {
+				var clone1 : GameObject = Instantiate(stoneBlockOff, Vector3(102.8, -8.1, -68.8), transform.rotation);
+				clone1.transform.forward = Vector3(1, 0, 0);
+				isDecidingAttack = true;
+				isDetecting = false;
+			}
+		}
+	}
+	
 	var pos = Vector2(rigidbody.transform.position.x, rigidbody.transform.position.z) ;
 
  	var movement = (pos - originalPos) * 10;
@@ -149,7 +164,7 @@ function Update () {
 		isEnraged = true;
 	}
 	
-	isDecidingAttack = false;
+	//isDecidingAttack = false;
 	
 	if (isDecidingToMove) {
 		isDecidingAttack = true;
@@ -243,7 +258,6 @@ function Update () {
 	if (isMissile) {
 		
 		if (missileTime == 0) {
-			Debug.Log("shoot");
 			shootMissiles();
 			lastAttack = "missile";
 		}
