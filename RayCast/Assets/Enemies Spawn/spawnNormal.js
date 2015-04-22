@@ -7,8 +7,15 @@ var payload : GameObject;
 private var calledOnce = false; 
 private var spawning = false; 
  
+function Start() {
 
+	if(enemyManager.spawnMode == SpawnType.Survival) {
+		SurvivalSpawn();
+	}
+	
+}
 function Update () {
+
 
 	if(enemyManager.spawnMode != SpawnType.Normal) 
 		return;
@@ -61,4 +68,18 @@ function Spawn ()
 	    
 	    yield new WaitForEndOfFrame ();
 	}  
+}
+
+function SurvivalSpawn () {
+
+	    var clone = Instantiate (enemyManager.DecideEnemy(), transform.position, transform.rotation);
+	    
+	    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject);
+		
+	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
+		rig.AI.WorkingMemory.SetItem("payload", payload);
+		rig.AI.WorkingMemory.SetItem("player", player);
+		rig.AI.WorkingMemory.SetItem("myself", clone);
+	
+
 }

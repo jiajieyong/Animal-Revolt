@@ -44,4 +44,16 @@ function Update () {
 		tpsCamera.camera.enabled = false;
 		
 	}
+	
+	if (Application.loadedLevel == 3) {
+		if (destination != null) {
+			if (Vector3.Distance(destination.position, transform.position) < 15) {
+				destination = null;
+			}
+
+		} else {
+			fpsArrow.SetActive(false);
+			tpsArrow.SetActive(false);
+		}
+	}
 }

@@ -35,6 +35,7 @@ var detonator: GameObject;
 var pickedFlag = false;
 var signalSet: GameObject;
 var animalManager : AnimalManager;
+var enemyManager : EnemyManager;
 
 private var tpsON = false; 
 private var vicinity : List.<GameObject> = new List.<GameObject>();
@@ -191,6 +192,8 @@ function OnTriggerEnter (other : Collider) {
 			Destroy(other.gameObject);
 			signalSet.SetActive(true);
 			pickedFlag = true;
+			
+			enemyManager.SendMessage("CTFEndSpawn");
 		}
 		
 		if (other.CompareTag("ctfBase") && pickedFlag == true){
@@ -201,6 +204,8 @@ function OnTriggerEnter (other : Collider) {
     		// show win menu
 			Application.LoadLevelAdditive (5);
 		}
+		
+		
 		
 }
 
