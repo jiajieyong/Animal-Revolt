@@ -887,5 +887,5 @@ function death() {
 }
 
 function animalSpawn() {
-
+	animalManager.SendMessage("RespawnAnimals");
 }
