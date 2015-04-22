@@ -55,7 +55,7 @@ function OnGUI() {
 			}
 			
 			else if (msg._type == "dots") { 
-				style.normal.textColor = Color.red;
+				style.normal.textColor = Color(0.75,0,0.75,1);
 			}
 			
 			if (msg._transform != null) {

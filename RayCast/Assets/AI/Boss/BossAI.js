@@ -1,4 +1,4 @@
-#pragma strict
+#pragma implicit
 var maxHealth : float;
 var laser : GameObject;
 var maxAngularSpeed : float;

@@ -74,8 +74,8 @@ function stun(duration: float){
 
 function dotDamage (damage: int){
 	var containerE = new Container(damage, transform, "enemy", "dots");		
-	for (var count = 0 ; count <5; count++){	
-		yield WaitForSeconds(1);
+	for (var count = 0 ; count <7; count++){	
+		yield WaitForSeconds(0.5f);
 		health -= damage; 
 		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
 	}

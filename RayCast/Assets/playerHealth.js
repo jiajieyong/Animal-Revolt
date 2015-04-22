@@ -25,7 +25,8 @@ function cottonGuard () {
 	cotton.SetActive(true); 
 	immortal = true; 
 	for (var hot = 0; hot < 20; hot++){
-		playerHealth += 1; 
+		if (playerHealth <100)
+			playerHealth += 1; 
 		yield WaitForSeconds (0.5f);
 	}
 	

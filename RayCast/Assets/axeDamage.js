@@ -2,6 +2,7 @@
 private var animator : Animator;
 var timer = 0.0;
 var cooldown = 2.0f;
+var axeSlash : AudioClip;
 
 function Start () {
 	animator = GetComponentInChildren(Animator);
@@ -21,6 +22,8 @@ function attackDamage () {
 	if (Physics.Raycast(rayOrigin, transform.TransformDirection(Vector3.forward), hit, 3)) {		
 		animator.SetTrigger("Melee");
 		yield WaitForSeconds(0.5f);
+		AudioSource.PlayClipAtPoint(axeSlash, transform.position);
+		
 		if (hit.collider != null) {
 		hit.transform.SendMessage("ApplyDamage", 5, SendMessageOptions.DontRequireReceiver);
 		}

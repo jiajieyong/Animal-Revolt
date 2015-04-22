@@ -11,14 +11,14 @@ public class LoadOnClick : MonoBehaviour {
 		Screen.showCursor = false;
 		Application.LoadLevel(level);
 	}
-
+	
 	public void ReloadScene()
 	{
 		loadingImage.SetActive(true);
 		Screen.showCursor = false;
 		Application.LoadLevel(Application.loadedLevel);
 	}
-
+	
 	public void NextScene()
 	{
 		loadingImage.SetActive(true);
@@ -29,7 +29,7 @@ public class LoadOnClick : MonoBehaviour {
 			Application.LoadLevel (Application.loadedLevel + 1);
 		}
 	}
-
+	
 	public void QuitGame()
 	{
 		Application.Quit ();
