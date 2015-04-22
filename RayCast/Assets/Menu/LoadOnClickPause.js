@@ -93,6 +93,7 @@ function Pause()
 			GameObject.Find("/First Person Controller").GetComponent(FPSInputController).enabled = false;
 			GameObject.Find("/First Person Controller").GetComponent(MouseLook).enabled = false;
 			GameObject.Find("/First Person Controller").GetComponent(switchCam).enabled = false;
+			GameObject.Find("/First Person Controller").GetComponent(switchCTF).enabled = false;
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(MouseLookJS).enabled = false;
 			GameObject.Find("/First Person Controller/pig arm").GetComponent(rotateArm).enabled = false;
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = false;
@@ -109,6 +110,7 @@ function Pause()
 			GameObject.Find("/First Person Controller").GetComponent(FPSInputController).enabled = true;
 			GameObject.Find("/First Person Controller").GetComponent(MouseLook).enabled = true;
 			GameObject.Find("/First Person Controller").GetComponent(switchCam).enabled = true;
+			GameObject.Find("/First Person Controller").GetComponent(switchCTF).enabled = true;
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(MouseLookJS).enabled = true;
 			GameObject.Find("/First Person Controller/pig arm").GetComponent(rotateArm).enabled = true;
 			GameObject.Find("/First Person Controller/Main Camera").GetComponent(crosshair).enabled = true;
