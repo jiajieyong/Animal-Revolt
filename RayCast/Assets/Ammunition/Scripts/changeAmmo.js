@@ -93,6 +93,12 @@ function SelectAmmo (name : String) {
 			dogMode = false;
 			ActivateAmmo(11);
 			break;
+		case 12:
+			cowMode = false;
+			dogMode = false;
+			ActivateAmmo(12);
+			break;
+			
 		default:
 			cowMode = false;
 			dogMode = false;

@@ -25,7 +25,8 @@ function cottonGuard () {
 	cotton.SetActive(true); 
 	immortal = true; 
 	for (var hot = 0; hot < 20; hot++){
-		playerHealth += 1; 
+		if (playerHealth <100)
+			playerHealth += 1; 
 		yield WaitForSeconds (0.5f);
 	}
 	
@@ -57,6 +58,7 @@ function ApplyDamage(damage: int){
 		GetComponent(switchCam).enabled = false;
 		tpsCamera.GetComponent(MouseLookJS).enabled = false;
 		tpsCamera.GetComponent(crosshair).enabled = false;
+		GameObject.Find("/First Person Controller/Display").GetComponent(buffDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(DDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Display").GetComponent(ImpactDisplay).enabled = false;
 		GameObject.Find("/First Person Controller/Inventory").SetActive(false);

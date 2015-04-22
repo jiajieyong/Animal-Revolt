@@ -113,3 +113,10 @@ function disableLaser() {
 	animator.SetBool ("Lasered", true);
 	animator.SetBool ("Charged", false);
 }
+
+function cleanUp() {
+	Destroy(charging);
+	Destroy(discharge);
+	Destroy(laser);
+	Destroy(laserEffect);
+}
