@@ -11,6 +11,7 @@ var goatSP : Transform[];
 var sheepSP : Transform[];
 var catSP : Transform[];
 var chickenSP : Transform[];
+var bullSP : Transform[];
 
 var frog : GameObject;
 var cow : GameObject;
@@ -21,6 +22,7 @@ var goat : GameObject;
 var sheep : GameObject;
 var cat : GameObject;
 var chicken : GameObject;
+var bull : GameObject;
 
 
 var startOfGame = true;
@@ -61,6 +63,10 @@ function Start () {
 	
 	for (i = 0; i < chickenSP.Length; i++) {
 		StartingSpawn(chickenSP[i], "chicken", chicken);
+	}
+	
+	for (i = 0; i < bullSP.Length; i++) {
+		StartingSpawn(bullSP[i], "bull", bull);
 	}
 
 
@@ -121,6 +127,11 @@ function Spawn (t : Vector3, r : Quaternion, n : String)
 			
 		case "chicken" :
 			clone = Instantiate (chicken, t, r);
+  			clone.name = n;
+			break;
+			
+		case "bull" :
+			clone = Instantiate (bull, t, r);
   			clone.name = n;
 			break;
 
