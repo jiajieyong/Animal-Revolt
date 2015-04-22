@@ -29,6 +29,8 @@ function Update () {
 	    // Move our position a step closer to the target.
 	    transform.rotation = Quaternion.LookRotation(newDir);
 	    }
+	    else 
+	    transform.rotation = Quaternion.Euler(Vector3(0,0,0));
 }
 
 function AIShoot(targetType: int) {
