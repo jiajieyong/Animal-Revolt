@@ -24,6 +24,19 @@ var cat : GameObject;
 var chicken : GameObject;
 var bull : GameObject;
 
+var frogCount : int = 0;
+var cowCount : int = 0;
+var dogCount : int = 0;
+var ratCount : int = 0;
+var horseCount : int = 0;
+var goatCount : int = 0;
+var sheepCount : int = 0;
+var catCount : int = 0;
+var chickenCount : int = 0;
+var bullCount : int = 0;
+
+
+
 
 var startOfGame = true;
 
@@ -39,6 +52,7 @@ function Start () {
 	
 	for (i = 0; i < dogSP.Length; i++) {
 		StartingSpawn(dogSP[i], "dog", dog);
+		
 	}
 	
 	for (i = 0; i < ratSP.Length; i++) {
@@ -153,6 +167,14 @@ function PickedUp(go : GameObject) {
 	var r = go.transform.rotation;
 	var n = go.name;
 
+	//if (enemyManager.spawnMode == SpawnType.Normal)
 	Spawn(t, r, n);
+
+}
+
+function RespawnAnimals() {
+
+
+	
 
 }

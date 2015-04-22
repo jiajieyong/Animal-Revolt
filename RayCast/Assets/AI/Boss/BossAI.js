@@ -14,6 +14,8 @@ var bossHealthTex : Texture2D;
 var bossEmptyHealthTex : Texture2D;
 var smokeTemplate : GameObject;
 
+var animalManager : GameObject;
+
 private var animator : Animator;
 private var time : float = 0;
 private var moveSpeed : float;
@@ -313,6 +315,16 @@ function Update () {
 		
 		lastAttack = "laser";
 	}
+	}
+	
+	
+	
+	if (health == 2000) {
+		animalSpawn();
+	}
+	
+	if (health == 1000) {
+		animalSpawn();
 	}
 }
 
@@ -872,4 +884,8 @@ function death() {
 	laser.transform.SendMessage("cleanUp");
 	Destroy(backBurner);
 	Destroy(gameObject);
+}
+
+function animalSpawn() {
+
 }
