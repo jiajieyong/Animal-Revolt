@@ -351,6 +351,8 @@ function Update () {
 }
 
 function OnGUI () { 
+	
+	if (!isDetecting) {
 	//95% of screen
 	var screenHeight = Screen.height;
 	var screenWidth = Screen.width;
@@ -359,6 +361,7 @@ function OnGUI () {
 	var healthHeight = screenHeight*0.03;
 	GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*0.95, 28), bossEmptyHealthTex);
 	GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*(health/maxHealth * 0.95), 28), bossHealthTex);
+	}
 }
 
 function shootLaser() {
