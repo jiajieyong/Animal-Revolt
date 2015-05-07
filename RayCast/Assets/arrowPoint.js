@@ -1,15 +1,31 @@
 ﻿#pragma strict
 var destination : GameObject;
+var wp1 : GameObject;
+var goToNext : GameObject;
 var base : Transform;
 var speed = 20; 
 function Start () {
-
+	if (wp1 != null) {
+		goToNext = wp1;
+	} else {
+		goToNext = destination;
+	}
 }
 
 function Update () {
 		
-		if (destination != null) { 
-		var targetDir = destination.transform.position - transform.position;
+		if (wp1 == null) {
+			if (destination != null) {
+				goToNext = destination;
+			}
+		} else {
+			if (Vector3.Distance(wp1.transform.position, transform.position) < 5) {
+				wp1 = null;
+			}
+		}
+		
+		if (goToNext != null) { 
+		var targetDir = goToNext.transform.position - transform.position;
 		
 	    // The step size is equal to speed times frame time.
 	    var step = speed * Time.deltaTime;

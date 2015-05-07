@@ -20,6 +20,7 @@ var bossEmptyHealthTex : Texture2D;
 var smokeTemplate : GameObject;
 
 var animalManager : GameObject;
+var playerEscaped : SurvivalPlayerCheck;
 
 private var animator : Animator;
 private var time : float = 0;
@@ -100,6 +101,7 @@ function Update () {
 				clone1.transform.forward = Vector3(1, 0, 0);
 				isDecidingAttack = true;
 				isDetecting = false;
+				playerEscaped.escaped = true;
 			}
 		}
 	}
@@ -316,7 +318,7 @@ function Update () {
 		
 		shootLaser();
 		
-		if (laserShootingPlayed && laserTime >= 5) {
+		if (!laserShootingPlayed && laserTime >= 5.5) {
 			AudioSource.PlayClipAtPoint(laserShootSound, transform.position);
 			laserShootingPlayed = true;
 		}

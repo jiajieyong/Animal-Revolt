@@ -29,7 +29,7 @@ function Update () {
 	
 	time += Time.deltaTime;
 	
-	if (time >= 0 && time < 5) {
+	if (time >= 0 && time < 5.5) {
 		var ps : ParticleSystem = charging.GetComponent(ParticleSystem);
 		ps.startSize = 	3.61 - 2.61/5*time;
 		charging.transform.position = transform.position;

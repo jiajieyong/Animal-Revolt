@@ -11,6 +11,7 @@ private var _isBullet = false;
 var stunIcon : Texture2D;
 var dotsIcon : Texture2D;
 var confusedIcon : Texture2D;
+var survivalPlayerCheck : SurvivalPlayerCheck;
 
 private var isDots = false;
 private var isStun = false;
@@ -49,6 +50,11 @@ function Update () {
 	if (isConfused) {
 		transform.Rotate(Vector3.up, 500 * Time.deltaTime);
 	}
+	
+	if (survivalPlayerCheck.escaped == true) {
+		DestroyObject(gameObject);
+	}
+
 }
 
 function dead() {
@@ -60,9 +66,10 @@ function dead() {
 	ai.enabled = false;
 }
 
-function updateEnemy(em:GameObject, p:GameObject) {
+function updateEnemy(em:GameObject, p:GameObject, c:SurvivalPlayerCheck) {
 	enemyManager = em;
 	player = p;
+	survivalPlayerCheck = c;
 }
 
 function ApplyDamage(damage: int){
