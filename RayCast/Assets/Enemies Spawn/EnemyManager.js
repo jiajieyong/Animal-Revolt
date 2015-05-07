@@ -5,6 +5,7 @@ var spawnMode : SpawnType;
 var enemyMelee : GameObject;                // The enemy prefab to be spawned.
 var enemyShoot : GameObject;
 var enemyShootCTF : GameObject;
+var survivalPlayerCheck : SurvivalPlayerCheck;
 
 var spawnTime : float = 5f;            // How long between each spawn.
 var totalWaves : float = 3f;
@@ -148,7 +149,7 @@ function NormalSpawn ()
 		var index : int = Random.Range (0, normalSP.Count);
 		var clone = Instantiate (DecideEnemy(), normalSP[index].transform.position, normalSP[index].transform.rotation);
 		
-		clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+		clone.GetComponent(Enemy).updateEnemy(gameObject, player, survivalPlayerCheck);
 	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 		rig.AI.WorkingMemory.SetItem("payload", payload);
 		rig.AI.WorkingMemory.SetItem("player", player);
@@ -174,7 +175,7 @@ function WaveSpawn ()
     var spawnPointIndex : int = Random.Range (0, waveSP.Length);
     var clone = Instantiate (DecideEnemy(), waveSP[spawnPointIndex].position, waveSP[spawnPointIndex].rotation);
 
-    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+    clone.GetComponent(Enemy).updateEnemy(gameObject, player, survivalPlayerCheck);
     var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 	rig.AI.WorkingMemory.SetItem("payload", payload);
 	rig.AI.WorkingMemory.SetItem("player", player);
@@ -188,7 +189,7 @@ function CTFStartSpawn () {
 	for (var i = 0; i < ctfSP.Length; i++) {
 	    var clone = Instantiate (DecideEnemyCTF(), ctfSP[i].position, ctfSP[i].rotation);
 
-	    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+	    clone.GetComponent(Enemy).updateEnemy(gameObject, player, survivalPlayerCheck);
 	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 		rig.AI.WorkingMemory.SetItem("payload", payload);
 		rig.AI.WorkingMemory.SetItem("player", player);
@@ -203,7 +204,7 @@ function CTFSpawn () {
 	var spawnPointIndex : int = Random.Range (0, ctfSP.Length);
     var clone = Instantiate (DecideEnemyCTF(), ctfSP[spawnPointIndex].position, ctfSP[spawnPointIndex].rotation);
 
-    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+    clone.GetComponent(Enemy).updateEnemy(gameObject, player, survivalPlayerCheck);
     var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 	rig.AI.WorkingMemory.SetItem("payload", payload);
 	rig.AI.WorkingMemory.SetItem("player", player);
@@ -216,7 +217,7 @@ function CTFEndSpawn () {
 	for (var i = 0; i < ctfENDSP.Length; i++) {
 	    var clone = Instantiate (DecideEnemy(), ctfENDSP[i].position, ctfENDSP[i].rotation);
 		
-	    clone.GetComponent(Enemy).updateEnemy(gameObject, player);
+	    clone.GetComponent(Enemy).updateEnemy(gameObject, player, survivalPlayerCheck);
 	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 		rig.AI.WorkingMemory.SetItem("payload", payload);
 		rig.AI.WorkingMemory.SetItem("player", player);

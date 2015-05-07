@@ -4,6 +4,7 @@ var enemyManager : EnemyManager;
 var enemy : GameObject;  
 var player : GameObject;
 var payload : GameObject;
+var survivalPlayerCheck : SurvivalPlayerCheck;
 private var calledOnce = false; 
 private var spawning = false; 
  
@@ -55,7 +56,7 @@ function Spawn ()
 	while(true) {
 		if(enemyManager.currentEnemyCount < enemyManager.maxEnemyCount) {
 			var clone = Instantiate (enemy, transform.position, transform.rotation); 
-	    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject);
+	    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject, survivalPlayerCheck);
 	    	enemyManager.SendMessage("EnemyCounter", 1);
 	    	
 	    	var rig : AIRig = clone.GetComponentInChildren(AIRig);	
@@ -74,7 +75,7 @@ function SurvivalSpawn () {
 
 	    var clone = Instantiate (enemyManager.DecideEnemy(), transform.position, transform.rotation);
 	    
-	    	clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject);
+	    clone.GetComponent(Enemy).updateEnemy(enemyManager.gameObject, player.gameObject, survivalPlayerCheck);
 		
 	    var rig : AIRig = clone.GetComponentInChildren(AIRig);	
 		rig.AI.WorkingMemory.SetItem("payload", payload);
