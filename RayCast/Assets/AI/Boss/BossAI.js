@@ -78,7 +78,7 @@ private var M_distance : DistanceMembership;
 
 function Start () {
 	animator = GetComponentInChildren(Animator);
-	health = maxHealth;
+	health = 100;
 	laserTime = 0;
 	bossRend = bossModel.GetComponent.<Renderer>();
 	meleeAngle = Mathf.Atan(4.0/7.0)/3.142*180;
@@ -318,7 +318,7 @@ function Update () {
 		
 		shootLaser();
 		
-		if (laserShootingPlayed && laserTime >= 5) {
+		if (!laserShootingPlayed && laserTime >= 5.5) {
 			AudioSource.PlayClipAtPoint(laserShootSound, transform.position);
 			laserShootingPlayed = true;
 		}
