@@ -24,6 +24,8 @@ function LoadScene(level : int)
 			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
+		if (GameObject.Find("/Bossman") != null)
+			GameObject.Find("/Bossman").GetComponent(BossAI).enabled = false;
 		Time.timeScale = 1;
 		loadingImage.SetActive(true);
 		Screen.showCursor = false;
@@ -44,6 +46,8 @@ function ReloadScene()
 			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
+		if (GameObject.Find("/Bossman") != null)
+			GameObject.Find("/Bossman").GetComponent(BossAI).enabled = false;
 		Time.timeScale = 1;
 		loadingImage.SetActive(true);
 		Screen.showCursor = false;
@@ -64,6 +68,8 @@ function NextScene()
 			GameObject.Find("/First Person Controller/Inventory").SetActive(false);
 		if (GameObject.Find("/Payload") != null)
 			GameObject.Find("/Payload").GetComponent(payloadHealth).enabled = false;
+		if (GameObject.Find("/Bossman") != null)
+			GameObject.Find("/Bossman").GetComponent(BossAI).enabled = false;
 		Time.timeScale = 1;
 		loadingImage.SetActive(true);
 		Screen.showCursor = false;

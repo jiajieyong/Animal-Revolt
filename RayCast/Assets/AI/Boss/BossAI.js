@@ -15,6 +15,9 @@ var ramForwardSound : AudioClip;
 var laserChargingSound : AudioClip;
 var laserShootSound : AudioClip;
 
+var bossMusic : AudioSource;
+var OST: GameObject;
+
 var bossHealthTex : Texture2D;
 var bossEmptyHealthTex : Texture2D;
 var smokeTemplate : GameObject;
@@ -76,7 +79,10 @@ private var originalMag : float;
 private var M_desirability : DesirabilityMembership;
 private var M_distance : DistanceMembership;
 
+private var audioFadeout = false;
+
 function Start () {
+	bossMusic = GameObject.Find("/Canvas").GetComponent.<AudioSource>();
 	animator = GetComponentInChildren(Animator);
 	health = maxHealth;
 	laserTime = 0;
@@ -91,7 +97,6 @@ function Start () {
 }
 
 function Update () {
-
 	if (isDetecting) {
 		var hit : RaycastHit;
 		var shootDirection = player.transform.position - (transform.position + transform.TransformDirection(Vector3(0, 2, 2)));
@@ -102,8 +107,18 @@ function Update () {
 				isDecidingAttack = true;
 				isDetecting = false;
 				playerEscaped.escaped = true;
+ 				audioFadeout = true;
 			}
 		}
+	}
+	
+	if (audioFadeout == true) {
+		OST.audio.volume = Mathf.Max(OST.audio.volume-0.005,0);
+	}
+	
+	if (OST.audio.volume == 0 && audioFadeout == true){
+		bossMusic.Play();
+		audioFadeout = false;
 	}
 	
 	var pos = Vector2(rigidbody.transform.position.x, rigidbody.transform.position.z) ;
@@ -353,14 +368,14 @@ function Update () {
 function OnGUI () { 
 	
 	if (!isDetecting) {
-	//95% of screen
-	var screenHeight = Screen.height;
-	var screenWidth = Screen.width;
-	
-	var healthPos = screenWidth*0.025;
-	var healthHeight = screenHeight*0.03;
-	GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*0.95, 28), bossEmptyHealthTex);
-	GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*(health/maxHealth * 0.95), 28), bossHealthTex);
+		//95% of screen
+		var screenHeight = Screen.height;
+		var screenWidth = Screen.width;
+		
+		var healthPos = screenWidth*0.025;
+		var healthHeight = screenHeight*0.03;
+		GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*0.95, 28), bossEmptyHealthTex);
+		GUI.DrawTexture(Rect(healthPos, healthHeight, screenWidth*(health/maxHealth * 0.95), 28), bossHealthTex);
 	}
 }
 
@@ -910,13 +925,17 @@ function calculateDesirability(undesirable : float, desirable : float, veryDesir
 
 function death() {
 	Instantiate(deathTemplate, transform.position + Vector3(0, 5, 0), transform.rotation);
+	AudioSource.PlayClipAtPoint(deathSound, transform.position);
+	GameObject.Find("/First Person Controller").GetComponent(playerHealth).immortal = true;
 	
 	Destroy(smoke);
-	laser.transform.SendMessage("cleanUp");
+	laser.GetComponent(laserCharging).cleanUp();
+	if (GameObject.Find("VolumetricLinePrefab(Clone)")!= null) {
+		Debug.Log("ddd");
+		Destroy(GameObject.Find("VolumetricLinePrefab(Clone)"));
+	}
 	Destroy(backBurner);
 	Destroy(gameObject);
-	
-	AudioSource.PlayClipAtPoint(deathSound, transform.position);
 }
 
 function dotDamage (damage: int){
