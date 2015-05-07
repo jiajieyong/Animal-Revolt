@@ -78,7 +78,7 @@ private var M_distance : DistanceMembership;
 
 function Start () {
 	animator = GetComponentInChildren(Animator);
-	health = 100;
+	health = maxHealth;
 	laserTime = 0;
 	bossRend = bossModel.GetComponent.<Renderer>();
 	meleeAngle = Mathf.Atan(4.0/7.0)/3.142*180;
