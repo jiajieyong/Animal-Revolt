@@ -29,9 +29,9 @@ function Update () {
 	
 	time += Time.deltaTime;
 	
-	if (time >= 0 && time < 3) {
+	if (time >= 0 && time < 5) {
 		var ps : ParticleSystem = charging.GetComponent(ParticleSystem);
-		ps.startSize = 	3.61 - 2.61/3*time;
+		ps.startSize = 	3.61 - 2.61/5*time;
 		charging.transform.position = transform.position;
 	} else if (time >= runningTime && notInstantiated) {
 		animator.SetBool ("Range", false);

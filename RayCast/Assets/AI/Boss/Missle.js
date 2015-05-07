@@ -8,6 +8,7 @@ var origin : Vector3;
 var damageDisplay : GameObject;
 var smokeTrail : GameObject;
 var explosion : GameObject;
+var explode : AudioClip;
 
 private var isNotYetUpdated = false;
 private var updated = false;
@@ -76,15 +77,18 @@ function OnTriggerEnter (other : Collider) {
 		Destroy(gameObject);
 		Destroy(other.gameObject);
 		Instantiate(explosion, transform.position, transform.rotation);
+		AudioSource.PlayClipAtPoint(explode, transform.position);
 	} else if (other.CompareTag("Player")) {
 		var containerP = new ImpactContainer(origin);
  		damageDisplay.transform.SendMessage("DisplayImpact", containerP);
     	other.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
 		Destroy(gameObject);
 		Instantiate(explosion, transform.position, transform.rotation);
+		AudioSource.PlayClipAtPoint(explode, transform.position);
 	} else if (other.CompareTag("ground")){
 		Destroy(gameObject);
 		Instantiate(explosion, transform.position, transform.rotation);
+		AudioSource.PlayClipAtPoint(explode, transform.position);
 	}
 }
 

@@ -67,10 +67,18 @@ function OnGUI() {
 				if (Vector3.Dot(currentCam.transform.forward, heading) > 0) {
 					
 					var screenPos : Vector3;
-					
 					//calculate offset of dmg to top of gameobject
-					if (msg._transform.name == "forearm R") {
-						screenPos  = currentCam.WorldToScreenPoint(boss.transform.position + Vector3(0, 9, 0));
+					
+					var possibleBoss : Transform = msg._transform;
+					var recurse : Transform = msg._transform;
+					
+					while (recurse != null) {
+						possibleBoss = recurse;
+						recurse = possibleBoss.parent;
+					}
+					
+					if (possibleBoss.name == "Bossman" ) {
+						screenPos  = currentCam.WorldToScreenPoint(boss.transform.position + Vector3(0, 7, 0));
 					} else {
 						var size = msg._transform.collider.bounds.size;
 						var offset = Vector3(0, size.y, 0);

@@ -139,8 +139,9 @@ function OnGUI() {
 	var size = transform.collider.bounds.size;
 	var offset = Vector3(0, size.y + 0.5, 0);
 	var currentCam = damageDisplay.GetComponent(DDisplay).chooseCamera();
-	var screenPos = currentCam.WorldToScreenPoint(transform.position + offset);
-	
+	if (currentCam != null) {
+		var screenPos = currentCam.WorldToScreenPoint(transform.position + offset);
+	}
 	if (isDots) {
 		GUI.DrawTexture(Rect(screenPos.x, Screen.height - screenPos.y, 40, 40), dotsIcon);
 	} else if (isStun) {

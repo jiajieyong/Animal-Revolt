@@ -22,11 +22,14 @@ function Update() {
  function OnCollisionEnter (info : Collision)
  {	
  	if (info.transform.CompareTag("Enemy")){
- 		info.gameObject.GetComponent(Enemy).setBulletState(true);
+ 		
+ 		if (info.transform.name != "Bossman") {
+ 			info.gameObject.GetComponent(Enemy).setBulletState(true);
+ 			var force : Vector3 = transform.forward * 80000;
+			info.rigidbody.AddForce(force);
+ 		}
  		var containerE = new Container(TheDamage, info.collider.transform, "enemy", "instant");
    		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
- 		var force : Vector3 = transform.forward * 80000;
-		info.rigidbody.AddForce(force);
 		Destroy(gameObject);
 	}
  }

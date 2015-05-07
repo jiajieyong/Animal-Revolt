@@ -9,6 +9,11 @@ var bossModel : GameObject;
 var damageDisplay : GameObject;
 var deathTemplate : GameObject;
 var stoneBlockOff : GameObject;
+var deathSound : AudioClip;
+var slashSound : AudioClip;
+var ramForwardSound : AudioClip;
+var laserChargingSound : AudioClip;
+var laserShootSound : AudioClip;
 
 var bossHealthTex : Texture2D;
 var bossEmptyHealthTex : Texture2D;
@@ -32,6 +37,8 @@ private var isMoving = false;
 private var isLasering = false;
 private var laserTime : float;
 private var laserNotInit = true;
+private var laserNotPlayed = true;
+private var laserShootingPlayed = false;
 
 private var health : float;
 private var angularSpeed : float;
@@ -60,6 +67,7 @@ private var seekingTime : float = 0;
 private var ramTarget : Vector3;
 private var lean : Vector3;
 private var backBurner : GameObject;
+private var playedSound = false;
 
 private var originalPos : Vector2;
 private var originalMag : float;
@@ -293,8 +301,14 @@ function Update () {
 	}
 	
 	if (isLasering) {
+		if (laserNotPlayed && laserTime < 5) {
+			AudioSource.PlayClipAtPoint(laserChargingSound, transform.position);
+			laserNotPlayed = false;
+		}
+		
 		laserTime += Time.deltaTime;
-		if (laserTime < 4) {
+		
+		if (laserTime < 5) {
 			angularSpeed = 2;
 		} else {
 			angularSpeed = maxAngularSpeed;
@@ -302,14 +316,20 @@ function Update () {
 		
 		shootLaser();
 		
-		if (laserTime > 10) {
+		if (laserShootingPlayed && laserTime >= 5) {
+			AudioSource.PlayClipAtPoint(laserShootSound, transform.position);
+			laserShootingPlayed = true;
+		}
+		
+		if (laserTime > 11) {
 			laser.GetComponent(laserCharging).disableLaser();
 			laser.GetComponent(laserCharging).enabled = false;
+			laserShootingPlayed = false;
 			isLasering = false;
 			laserTime = 0;
 			laserNotInit = true;
 			isDecidingToMove = true;
-			
+			laserNotPlayed = true;
 			isDelay = true;
 		}
 		
@@ -385,6 +405,10 @@ function ram() {
 		ramTarget = Vector3(playerPos.x, transform.position.y, playerPos.z) - ramDir*2;
 		lean  = transform.TransformDirection(0, -0.5, 1);
 	} else {
+		if (!playedSound) {
+			AudioSource.PlayClipAtPoint(ramForwardSound, transform.position);
+			playedSound = true;
+		}
 		backBurner.transform.position = transform.TransformPoint(0, 6/3, -0.5/3);
 		var step1 : float = ramSpeed * Time.deltaTime;
 		var goToPos : Vector3 = Vector3.MoveTowards(transform.position, ramTarget, step1);
@@ -399,13 +423,14 @@ function ram() {
 			isRamming = false;
 			isSeekingTarget = false;
 			isDecidingToMove = true;
+			playedSound = false;
 			seekingTime = 0;
 			
 			var localPlayerPos = transform.InverseTransformPoint(player.transform.position);
 			if (localPlayerPos.z >= 0)  {
 				localPlayerPos = Vector3(localPlayerPos.x, 0, localPlayerPos.z);
 				var angle = Vector3.Angle(localPlayerPos, Vector3(0, 0, 1));
-				if (Vector3.Magnitude(localPlayerPos) < 6 && angle < 50) {
+				if (Vector3.Magnitude(localPlayerPos) < 4 && angle < 50) {
 					var containerP = new ImpactContainer(transform.position);
 					damageDisplay.transform.SendMessage("DisplayImpact", containerP);
 					player.transform.SendMessage("ApplyDamage", ramDamage, SendMessageOptions.DontRequireReceiver);
@@ -470,6 +495,7 @@ function useMelee() {
 			animator.SetBool ("Melee", true);
 			animatingMelee = true;
 			playerNotYetHit = true;
+			AudioSource.PlayClipAtPoint(slashSound, transform.position);
 			meleeCount++;
 		} else {
 			var dir : Vector3 = player.transform.position - transform.position;
@@ -884,6 +910,17 @@ function death() {
 	laser.transform.SendMessage("cleanUp");
 	Destroy(backBurner);
 	Destroy(gameObject);
+	
+	AudioSource.PlayClipAtPoint(deathSound, transform.position);
+}
+
+function dotDamage (damage: int){
+	var containerE = new Container(damage, transform, "enemy", "dots");		
+	for (var count = 0 ; count <7; count++){	
+		yield WaitForSeconds(0.5f);
+		health -= damage; 
+		damageDisplay.transform.SendMessage("DisplayDamage", containerE);
+	}
 }
 
 function animalSpawn() {
