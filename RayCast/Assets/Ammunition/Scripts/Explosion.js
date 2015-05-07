@@ -29,7 +29,7 @@ function OnCollisionEnter (info: Collision){
 		 
          for (var hit : Collider in colliders) {
              if (hit.rigidbody) {
-             	if (!hit.CompareTag("ammo")) {
+             	if (!hit.CompareTag("ammo") && !hit.CompareTag("Payload")) {
              		var containerE = new Container(TheDamage, hit.collider.transform, "enemy", "instant");
              	 	damageDisplay.transform.SendMessage("DisplayDamage", containerE);
              	 	hit.transform.SendMessage("ApplyDamage", TheDamage, SendMessageOptions.DontRequireReceiver);
