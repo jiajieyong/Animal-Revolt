@@ -430,7 +430,7 @@ function ram() {
 			if (localPlayerPos.z >= 0)  {
 				localPlayerPos = Vector3(localPlayerPos.x, 0, localPlayerPos.z);
 				var angle = Vector3.Angle(localPlayerPos, Vector3(0, 0, 1));
-				if (Vector3.Magnitude(localPlayerPos) < 6 && angle < 50) {
+				if (Vector3.Magnitude(localPlayerPos) < 4 && angle < 50) {
 					var containerP = new ImpactContainer(transform.position);
 					damageDisplay.transform.SendMessage("DisplayImpact", containerP);
 					player.transform.SendMessage("ApplyDamage", ramDamage, SendMessageOptions.DontRequireReceiver);

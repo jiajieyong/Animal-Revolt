@@ -26,7 +26,9 @@ function Update () {
 	if (updated && target != null) {
 		
 		targetPath.RemoveAll(function (x : Vector3) {return x == transform.position;});
-		if (target.GetComponent(Enemy).health <= 0 || targetPath.Count == 0) {
+		if (targetPath.Count == 0) {
+			Destroy(gameObject);
+		} else if (target.name != "Bossman" && target.GetComponent(Enemy).health <= 0) {
 			Destroy(gameObject);
 		} else {
 			var oldPos : Vector3 = targetPath[0];

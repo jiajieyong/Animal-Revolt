@@ -50,7 +50,10 @@ function OnGUI() {
 
 function updateTarget(target1 : Transform) {
 	if (target1.gameObject.tag == "Enemy") {
-		if (target1.GetComponent(Enemy).health > 0) {
+		if (target1.transform.name == "Bossman") {
+			isValidTarget = true;
+			target = target1.gameObject;
+		} else if (target1.GetComponent(Enemy).health > 0) {
 			isValidTarget = true;
 			target = target1.gameObject;
 		}
