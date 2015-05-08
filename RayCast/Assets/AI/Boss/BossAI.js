@@ -930,10 +930,6 @@ function death() {
 	
 	Destroy(smoke);
 	laser.GetComponent(laserCharging).cleanUp();
-	if (GameObject.Find("VolumetricLinePrefab(Clone)")!= null) {
-		Debug.Log("ddd");
-		Destroy(GameObject.Find("VolumetricLinePrefab(Clone)"));
-	}
 	Destroy(backBurner);
 	Destroy(gameObject);
 }

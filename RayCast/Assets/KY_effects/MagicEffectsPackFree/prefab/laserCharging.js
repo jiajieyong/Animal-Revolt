@@ -119,4 +119,5 @@ function cleanUp() {
 	Destroy(discharge);
 	Destroy(laser);
 	Destroy(laserEffect);
+	Destroy(gameObject);
 }
