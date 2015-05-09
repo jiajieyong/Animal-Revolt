@@ -6,7 +6,7 @@ var tpsArrow: GameObject;
 var fpsArrow: GameObject;
 var destination: Transform;
 
-private var camSwitch = false;
+private var camSwitch = true;
 
 function Start () {
 	fpsCamera.camera.enabled = true;
