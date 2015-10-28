@@ -1,3 +1,4 @@
-# Gently-Plays-Animal-Farm
+# Animal-Revolt
 Award winning game at STEPS
-at
+
+http://jiajieyong.github.io/Animal-Revolt/
